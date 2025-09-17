@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% include header.html %}
+<div class="grid grid-cols-4 gap-4 h-screen">
+  <aside class="bg-gray-300">
+    {% include side_column.html %}
+  </aside>
+  <main class="col-span-3">
+    {{ content }}
+  </main>
+</div>

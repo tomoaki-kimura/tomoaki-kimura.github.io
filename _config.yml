@@ -1,0 +1,33 @@
+url: "https://tomoaki-kimura.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "HearthSide KidsPrograming School" # the name of your site, e.g. ACME Corp.
+
+collections_dir: articles
+
+collections:
+  drafts:
+    output: true
+  html:
+    output: true
+  css:
+    output: true
+  bootstrap:
+    output: true
+  ruby:
+    output: true
+  ruby_2d:
+    output: true
+  jekyll:
+    output: true
+  ruby_on_rails:
+    output: true
+
+header_pages:
+  - console.md
+  - html.md
+  - css.md
+  - bootstrap.md
+  - ruby.md
+  - ruby_2d.md
+  - jekyll.md
+  - ruby_on_rails.md
