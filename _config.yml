@@ -24,12 +24,14 @@ collections:
 
 header_pages:
   - title: 開発環境を整えよう(1)
+    icon: ri-computer-line
     contents: 
       - title: VSCode
         link: vs_code.html
       - title: Git
         link: git.html
   - title: HTML/CSS
+    icon: ri-html5-line
     contents:
       - title: HTML
         link: html_base.html
@@ -42,11 +44,15 @@ header_pages:
       - title: ウェブサイト作成
         link:
   - title: CSSフレームワーク
+    icon: ri-css3-line
     contents:
       - title: Bootstrap
-        link: bootstrap.html
-        
+        link: bootstrap.html 
   - title: JavaScript
+    icon: ri-javascript-line
   - title: 開発環境を整えよう(2)
-  - title: Ruby基礎
-  - title: Ruby応用
+    icon: ri-computer-line
+  - title: Ruby
+    icon: lo-ruby-line
+  - title: RubyOnRails
+    icon: lo-rails-line

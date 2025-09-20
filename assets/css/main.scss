@@ -2,3 +2,15 @@
 ---
 
 @use "base";
+
+.lo-ruby-line::after {
+  background-image: url('/assets/images/ruby-svg-line.svg');
+  background-size: cover; /* 画像を全体にフィット */
+  background-position: center; /* 中央に配置 */
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.lo-rails-line::after {
+  background-image: url('/assets/images/rubyonrails-svg-line.svg');
+}
