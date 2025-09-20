@@ -7,57 +7,174 @@
       HTMLを学ぼう | HearthSide KidsPrograming School
     </title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
-    <nav class="relative bg-gray-800">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-16 items-center justify-between">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
-          <span class="absolute -inset-0.5"></span>
-          <span class="sr-only">Open main menu</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
-            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
-            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-        <div class="hidden sm:ml-6 sm:block">
-          <div class="flex space-x-4">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-            <a href="console.html" aria-current="page" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">DashBoard</a>
-            <a href="html.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">HTML</a>
-            <a href="ruby.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Ruby</a>
-            <a href="ruby_2d.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Ruby2D</a>
-          </div>
-        </div>
-      </div>
+    <div class="flex h-screen">
+  <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900">
+    <ul class="mt-4 side-column-close hidden">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="#" class="flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <span class="text-sm"><br><br></span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-close">
+        <i class="ri-arrow-right-circle-fill mr-4"></i>
+      </button>
     </div>
-  </div>
+  </li>
+</ul>
 
-  <div id="mobile-menu" hidden class="block sm:hidden">
-    <div class="space-y-1 px-2 pt-2 pb-3">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-      <a href="/console.html" aria-current="page" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">ダッシュボード</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+<ul class="mt-4 side-column-open">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <i class="ri-home-2-line mr-3 text-lg"></i>
+        <span class="text-sm">HearthSide Kids Programming School</span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-open">
+        <i class="ri-arrow-left-circle-fill mr-4"></i>
+      </button>
     </div>
-  </div>
-</nav>
-<div class="grid grid-cols-4 gap-4 h-screen">
-  <aside class="bg-gray-300">
-    <div>side</div>
+  </li>
+  
+    <li class="mb-1 group">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <i class="ri-instance-line mr-3 text-lg"></i>
+        <span class="text-sm">開発環境</span>
+        <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+      </a>
+      <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+        <li class="mb-4">
+          <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
+        </li> 
+      </ul>
+    </li>
+  
+    <li class="mb-1 group">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <i class="ri-instance-line mr-3 text-lg"></i>
+        <span class="text-sm">HTML/CSS</span>
+        <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+      </a>
+      <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+        <li class="mb-4">
+          <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
+        </li> 
+      </ul>
+    </li>
+  
+    <li class="mb-1 group">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <i class="ri-instance-line mr-3 text-lg"></i>
+        <span class="text-sm">JavaScript</span>
+        <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+      </a>
+      <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+        <li class="mb-4">
+          <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
+        </li> 
+      </ul>
+    </li>
+  
+    <li class="mb-1 group">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <i class="ri-instance-line mr-3 text-lg"></i>
+        <span class="text-sm">Ruby</span>
+        <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+      </a>
+      <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+        <li class="mb-4">
+          <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
+        </li> 
+      </ul>
+    </li>
+  
+    <li class="mb-1 group">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <i class="ri-instance-line mr-3 text-lg"></i>
+        <span class="text-sm">テスト</span>
+        <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+      </a>
+      <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+        <li class="mb-4">
+          <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
+        </li> 
+      </ul>
+    </li>
+  
+    <li class="mb-1 group">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <i class="ri-instance-line mr-3 text-lg"></i>
+        <span class="text-sm">本番環境</span>
+        <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+      </a>
+      <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+        <li class="mb-4">
+          <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
+        </li> 
+      </ul>
+    </li>
+  
+</ul>
+
+<script>
+  const toggleMenuOpen = document.querySelector('.toggle-menu-open')
+  const toggleMenuClose = document.querySelector('.toggle-menu-close')
+  const sideColumn = document.querySelector('aside')
+  const sideColumnOpen = document.querySelector('.side-column-open')
+  const sideColumnClose = document.querySelector('.side-column-close')
+
+  toggleMenuOpen.addEventListener('click', (e) => {
+    sideColumn.classList.remove('w-64')
+    sideColumn.classList.add('w-9')
+    //main.classList.remove('ml-64')
+    //main.classList.add('ml-9')
+    sideColumnOpen.classList.add('hidden')
+    sideColumnClose.classList.remove('hidden')
+  })
+
+  toggleMenuClose.addEventListener('click', (e) => {
+    sideColumn.classList.remove('w-9')
+    sideColumn.classList.add('w-64')
+    //main.classList.remove('ml-9')
+    //main.classList.add('ml-64')
+    sideColumnClose.classList.add('hidden')
+    sideColumnOpen.classList.remove('hidden')
+  })
+</script>
+
+<script>
+  document.querySelectorAll(".sidebar-dropdown-toggle").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const parent = item.closest(".group");
+      if (parent.hasAttribute("data-state-opened")) {
+        parent.removeAttribute("data-state-opened");
+      } else {
+        document.querySelectorAll(".sidebar-dropdown-toggle").forEach((i) => {
+          i.closest(".group").removeAttribute("data-state-opened");
+        });
+        parent.toggleAttribute("data-state-opened");
+      }
+    });
+  });
+</script>
   </aside>
-  <main class="col-span-3">
+  <main id="content" class="w-[calc(100%-256px)] ml-64 bg-gray-50 min-h-screen">
+    <div class="py-2 px-4 hg-white flex items-center shadow-md shadow-black/5">
+  <ul class="flex items-center ml-4">
+    <li class="mr-2">
+      <a href="/console.html" class="text-gray-600 text-sm hover:text-gray-700">ハースサイド　キッズプログラミングスクール　ダッシュボード</a>
+    </li>
+  </ul>
+</div>
+
     
 
   </main>
 </div>
+
   </body>
 </html>

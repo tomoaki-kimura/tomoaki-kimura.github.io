@@ -23,11 +23,9 @@ collections:
     output: true
 
 header_pages:
-  - console.md
-  - html.md
-  - css.md
-  - bootstrap.md
-  - ruby.md
-  - ruby_2d.md
-  - jekyll.md
-  - ruby_on_rails.md
+  - 開発環境
+  - HTML/CSS
+  - JavaScript
+  - Ruby
+  - テスト
+  - 本番環境

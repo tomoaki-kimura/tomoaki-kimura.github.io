@@ -2,12 +2,12 @@
 layout: default
 ---
 
-{% include header.html %}
-<div class="grid grid-cols-4 gap-4 h-screen">
-  <aside class="bg-gray-300">
+<div class="flex h-screen">
+  <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900">
     {% include side_column.html %}
   </aside>
-  <main class="col-span-3">
+  <main id="content" class="w-[calc(100%-256px)] ml-64 bg-gray-50 min-h-screen">
+    {% include header.html %}
     {{ content }}
   </main>
 </div>

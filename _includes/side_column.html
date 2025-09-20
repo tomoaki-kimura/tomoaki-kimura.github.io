@@ -1,1 +1,83 @@
-<div>side</div>
+<ul class="mt-4 side-column-close hidden">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="#" class="flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <span class="text-sm"><br><br></span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-close">
+        <i class="ri-arrow-right-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ul class="mt-4 side-column-open">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <i class="ri-home-2-line mr-3 text-lg"></i>
+        <span class="text-sm">HearthSide Kids Programming School</span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-open">
+        <i class="ri-arrow-left-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+  {% for page in site.header_pages %}
+    <li class="mb-1 group">
+      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <i class="ri-instance-line mr-3 text-lg"></i>
+        <span class="text-sm">{{ page }}</span>
+        <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+      </a>
+      <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+        <li class="mb-4">
+          <a href="#" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">Active order</a>
+        </li> 
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+
+<script>
+  const toggleMenuOpen = document.querySelector('.toggle-menu-open')
+  const toggleMenuClose = document.querySelector('.toggle-menu-close')
+  const sideColumn = document.querySelector('aside')
+  const sideColumnOpen = document.querySelector('.side-column-open')
+  const sideColumnClose = document.querySelector('.side-column-close')
+
+  toggleMenuOpen.addEventListener('click', (e) => {
+    sideColumn.classList.remove('w-64')
+    sideColumn.classList.add('w-9')
+    //main.classList.remove('ml-64')
+    //main.classList.add('ml-9')
+    sideColumnOpen.classList.add('hidden')
+    sideColumnClose.classList.remove('hidden')
+  })
+
+  toggleMenuClose.addEventListener('click', (e) => {
+    sideColumn.classList.remove('w-9')
+    sideColumn.classList.add('w-64')
+    //main.classList.remove('ml-9')
+    //main.classList.add('ml-64')
+    sideColumnClose.classList.add('hidden')
+    sideColumnOpen.classList.remove('hidden')
+  })
+</script>
+
+<script>
+  document.querySelectorAll(".sidebar-dropdown-toggle").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      const parent = item.closest(".group");
+      if (parent.hasAttribute("data-state-opened")) {
+        parent.removeAttribute("data-state-opened");
+      } else {
+        document.querySelectorAll(".sidebar-dropdown-toggle").forEach((i) => {
+          i.closest(".group").removeAttribute("data-state-opened");
+        });
+        parent.toggleAttribute("data-state-opened");
+      }
+    });
+  });
+</script>
