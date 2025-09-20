@@ -23,9 +23,30 @@ collections:
     output: true
 
 header_pages:
-  - 開発環境
-  - HTML/CSS
-  - JavaScript
-  - Ruby
-  - テスト
-  - 本番環境
+  - title: 開発環境を整えよう(1)
+    contents: 
+      - title: VSCode
+        link: vs_code.html
+      - title: Git
+        link: git.html
+  - title: HTML/CSS
+    contents:
+      - title: HTML
+        link: html_base.html
+      - title: CSS
+        link: html_tags.html
+      - title: ウェブページ作成
+        link: id_class
+      - title: Bootstrap
+        link:  
+      - title: ウェブサイト作成
+        link:
+  - title: CSSフレームワーク
+    contents:
+      - title: Bootstrap
+        link: bootstrap.html
+        
+  - title: JavaScript
+  - title: 開発環境を整えよう(2)
+  - title: Ruby基礎
+  - title: Ruby応用
