@@ -2,6 +2,7 @@ url: "https://tomoaki-kimura.github.io" # the base hostname & protocol for your 
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "HearthSide KidsPrograming School" # the name of your site, e.g. ACME Corp.
 
+
 collections_dir: articles
 
 collections:
@@ -23,7 +24,15 @@ collections:
     output: true
 
 header_pages:
-  - title: 開発環境を整えよう(1)
+  - title: scratch
+    contents:
+      - title: スクラッチ基礎
+        link: scratch.html
+      - title: 迷路ゲーム
+        link: scratch.html
+      - title: シューティングゲーム
+        link: scratch.html
+  - title: 開発環境(1)
     icon: ri-computer-line
     contents: 
       - title: VSCode
@@ -36,23 +45,64 @@ header_pages:
       - title: HTML
         link: html_base.html
       - title: CSS
-        link: html_tags.html
-      - title: ウェブページ作成
-        link: id_class
-      - title: Bootstrap
-        link:  
-      - title: ウェブサイト作成
-        link:
+        link: html_tags.html  
+      - title: webサイト
+        link: my_site.html
   - title: CSSフレームワーク
     icon: ri-css3-line
     contents:
-      - title: Bootstrap
-        link: bootstrap.html 
+      - title: Bootstrap5
+        link: bootstrap.html
   - title: JavaScript
     icon: ri-javascript-line
-  - title: 開発環境を整えよう(2)
+    contents:
+      - title: JavaScript基礎
+        link: java_script.html
+      - title: シングルページ
+        link: java_script.html
+  - title: 開発環境(2)
     icon: ri-computer-line
+    contents:
+      - title: WSL
+        link: wsl.html
+      - title: asdf
+        link: asdf.html
   - title: Ruby
     icon: lo-ruby-line
+    contents:
+      - title: ruby文法
+        link: ruby.html
+      - title: ruby文法
+        link: ruby.html
+  - title: Ruby2D
+    icon: lo-ruby-line
+    contents:
+      - title: 基礎
+        link: ruby2d.html
+      - title: ヘビゲーム
+        link: ruby.html
+      - title: ブロック崩し
+        link: ruby.html
+      - title: シューティングゲーム
+        link: ruby.html
+      - title: アクションゲーム
+        link: ruby.html
   - title: RubyOnRails
     icon: lo-rails-line
+    contents:
+      - title: タスクリスト
+        link: tasklist
+      - title: SNS
+        link: link
+  - title: JavaScript(2)
+    icon: ri-javascript-line
+    contents:
+      - title: TypeScript
+        link: link
+      - title: Stimulus
+        link: stimulus
+  - title: 本番環境
+    icon: ""
+    contents:
+      - title: AWS
+        link: link

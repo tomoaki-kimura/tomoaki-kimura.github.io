@@ -1,20 +1,21 @@
-@charset "UTF-8";
 body {
   background: #ffffff;
   color: #000000;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.lo-ruby-line::after {
-  background-image: url("/assets/images/ruby-svg-line.svg");
-  background-size: cover; /* 画像を全体にフィット */
-  background-position: center; /* 中央に配置 */
+.side-column-open .group i {
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-color: white;
+  width: 18px;
+  height: 18px;
 }
-
-.lo-rails-line::after {
-  background-image: url("/assets/images/rubyonrails-svg-line.svg");
+.side-column-open .lo-ruby-line {
+  background-image: url("/assets/images/icons/ruby-svg-line.svg");
+}
+.side-column-open .lo-rails-line {
+  background-image: url("/assets/images/icons/rubyonrails-svg-line.svg");
 }
 
 /*# sourceMappingURL=main.css.map */
