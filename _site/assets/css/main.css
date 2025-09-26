@@ -17,5 +17,8 @@ body {
 .side-column-open .lo-rails-line {
   background-image: url("/assets/images/icons/rubyonrails-svg-line.svg");
 }
+.side-column-open .lo-scratch-line {
+  background-image: url("/assets/images/icons/scratch-svg-line.svg");
+}
 
 /*# sourceMappingURL=main.css.map */

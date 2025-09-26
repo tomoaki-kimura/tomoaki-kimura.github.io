@@ -24,7 +24,8 @@ collections:
     output: true
 
 header_pages:
-  - title: scratch
+  - title: スクラッチ
+    icon: lo-scratch-line
     contents:
       - title: スクラッチ基礎
         link: scratch.html
@@ -50,11 +51,17 @@ header_pages:
         link: html_tags.html  
       - title: webサイト
         link: my_site.html
-  - title: CSSフレームワーク
+  - title: CSS
     icon: ri-css3-line
     contents:
-      - title: Bootstrap5
-        link: bootstrap.html
+      - title: ２カラムデザイン
+        link: column.html
+      - title: パネルデザイン
+        link: panel.html
+      - title: フォーム
+        link: form.html
+      - title: レスポンシブデザイン
+        link: response.
   - title: JavaScript
     icon: ri-javascript-line
     contents:
