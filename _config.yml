@@ -100,8 +100,7 @@ header_pages:
     icon: lo-rails-line
     contents:
       - title: ブログサイト
-        link: ruby.html
-      
+        link: ruby.html  
   - title: RubyOnRails
     icon: lo-rails-line
     contents:
@@ -116,8 +115,10 @@ header_pages:
         link: link
       - title: Stimulus
         link: stimulus
+  - title: DataBase
+    icon: ri-database-2-line 
   - title: 本番環境
-    icon: ""
+    icon: ri-server-line
     contents:
       - title: AWS
         link: link
