@@ -27,13 +27,11 @@ header_pages:
   - title: スクラッチ
     icon: lo-scratch-line
     contents:
-      - title: スクラッチ基礎
-        link: scratch.html
       - title: 迷路ゲーム
         link: scratch.html
-      - title: シューティングゲーム
+      - title: ジャンプゲーム
         link: scratch.html
-      - title: シューティングゲームⅡ
+      - title: ヘビゲーム
         link: scratch.html
   - title: 開発環境(1)
     icon: ri-computer-line
@@ -61,7 +59,7 @@ header_pages:
       - title: フォーム
         link: form.html
       - title: レスポンシブデザイン
-        link: response.
+        link: response.html
   - title: JavaScript
     icon: ri-javascript-line
     contents:
@@ -81,7 +79,7 @@ header_pages:
     contents:
       - title: ruby文法
         link: ruby.html
-      - title: ruby文法
+      - title: ライブラリ
         link: ruby.html
   - title: Ruby2D
     icon: lo-ruby-line
@@ -94,13 +92,30 @@ header_pages:
         link: ruby.html
       - title: シューティングゲーム
         link: ruby.html
-      - title: アクションゲーム
+      - title: テトリス
         link: ruby.html
   - title: Jekyll
     icon: lo-rails-line
     contents:
       - title: ブログサイト
-        link: ruby.html  
+        link: ruby.html
+      - title: webサイトのリプレイス
+        link: ruby.html
+  - title: sinatora
+    icon: lo-rails-line
+    contents:
+      - title: 時間割
+        link: ruby.html
+      - title: Api
+        link: ruby.html 
+  - title: SQL
+    icon: ri-database-2-line
+    contents:
+      - title: SQLite
+        link: ruby.html
+      - title: PostgreSQL
+        link: ruby.html
+
   - title: RubyOnRails
     icon: lo-rails-line
     contents:
@@ -115,7 +130,7 @@ header_pages:
         link: link
       - title: Stimulus
         link: stimulus
-  - title: DataBase
+  - title: DataBase2
     icon: ri-database-2-line 
   - title: 本番環境
     icon: ri-server-line
