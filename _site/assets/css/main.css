@@ -20,5 +20,11 @@ body {
 .side-column-open .lo-scratch-line {
   background-image: url("/assets/images/icons/scratch-svg-line.svg");
 }
+.side-column-open .lo-jekyll-line {
+  background-image: url("/assets/images/icons/jekyll-svg-line.svg");
+}
+.side-column-open .lo-sinatra-line {
+  background-image: url("/assets/images/icons/sinatra-svg-line.svg");
+}
 
 /*# sourceMappingURL=main.css.map */
