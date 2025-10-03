@@ -2,39 +2,54 @@ url: "https://tomoaki-kimura.github.io" # the base hostname & protocol for your 
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "HearthSide KidsPrograming School" # the name of your site, e.g. ACME Corp.
 
+courses:
+  basic_course:
+    - スクラッチ
+    - Ruby(1)
+  standard_course:
+    - 開発環境(1)
+    - 開発環境(2)
+    - Ruby(1)
+    - Ruby2D(1)
+    - Ruby(2)
+    - Ruby2D(2)
+  advance_course:
+    - 開発環境(1)
+    - HTML/CSS
+    - CSS
+    - 開発環境(2)
+  professional_course:
+    - 開発環境(1)
+    - HTML/CSS
 
 collections_dir: articles
 
 collections:
+  scratch:
+    output: true
   drafts:
     output: true
-  html:
-    output: true
-  css:
-    output: true
-  bootstrap:
+  davelopent_environment:
     output: true
   ruby:
     output: true
   ruby_2d:
     output: true
-  jekyll:
-    output: true
-  ruby_on_rails:
-    output: true
 
-courses:
+curriculums:
   - title: スクラッチ
     icon: lo-scratch-line
+    link: scratch.html
     contents:
       - title: 迷路ゲーム
-        link: scratch.html
-      - title: ジャンプゲーム
-        link: scratch.html
+        params: meiro 
+      - title: nump
+        params: jump_game
       - title: ヘビゲーム
-        link: scratch.html
-  - title: 開発環境
+        params: hebi
+  - title: 開発環境(1)
     icon: ri-computer-line
+    link: vs
     contents: 
       - title: VSCode
         link: vs_code.html
@@ -60,7 +75,7 @@ courses:
         link: form.html
       - title: レスポンシブデザイン
         link: response.html
-  - title: JavaScript
+  - title: JavaScript(1)
     icon: ri-javascript-line
     contents:
       - title: JavaScript基礎
@@ -74,19 +89,23 @@ courses:
         link: wsl.html
       - title: asdf
         link: asdf.html
-  - title: Ruby
+  - title: Ruby(1)
     icon: lo-ruby-line
     contents:
-      - title: ruby文法
+      - title: ruby基礎
         link: ruby.html
       - title: ライブラリ
         link: ruby.html
+  - title: WebAssembly
+    icon: lo-ruby-line
   - title: Git
     icon: ri-git-branch-line
     contents:
       - title: Git基礎
         link: git
-  - title: Ruby2D
+      - title: github.io
+        link: git
+  - title: Ruby2D(1)
     icon: lo-ruby-line
     contents:
       - title: 基礎
@@ -95,6 +114,14 @@ courses:
         link: ruby.html
       - title: ブロック崩し
         link: ruby.html
+  - title: Ruby(2)
+    icon: lo-ruby-line
+    contents:
+      - title: Ruby応用
+        link: ruby.html
+  - title: Ruby2D(2)
+    icon: lo-ruby-line
+    contents: 
       - title: シューティングゲーム
         link: ruby.html
       - title: テトリス
@@ -118,7 +145,7 @@ courses:
         link: ruby.html
       - title: Api
         link: ruby.html
-  - title: SQL
+  - title: SQL(1)
     icon: ri-database-2-line
     contents:
       - title: SQLite
@@ -189,13 +216,3 @@ courses:
         link: seisaku
       - title: デプロイ
         link: deploy
-
-classes:
-  basic:
-    contentes:
-      - スクラッチ
-      - 開発環境
-      - 開発環境(2)
-
-  advance: ""
-  professional: ""
