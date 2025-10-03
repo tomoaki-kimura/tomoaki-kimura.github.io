@@ -23,7 +23,7 @@ collections:
   ruby_on_rails:
     output: true
 
-header_pages:
+courses:
   - title: スクラッチ
     icon: lo-scratch-line
     contents:
@@ -33,7 +33,7 @@ header_pages:
         link: scratch.html
       - title: ヘビゲーム
         link: scratch.html
-  - title: 開発環境(1)
+  - title: 開発環境
     icon: ri-computer-line
     contents: 
       - title: VSCode
@@ -81,6 +81,11 @@ header_pages:
         link: ruby.html
       - title: ライブラリ
         link: ruby.html
+  - title: Git
+    icon: ri-git-branch-line
+    contents:
+      - title: Git基礎
+        link: git
   - title: Ruby2D
     icon: lo-ruby-line
     contents:
@@ -94,6 +99,11 @@ header_pages:
         link: ruby.html
       - title: テトリス
         link: ruby.html
+  - title: Github
+    icon: ri-github-line
+    contents:
+      - title: Github基礎
+        link: link
   - title: Jekyll
     icon: lo-jekyll-line
     contents:
@@ -101,20 +111,27 @@ header_pages:
         link: ruby.html
       - title: webサイトのリプレイス
         link: ruby.html
-  - title: sinatora
+  - title: sinatra
     icon: lo-sinatra-line
     contents:
       - title: 時間割
         link: ruby.html
       - title: Api
-        link: ruby.html 
+        link: ruby.html
   - title: SQL
     icon: ri-database-2-line
     contents:
       - title: SQLite
         link: ruby.html
-      - title: PostgreSQL
+      - title: 時間割（２）
         link: ruby.html
+  - title: NoSQL
+    icon: ri-database-2-line
+    contents:
+      - title: Redis
+        link: ruby.html
+      - title: FireBase
+        link: firebase
   - title: RubyOnRails
     icon: lo-rails-line
     contents:
@@ -129,10 +146,56 @@ header_pages:
         link: link
       - title: Stimulus
         link: stimulus
-  - title: DataBase2
-    icon: ri-database-2-line 
+  - title: SQL(2)
+    icon: ri-database-2-line
+    contents:
+      - title: PostgreSQL
+        link: link
+  - title: 設計
+    icon: ri-file-line
+    contents:
+      - title: 企画書
+        link: kikaku
+      - title: 画面遷移図
+        link: senizu
+      - title: 画面詳細図
+        link: shousai
+      - title: ER図
+        link: er
+      - title: テーブル設計書
+        link: teble
+      - title: URL設計書
+        link: url
+      - title: 要件定義書
+        link: youken
+  - title: RubyOnRails(2)
+    icon: lo-rails-line
+    contents:
+      - title: ECサイト
+        link: tasklist
   - title: 本番環境
     icon: ri-server-line
     contents:
       - title: AWS
         link: link
+  - title: 卒業制作
+    icon: ri-layout-5-line
+    contents:
+      - title: 企画
+        link: kikaku
+      - title: 設計
+        link: sekkei
+      - title: 制作
+        link: seisaku
+      - title: デプロイ
+        link: deploy
+
+classes:
+  basic:
+    contentes:
+      - スクラッチ
+      - 開発環境
+      - 開発環境(2)
+
+  advance: ""
+  professional: ""

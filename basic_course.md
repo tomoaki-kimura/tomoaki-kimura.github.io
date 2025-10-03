@@ -1,6 +1,7 @@
 ---
 layout: page
-title: コンソールトップ
+title: ベーシックコース
+course: basic
 ---
 
 ## ハースサイドキッズプログラミングスクール
