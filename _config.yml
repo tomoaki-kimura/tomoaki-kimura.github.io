@@ -39,98 +39,120 @@ collections:
 curriculums:
   - title: スクラッチ
     icon: lo-scratch-line
-    link: scratch.html
+    link: scratch
     contents:
       - title: 迷路ゲーム
-        params: meiro 
-      - title: nump
+        params: meiro
+      - title: ジャンプゲーム
         params: jump_game
       - title: ヘビゲーム
         params: hebi
   - title: 開発環境(1)
     icon: ri-computer-line
-    link: vs
-    contents: 
+    link: davelopent_environment
+    level: 1
+    contents:
       - title: VSCode
-        link: vs_code.html
+        params: vs_code
       - title: Git
-        link: git.html
+        params: git
   - title: HTML/CSS
     icon: ri-html5-line
+    link: html_css
     contents:
       - title: HTML
-        link: html_base.html
+        params: html
       - title: CSS
-        link: html_tags.html  
+        params: css  
       - title: webサイト
-        link: my_site.html
+        params: my_site
   - title: CSS
     icon: ri-css3-line
+    link: css
     contents:
       - title: ２カラムデザイン
-        link: column.html
+        params: two_column
       - title: パネルデザイン
-        link: panel.html
+        params: panel
       - title: フォーム
-        link: form.html
+        params: form
       - title: レスポンシブデザイン
-        link: response.html
+        params: response
   - title: JavaScript(1)
     icon: ri-javascript-line
+    link: javescript
+    level: 1
     contents:
       - title: JavaScript基礎
-        link: java_script.html
+        params: java_script_basic
       - title: シングルページ
-        link: java_script.html
+        params: single_page
   - title: 開発環境(2)
     icon: ri-computer-line
+    link: davelopent_environment
+    level: 2
     contents:
       - title: WSL
-        link: wsl.html
+        params: wsl
       - title: asdf
-        link: asdf.html
+        params: asdf
   - title: Ruby(1)
     icon: lo-ruby-line
+    link: ruby
+    level: 1
     contents:
       - title: ruby基礎
-        link: ruby.html
-      - title: ライブラリ
-        link: ruby.html
+        params: ruby_basic
+      - title: RubyGems
+        params: ruby_gems
+  - title: Rspec(1)
+    icon: lo-ruby-line
+    link: rspec
+    level: 1
   - title: WebAssembly
     icon: lo-ruby-line
+    link: wasm
   - title: Git
     icon: ri-git-branch-line
+    link: git
     contents:
       - title: Git基礎
-        link: git
+        params: git
       - title: github.io
-        link: git
+        params: git
   - title: Ruby2D(1)
     icon: lo-ruby-line
+    link: ruby2d
+    level: 1
     contents:
       - title: 基礎
-        link: ruby2d.html
+        params: ruby2d_basic
       - title: ヘビゲーム
-        link: ruby.html
-      - title: ブロック崩し
-        link: ruby.html
+        params: hebi
   - title: Ruby(2)
     icon: lo-ruby-line
+    link: ruby
+    level: 2
     contents:
       - title: Ruby応用
-        link: ruby.html
+        params: ruby_advance
   - title: Ruby2D(2)
     icon: lo-ruby-line
-    contents: 
+    link: ruby2d
+    level: 2
+    contents:
+      - title: ブロックくずし
+        params: blocks
       - title: シューティングゲーム
-        link: ruby.html
+        params: ruby.html
       - title: テトリス
-        link: ruby.html
+        params: ruby.html
   - title: Github
     icon: ri-github-line
+    link: github
     contents:
       - title: Github基礎
-        link: link
+        params: link
   - title: Jekyll
     icon: lo-jekyll-line
     contents:
@@ -216,3 +238,4 @@ curriculums:
         link: seisaku
       - title: デプロイ
         link: deploy
+
