@@ -3,38 +3,26 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "HearthSide KidsPrograming School" # the name of your site, e.g. ACME Corp.
 
 courses:
-  basic_course:
+  basic:
     - スクラッチ
     - Ruby(1)
-  standard_course:
+  standard:
     - 開発環境(1)
     - 開発環境(2)
     - Ruby(1)
     - Ruby2D(1)
     - Ruby(2)
     - Ruby2D(2)
-  advance_course:
+  advance:
     - 開発環境(1)
     - HTML/CSS
     - CSS
     - 開発環境(2)
-  professional_course:
+  professional:
     - 開発環境(1)
     - HTML/CSS
 
-collections_dir: articles
-
-collections:
-  scratch:
-    output: true
-  drafts:
-    output: true
-  davelopent_environment:
-    output: true
-  ruby:
-    output: true
-  ruby_2d:
-    output: true
+page_excepts: true
 
 curriculums:
   - title: スクラッチ
@@ -42,69 +30,69 @@ curriculums:
     link: scratch
     contents:
       - title: 迷路ゲーム
-        params: meiro
+        chapter: meiro
       - title: ジャンプゲーム
-        params: jump_game
+        chapter: jump_game
       - title: ヘビゲーム
-        params: hebi
-  - title: 開発環境(1)
+        chapter: hebi
+  - title: 開発環境
     icon: ri-computer-line
     link: davelopent_environment
     level: 1
     contents:
       - title: VSCode
-        params: vs_code
+        chapter: vs_code
       - title: Git
-        params: git
+        chapter: git
   - title: HTML/CSS
     icon: ri-html5-line
     link: html_css
     contents:
       - title: HTML
-        params: html
+        chapter: html
       - title: CSS
-        params: css  
+        chapter: css  
       - title: webサイト
-        params: my_site
+        chapter: my_site
   - title: CSS
     icon: ri-css3-line
     link: css
     contents:
       - title: ２カラムデザイン
-        params: two_column
+        chapter: two_column
       - title: パネルデザイン
-        params: panel
+        chapter: panel
       - title: フォーム
-        params: form
+        chapter: form
       - title: レスポンシブデザイン
-        params: response
+        chapter: response
   - title: JavaScript(1)
     icon: ri-javascript-line
     link: javescript
     level: 1
     contents:
       - title: JavaScript基礎
-        params: java_script_basic
+        chapter: java_script_basic
       - title: シングルページ
-        params: single_page
+        chapter: single_page
   - title: 開発環境(2)
     icon: ri-computer-line
     link: davelopent_environment
     level: 2
     contents:
       - title: WSL
-        params: wsl
+        chapter: wsl
       - title: asdf
-        params: asdf
+        chapter: asdf
   - title: Ruby(1)
     icon: lo-ruby-line
     link: ruby
     level: 1
     contents:
       - title: ruby基礎
-        params: ruby_basic
+        chapter: ruby_basic
       - title: RubyGems
-        params: ruby_gems
+        chapter: ruby_gems
   - title: Rspec(1)
     icon: lo-ruby-line
     link: rspec
@@ -117,42 +105,42 @@ curriculums:
     link: git
     contents:
       - title: Git基礎
-        params: git
+        chapter: git
       - title: github.io
-        params: git
+        chapter: git
   - title: Ruby2D(1)
     icon: lo-ruby-line
     link: ruby2d
     level: 1
     contents:
       - title: 基礎
-        params: ruby2d_basic
+        chapter: ruby2d_basic
       - title: ヘビゲーム
-        params: hebi
+        chapter: hebi
   - title: Ruby(2)
     icon: lo-ruby-line
     link: ruby
     level: 2
     contents:
       - title: Ruby応用
-        params: ruby_advance
+        chapter: ruby_advance
   - title: Ruby2D(2)
     icon: lo-ruby-line
     link: ruby2d
     level: 2
     contents:
       - title: ブロックくずし
-        params: blocks
+        chapter: blocks
       - title: シューティングゲーム
-        params: ruby.html
+        chapter: ruby.html
       - title: テトリス
-        params: ruby.html
+        chapter: ruby.html
   - title: Github
     icon: ri-github-line
     link: github
     contents:
       - title: Github基礎
-        params: link
+        chapter: link
   - title: Jekyll
     icon: lo-jekyll-line
     contents:
@@ -174,14 +162,7 @@ curriculums:
         link: ruby.html
       - title: 時間割（２）
         link: ruby.html
-  - title: NoSQL
-    icon: ri-database-2-line
-    contents:
-      - title: Redis
-        link: ruby.html
-      - title: FireBase
-        link: firebase
-  - title: RubyOnRails
+  - title: RubyOnRails(1)
     icon: lo-rails-line
     contents:
       - title: タスクリスト
