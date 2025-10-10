@@ -7,12 +7,3 @@
     </li>
   {% endfor %}
 </ul>
-
-<script>
-  const url = new URL(window.location.href)
-  const chapter = url.searchParams.get("chapter")
-  const posts = document.querySelectorAll(`.${chapter}`)
-  const target = document.querySelector('#posts')
-  target.innerHTML = ""
-  posts.forEach(o => target.append(o))
-</script>

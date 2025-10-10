@@ -7,11 +7,11 @@
       {{ page.title }}{% if page.title %} | {% endif %}{{ site.title }}
     </title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="{{ "assets/js/main.js" | relative_url }}"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
     {{ content }}
-    <sctipt src="{{ "assets/js/main.js" | relative_url }}"></script>
   </body>
 </html>

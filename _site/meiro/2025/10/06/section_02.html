@@ -7,6 +7,7 @@
       迷路ゲーム | HearthSide KidsPrograming School
     </title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="/assets/js/main.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
@@ -171,51 +172,7 @@
 </ul>
 
 <script>
-  window.onload = function() {
-    const toggleMenuOpen = document.querySelector('.toggle-menu-open')
-    const toggleMenuClose = document.querySelector('.toggle-menu-close')
-    const sideColumn = document.querySelector('aside')
-    const main = document.querySelector('main')
-    const sideColumnOpen = document.querySelector('.side-column-open')
-    const sideColumnClose = document.querySelector('.side-column-close')
 
-    toggleMenuOpen.addEventListener('click', (e) => {
-      sideColumn.classList.remove('w-64')
-      sideColumn.classList.add('w-9')
-      main.classList.remove('ml-64')
-      main.classList.add('ml-9')
-      //main.classList.remove('w-[calc(100%-256px)]')
-      main.classList.add('w-screen')
-      sideColumnOpen.classList.add('hidden')
-      sideColumnClose.classList.remove('hidden')
-    })
-
-    toggleMenuClose.addEventListener('click', (e) => {
-      sideColumn.classList.remove('w-9')
-      sideColumn.classList.add('w-64')
-      main.classList.remove('ml-9')
-      main.classList.add('ml-64')
-      sideColumnClose.classList.add('hidden')
-      sideColumnOpen.classList.remove('hidden')
-    })
-  }
-</script>
-
-<script>
-  document.querySelectorAll(".sidebar-dropdown-toggle").forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      const parent = item.closest(".group");
-      if (parent.hasAttribute("data-state-opened")) {
-        parent.removeAttribute("data-state-opened");
-      } else {
-        document.querySelectorAll(".sidebar-dropdown-toggle").forEach((i) => {
-          i.closest(".group").removeAttribute("data-state-opened");
-        });
-        parent.toggleAttribute("data-state-opened");
-      }
-    });
-  });
 </script>
   </aside>
   <main id="content" class="w-screen ml-64 bg-gray-50 min-h-screen">
@@ -229,6 +186,8 @@
   </ul>
 </div>
 
+    /meiro/2025/10/06/section_02.html
+<h1>迷路ゲーム</h1> 
     <h1 id="迷路ゲーム2">迷路ゲーム(2)</h1>
 
 <p>スクラッチ</p>
@@ -236,6 +195,5 @@
     aaa
   </main>
 </div>
-    <sctipt src="/assets/js/main.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title> 
-      迷路ゲーム | HearthSide KidsPrograming School
+      ヘビゲーム | HearthSide KidsPrograming School
     </title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="module" src="/assets/js/main.js"></script>
@@ -186,11 +186,67 @@
   </ul>
 </div>
 
-    /meiro/2025/10/05/section_01.html
-<h1>迷路ゲーム</h1> 
-    <h1 id="迷路ゲーム1">迷路ゲーム(1)</h1>
+    /hebi/2025/10/06/section_02.html
+<h1>ヘビゲーム</h1> 
+    <h1 id="ヘビゲーム1">ヘビゲーム(1)</h1>
 
-<p>スクラッチ</p>
+<p>スクラッチ## 2. 自機をCircleクラスで作る</p>
+
+<h3 id="図形の描写">図形の描写</h3>
+
+<p>main.rb</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>requie "ruby2d"
+
+Circle.new(radius: 10)
+
+show
+</code></pre></div></div>
+
+<h3 id="ファイルの実行">ファイルの実行</h3>
+
+<p>bash</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby main.rb
+</code></pre></div></div>
+
+<h3 id="結果">結果</h3>
+
+<p>左上に丸が出現。</p>
+
+<h4 id="ここで試したいこと">*ここで試したいこと</h4>
+
+<ul>
+  <li>引数の数字を変更する。</li>
+  <li>引数を省略する。</li>
+</ul>
+
+<h3 id="丸の位置を変更する">丸の位置を変更する</h3>
+
+<p>main.rb</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>requie "ruby2d"
+
+head = Circle.new(radius: 10)
+head.x = Windoww.width / 2
+head.y = Window.height / 2
+
+show
+</code></pre></div></div>
+
+<h3 id="ファイルの実行-1">ファイルの実行</h3>
+
+<p>bash</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby main.rb
+</code></pre></div></div>
+
+<h3 id="結果-1">結果</h3>
+
+<p>丸が真ん中に移動。</p>
+
+<h4 id="ここで試したいこと-1">*ここで試したいこと</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Window.width / 2</code> と <code class="language-plaintext highlighter-rouge">Window.height / 2</code> を <code class="language-plaintext highlighter-rouge">200</code> に置き換える。</li>
+  <li>他にも適当な数字を試してみる。</li>
+</ul>
 
     aaa
   </main>
