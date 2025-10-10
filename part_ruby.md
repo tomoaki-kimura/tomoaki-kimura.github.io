@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: Ruby
-parmalink: ruby.html
+permalink: ruby.html
 ---
 
 # {{ page.title }}
