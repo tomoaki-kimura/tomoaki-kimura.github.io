@@ -12,7 +12,7 @@ courses:
     - 開発環境(2)
     - Ruby(1)
     - Ruby2D(1)
-    - Ruby(2)
+    - Ruby_2(2)
     - Ruby2D(2)
   advance:
     - 開発環境(1)
@@ -28,7 +28,7 @@ page_excepts: true
 curriculums:
   - title: スクラッチ
     icon: lo-scratch-line
-    link: scratch
+    part: scratch
     contents:
       - title: 迷路ゲーム
         chapter: meiro
@@ -36,10 +36,9 @@ curriculums:
         chapter: jump_game
       - title: ヘビゲーム
         chapter: hebi
-  - title: 開発環境
+  - title: 開発環境(1)
     icon: ri-computer-line
-    link: davelopent_environment
-    level: 1
+    part: davelopent_environment
     contents:
       - title: VSCode
         chapter: vs_code
@@ -47,7 +46,7 @@ curriculums:
         chapter: git
   - title: HTML/CSS
     icon: ri-html5-line
-    link: html_css
+    part: html_css
     contents:
       - title: HTML
         chapter: html
@@ -57,7 +56,7 @@ curriculums:
         chapter: my_site
   - title: CSS
     icon: ri-css3-line
-    link: css
+    part: css
     contents:
       - title: ２カラムデザイン
         chapter: two_column
@@ -69,8 +68,7 @@ curriculums:
         chapter: response
   - title: JavaScript(1)
     icon: ri-javascript-line
-    link: javescript
-    level: 1
+    part: javescript
     contents:
       - title: JavaScript基礎
         chapter: java_script_basic
@@ -78,8 +76,7 @@ curriculums:
         chapter: single_page
   - title: 開発環境(2)
     icon: ri-computer-line
-    link: davelopent_environment
-    level: 2
+    part: davelopent_environment
     contents:
       - title: WSL
         chapter: wsl
@@ -87,8 +84,7 @@ curriculums:
         chapter: asdf
   - title: Ruby(1)
     icon: lo-ruby-line
-    link: ruby
-    level: 1
+    part: ruby
     contents:
       - title: ruby基礎
         chapter: ruby_basic
@@ -96,14 +92,13 @@ curriculums:
         chapter: ruby_gems
   - title: Rspec(1)
     icon: lo-ruby-line
-    link: rspec
-    level: 1
+    part: rspec
   - title: WebAssembly
     icon: lo-ruby-line
-    link: wasm
+    part: wasm
   - title: Git
     icon: ri-git-branch-line
-    link: git
+    part: git
     contents:
       - title: Git基礎
         chapter: git
@@ -111,8 +106,7 @@ curriculums:
         chapter: git
   - title: Ruby2D(1)
     icon: lo-ruby-line
-    link: ruby2d
-    level: 1
+    part: ruby2d
     contents:
       - title: 基礎
         chapter: ruby2d_basic
@@ -120,15 +114,13 @@ curriculums:
         chapter: hebi
   - title: Ruby(2)
     icon: lo-ruby-line
-    link: ruby
-    level: 2
+    part: ruby
     contents:
       - title: Ruby応用
         chapter: ruby_advance
   - title: Ruby2D(2)
     icon: lo-ruby-line
-    link: ruby2d
-    level: 2
+    part: ruby2d
     contents:
       - title: ブロックくずし
         chapter: blocks
@@ -138,86 +130,101 @@ curriculums:
         chapter: ruby.html
   - title: Github
     icon: ri-github-line
-    link: github
+    part: github
     contents:
       - title: Github基礎
         chapter: link
   - title: Jekyll
     icon: lo-jekyll-line
+    part: jekll
     contents:
       - title: ブログサイト
-        link: ruby.html
+        chapter: ruby
       - title: webサイトのリプレイス
-        link: ruby.html
+        chapter: ruby
   - title: sinatra
     icon: lo-sinatra-line
+    part: sinatra
     contents:
       - title: 時間割
-        link: ruby.html
+        chapter: ruby
       - title: Api
-        link: ruby.html
+        chapter: ruby
   - title: SQL(1)
     icon: ri-database-2-line
+    part: sql
     contents:
       - title: SQLite
-        link: ruby.html
+        chapter: ruby.html
       - title: 時間割（２）
-        link: ruby.html
+        chapter: ruby.html
   - title: RubyOnRails(1)
     icon: lo-rails-line
+    part: ruby_on_rails
     contents:
       - title: タスクリスト
-        link: tasklist
+        chapter: tasklist
       - title: SNS
-        link: link
+        chapter: link
   - title: JavaScript(2)
     icon: ri-javascript-line
+    part: javescript
     contents:
       - title: TypeScript
-        link: link
+        chapter: link
       - title: Stimulus
-        link: stimulus
+        chapter: stimulus
   - title: SQL(2)
     icon: ri-database-2-line
+    part: sql_2
     contents:
       - title: PostgreSQL
-        link: link
+        chapter: link
   - title: 設計
     icon: ri-file-line
+    part: app_design
     contents:
       - title: 企画書
-        link: kikaku
+        chapter: kikaku
       - title: 画面遷移図
-        link: senizu
+        chapter: senizu
       - title: 画面詳細図
-        link: shousai
+        chapter: shousai
       - title: ER図
-        link: er
+        chapter: er
       - title: テーブル設計書
-        link: teble
+        chapter: teble
       - title: URL設計書
-        link: url
+        chapter: url
       - title: 要件定義書
-        link: youken
+        chapter: youken
   - title: RubyOnRails(2)
     icon: lo-rails-line
     contents:
       - title: ECサイト
-        link: tasklist
-  - title: 本番環境
+        chapter: tasklist
+  - title: 本番環境(1)
     icon: ri-server-line
     contents:
       - title: AWS
-        link: link
+        chapter: link
   - title: 卒業制作
     icon: ri-layout-5-line
     contents:
       - title: 企画
-        link: kikaku
+        chapter: kikaku
       - title: 設計
-        link: sekkei
+        chapter: sekkei
       - title: 制作
-        link: seisaku
+        chapter: seisaku
       - title: デプロイ
-        link: deploy
-
+        chapter: deploy
+  - title: 本番環境(2)
+    icon: ri-server-line
+    contents:
+      - title: ドメイン
+        chapter: link
+      - title: SSL
+        chapter: link
+      - title: 自動デプロイ
+        chapter: link
