@@ -1,6 +1,7 @@
 ---
 layout: posts
 title: Ruby
+part: ruby
 permalink: ruby.html
 ---
 

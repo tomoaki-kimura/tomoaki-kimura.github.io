@@ -1,6 +1,7 @@
----
-layout: default
----
-
-{{ content }}
-
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ja' }}">
+  {% include head.html %}
+  <body>
+    {{ content }}
+  </body>
+</html>
