@@ -1,7 +1,23 @@
 {% include bread_crumb.html %}
 
-<div class="">
-  <div class="">
-  <h1>{{ page.title }}</h1>
-  <div>ページ内容</div>
+<div class="mx-10 my-10">
+  <h1 class="text-4xl font-bold">
+    <p>{{ page.part }}を学ぼう</p>
+    {% if page.chapter && page.title %}
+      <p class="text-3xl mt-5">
+        {{ page.chapter }}章 - {{ page.title }}
+        <span class="ml-10">セクション</span>
+      </p>
+    {% endif %}
+  </h1>
+  <div class="mt-5">
+    <p>
+      {% if page.chapter && page.title %}
+        このセクションで学ぶ内容：
+      {% elsif page.description %}
+        ページ概要:
+      {% endif %}
+      {{ page.description }}
+    </p>
+  </div>
 </div>
