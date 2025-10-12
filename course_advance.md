@@ -4,5 +4,3 @@ title: アドバンスコース
 course: advance
 permalink: advance.html
 ---
-
-## {{ page.title }}

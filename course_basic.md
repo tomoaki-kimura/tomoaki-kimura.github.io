@@ -5,8 +5,6 @@ course: basic
 permalink: basic.html
 ---
 
-## {{ page.title }}
-
 <table>
   <tbody>
     {% for post in site.scratch %}
