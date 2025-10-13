@@ -1,7 +1,7 @@
 <ul class="mt-4 side-column-close hidden">
   <li class="mb-1 group active">
     <div class="flex">
-      <a href="#" class="flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+      <a href="/" class="flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <span class="text-sm"><br><br></span>
       </a>
       <button type="button" class="text-gray-300 toggle-menu-close">
@@ -14,30 +14,29 @@
 <ul class="mt-4 side-column-open">
   <li class="mb-1 group active">
     <div class="flex">
-      <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+      <a href="" class="current-course-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <i class="ri-home-2-line mr-3 text-lg"></i>
-        <span class="text-sm">HearthSide Kids Programming School</span>
+        <span class="text-lg current-course-name">{{ page.course }}</span>
       </a>
-      <button type="button" class="text-gray-300 toggle-menu-open">
+      <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
         <i class="ri-arrow-left-circle-fill mr-4"></i>
       </button>
     </div>
   </li>
 
-  {% for page in site.curriculums %}
-    {{ page.title }}
-    {% if site.courses.basic contains page.title %}
+  {% for curriculum in site.curriculums %}
+    {% if site.courses.basic contains curriculum.title %}
       <li class="mb-1 group">
-        <a href="{{ page.link }}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
-          <i class="{{ page.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
-          <span class="text-sm">{{ page.title }}</span>
+        <a href="{{ curriculum.link }}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+          <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
+          <span class="text-sm">{{ curriculum.title }}</span>
           <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
         </a>
-        {% if page.contents %}
+        {% if curriculum.contents %}
           <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
-            {% for content in page.contents %}
+            {% for content in curriculum.contents %}
               <li class="mb-4">
-                <a href="{{ content.link }}" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                <a href="/{{ curriculum.part }}.html?chapter={{ content.chapter }}" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
                   {{ content.title }}  
                 </a>
               </li>
@@ -48,7 +47,3 @@
     {% endif %}
   {% endfor %}
 </ul>
-
-<script>
-
-</script>

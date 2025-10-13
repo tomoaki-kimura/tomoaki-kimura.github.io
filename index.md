@@ -9,9 +9,18 @@ permalink: '/'
       Hearth Side Programing School カリキュラム
     </h1>
     <div class="justify-self-center">
-      <div href="basic.html" data-course="basic" class="course bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded">
+      <a href="basic.html" data-course="basic" class="course bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded">
         ベーシックコース
-      </div>
+      </a>
+      <a href="standard.html" data-course="standard" class="course bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded">
+        スタンダードコース
+      </a>
+      <a href="advance.html" data-course="advance" class="course bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded">
+        アドバンスコース
+      </a>
+      <a href="professional.html" data-course="professional" class="course bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded">
+        プロ育成コース
+      </a>
     </div>
   </div>
 </div>

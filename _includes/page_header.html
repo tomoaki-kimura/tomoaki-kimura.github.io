@@ -2,7 +2,11 @@
 
 <div class="mx-10 my-10">
   <h1 class="text-4xl font-bold">
-    <p>{{ page.part }}を学ぼう</p>
+    {% if page.part %}
+      <p>{{ page.part }}</p>
+    {% else %}
+      <p>{{ page.title }}</p>
+    {% endif %}
     <p class="text-3xl mt-5 page-chapter">
       {% if page.chapter && page.title %}
         {{ page.chapter }}章 - {{ page.title }}
