@@ -73,6 +73,21 @@
     const part = url.pathname
     const currentChapter = part.replace('/', '').replace('.html', '')
     const currentChapterNode = document.querySelector(`a[href='${currentChapter}']`)
-    const currentParentNode = currentChapterNode.parentNode
-    currentParentNode.toggleAttribute("data-state-opened")
+    if (currentChapter && currentChapter.parentNode) {
+      const currentParentNode = currentChapterNode.parentNode
+      currentParentNode.toggleAttribute("data-state-opened")
+    }
+    
+    // current_course show
+    const courseData = {
+      basic: "ベーシックコース",
+      standard: "スタンダードコース",
+      advance: "アドバンスコース",
+      professional: "プロ育成コース"
+    }
+    const currentCourse = sessionStorage.getItem("currentCourse")
+    const currentCourseLink = document.querySelector('.current-course-link')
+    const currentCourseName = document.querySelector('.current-course-name')
+    currentCourseName.innerHTML = courseData[currentCourse]
+    currentCourseLink.setAttribute() 
   }
