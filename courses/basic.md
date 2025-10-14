@@ -7,7 +7,7 @@ permalink: basic.html
 
 <table>
   <tbody>
-    {% for post in site.scratch %}
+    {% for post in site.basic %}
       <tr>
         <td>{{ post.title }}{{ post.level }}</td>
       </tr>

@@ -6,11 +6,11 @@ courses:
   basic:
     - スクラッチ
     - Ruby(1)
-    - Ruby2D(1)
   standard:
     - 開発環境(1)
     - 開発環境(2)
     - Ruby(1)
+    - Git
     - Ruby2D(1)
     - Ruby_2(2)
     - Ruby2D(2)
@@ -19,9 +19,10 @@ courses:
     - HTML/CSS
     - CSS
     - 開発環境(2)
+    - Ruby(1)
+    - Ruby2D(1)
   professional:
     - 開発環境(1)
-    - HTML/CSS
 
 page_excepts: true
 
@@ -38,7 +39,7 @@ curriculums:
         chapter: hebi
   - title: 開発環境(1)
     icon: ri-computer-line
-    part: davelopent_environment
+    part: davelopent_environment_1
     contents:
       - title: VSCode
         chapter: vs_code
@@ -68,7 +69,7 @@ curriculums:
         chapter: response
   - title: JavaScript(1)
     icon: ri-javascript-line
-    part: javescript
+    part: javescript_1
     contents:
       - title: JavaScript基礎
         chapter: java_script_basic
@@ -76,7 +77,7 @@ curriculums:
         chapter: single_page
   - title: 開発環境(2)
     icon: ri-computer-line
-    part: davelopent_environment
+    part: davelopent_environment_2
     contents:
       - title: WSL
         chapter: wsl
@@ -84,7 +85,7 @@ curriculums:
         chapter: asdf
   - title: Ruby(1)
     icon: lo-ruby-line
-    part: ruby
+    part: ruby_1
     contents:
       - title: ruby基礎
         chapter: ruby_basic
@@ -92,7 +93,7 @@ curriculums:
         chapter: ruby_gems
   - title: Rspec(1)
     icon: lo-ruby-line
-    part: rspec
+    part: rspec_1
   - title: WebAssembly
     icon: lo-ruby-line
     part: wasm
@@ -106,7 +107,7 @@ curriculums:
         chapter: git
   - title: Ruby2D(1)
     icon: lo-ruby-line
-    part: ruby2d
+    part: ruby2d_1
     contents:
       - title: 基礎
         chapter: ruby2d_basic
@@ -114,20 +115,20 @@ curriculums:
         chapter: hebi
   - title: Ruby(2)
     icon: lo-ruby-line
-    part: ruby
+    part: ruby_2
     contents:
       - title: Ruby応用
         chapter: ruby_advance
   - title: Ruby2D(2)
     icon: lo-ruby-line
-    part: ruby2d
+    part: ruby2d_2
     contents:
       - title: ブロックくずし
         chapter: blocks
       - title: シューティングゲーム
-        chapter: ruby.html
+        chapter: shooting
       - title: テトリス
-        chapter: ruby.html
+        chapter: tetris
   - title: Github
     icon: ri-github-line
     part: github
@@ -152,15 +153,15 @@ curriculums:
         chapter: ruby
   - title: SQL(1)
     icon: ri-database-2-line
-    part: sql
+    part: sql_1
     contents:
       - title: SQLite
-        chapter: ruby.html
+        chapter: ruby
       - title: 時間割（２）
-        chapter: ruby.html
+        chapter: ruby
   - title: RubyOnRails(1)
     icon: lo-rails-line
-    part: ruby_on_rails
+    part: ruby_on_rails_1
     contents:
       - title: タスクリスト
         chapter: tasklist
@@ -168,7 +169,7 @@ curriculums:
         chapter: link
   - title: JavaScript(2)
     icon: ri-javascript-line
-    part: javescript
+    part: javescript_2
     contents:
       - title: TypeScript
         chapter: link
@@ -200,16 +201,19 @@ curriculums:
         chapter: youken
   - title: RubyOnRails(2)
     icon: lo-rails-line
+    part: ruby_on_rails_2
     contents:
       - title: ECサイト
         chapter: tasklist
   - title: 本番環境(1)
     icon: ri-server-line
+    part: production_environment_1
     contents:
       - title: AWS
         chapter: link
   - title: 卒業制作
     icon: ri-layout-5-line
+    part: total_test
     contents:
       - title: 企画
         chapter: kikaku
@@ -221,6 +225,7 @@ curriculums:
         chapter: deploy
   - title: 本番環境(2)
     icon: ri-server-line
+    part: production_environment_2
     contents:
       - title: ドメイン
         chapter: link

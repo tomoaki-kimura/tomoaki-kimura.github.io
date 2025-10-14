@@ -1,5 +1,3 @@
-import ChaptersTemplate from './chapters_template.js'
-
 window.onload = function() {
 
   // side_column state
@@ -43,10 +41,8 @@ window.onload = function() {
   const checkWindow = (windowSize) => {
       if (windowSize.matches) {
           openSideColumn()
-          console.log('PC');
       } else {
           closeSideColumn()
-          console.log('SP');
       }
   }
 
@@ -71,14 +67,14 @@ window.onload = function() {
   })
 
   // current_page menu
-  // const url = new URL(window.location.href)
-  // const part = url.pathname
-  // const currentChapter = part.replace('/', '').replace('.html', '')
-  // const currentChapterNode = document.querySelector(`a[href='${currentChapter}']`)
-  // if (currentChapter && currentChapter.parentNode) {
-  //   const currentParentNode = currentChapterNode.parentNode
-  //   currentParentNode.toggleAttribute("data-state-opened")
-  // }
+  const url = new URL(window.location.href)
+  const part = url.pathname
+  const currentChapter = part.replace('/', '').replace('.html', '')
+  const currentChapterNode = document.querySelector(`a[href='${currentChapter}']`)
+  if (currentChapter && currentChapter.parentNode) {
+    const currentParentNode = currentChapterNode.parentNode
+    currentParentNode.toggleAttribute("data-state-opened")
+  }
   
   // current_course name get sessionStrage
   const courseData = {
@@ -93,5 +89,3 @@ window.onload = function() {
   currentCourseName.innerHTML = courseData[currentCourse]
   currentCourseLink.setAttribute('href', `/${ currentCourse }.html`) 
 }
-
-console.log(ChaptersTemplate())
