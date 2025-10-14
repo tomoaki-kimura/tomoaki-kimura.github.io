@@ -228,3 +228,18 @@ curriculums:
         chapter: link
       - title: 自動デプロイ
         chapter: link
+
+collections_dir: articles
+
+collections:
+  posts:
+    output: true
+  basic:
+    output: true
+  standard:
+    output: true
+  advence:
+    output: true
+  professional:
+    output: true
+
