@@ -27,6 +27,6 @@
 </div>
 
 <script>
-const pageChapter = document.querySelector('.page-chapter')
-
+  const curriculum = {{ site.curriculums | find: 'part', 'scratch' | replace: ' =>', ':' }}
+  console.log(curriculum)
 </script>

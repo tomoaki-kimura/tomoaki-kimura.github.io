@@ -10,17 +10,11 @@ courses:
     - 開発環境(1)
     - 開発環境(2)
     - Ruby(1)
-    - Git
     - Ruby2D(1)
-    - Ruby_2(2)
+    - Ruby(2)
     - Ruby2D(2)
   advance:
     - 開発環境(1)
-    - HTML/CSS
-    - CSS
-    - 開発環境(2)
-    - Ruby(1)
-    - Ruby2D(1)
   professional:
     - 開発環境(1)
 
@@ -39,7 +33,7 @@ curriculums:
         chapter: hebi
   - title: 開発環境(1)
     icon: ri-computer-line
-    part: davelopent_environment_1
+    part: development_environment_1
     contents:
       - title: VSCode
         chapter: vs_code

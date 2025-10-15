@@ -162,7 +162,7 @@
 
   </aside>
   <main id="content" class="w-screen ml-64 bg-gray-50 min-h-screen">
-    /ruby2d/hebi/2025/10/06/section_02.html
+    /ruby2d/hebi/2025/10/05/hebi_01.html
 
 <div class="mx-10 my-10">
   <h1 class="text-4xl font-bold">
@@ -181,74 +181,41 @@
       
         このセクションで学ぶ内容：
       
-      最初のステップ。スクラッチの始め方を紹介します。
+      必要なgemのインストールと、ゲーム画面の立ち上げをします。
     </p>
   </div>
 </div>
 
 <script>
-const pageChapter = document.querySelector('.page-chapter')
-
+  const curriculum = {"title": "スクラッチ", "icon": "lo-scratch-line", "part": "scratch", "contents": [{"title": "迷路ゲーム", "chapter": "meiro"}, {"title": "ジャンプゲーム", "chapter": "jump_game"}, {"title": "ヘビゲーム", "chapter": "hebi"}]}
+  console.log(curriculum)
 </script>
 
     <div class="markdown-body">
-      <h2 id="自機をcircleクラスで作る">自機をCircleクラスで作る</h2>
+      <h2 id="ファイルの作成">ファイルの作成</h2>
 
-<h3 id="図形の描写">図形の描写</h3>
+<h3 id="gem-のインストール">gem のインストール</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>ruby2d
+</code></pre></div></div>
+
+<h3 id="mainrb-の作成">main.rb の作成</h3>
 
 <p>main.rb</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>requie "ruby2d"
 
-Circle.new(radius: 10)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>requie "ruby2d"
 
 show
 </code></pre></div></div>
 
 <h3 id="ファイルの実行">ファイルの実行</h3>
 
-<p>bash</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby main.rb
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby main.rb
 </code></pre></div></div>
 
 <h3 id="結果">結果</h3>
 
-<p>左上に丸が出現。</p>
-
-<h4 id="ここで試したいこと">*ここで試したいこと</h4>
-
-<ul>
-  <li>引数の数字を変更する。</li>
-  <li>引数を省略する。</li>
-</ul>
-
-<h3 id="丸の位置を変更する">丸の位置を変更する</h3>
-
-<p>main.rb</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>requie "ruby2d"
-
-head = Circle.new(radius: 10)
-head.x = Windoww.width / 2
-head.y = Window.height / 2
-
-show
-</code></pre></div></div>
-
-<h3 id="ファイルの実行-1">ファイルの実行</h3>
-
-<p>bash</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby main.rb
-</code></pre></div></div>
-
-<h3 id="結果-1">結果</h3>
-
-<p>丸が真ん中に移動。</p>
-
-<h4 id="ここで試したいこと-1">*ここで試したいこと</h4>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Window.width / 2</code> と <code class="language-plaintext highlighter-rouge">Window.height / 2</code> を <code class="language-plaintext highlighter-rouge">200</code> に置き換える。</li>
-  <li>他にも適当な数字を試してみる。</li>
-</ul>
+<p>NativeWindowが立ち上がればOK。</p>
 
     </div>
   </main>
