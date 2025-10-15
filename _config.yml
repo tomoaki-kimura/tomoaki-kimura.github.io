@@ -2,32 +2,29 @@ url: "https://tomoaki-kimura.github.io" # the base hostname & protocol for your 
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "HearthSide KidsPrograming School" # the name of your site, e.g. ACME Corp.
 
-
-course_names: 
-  basic: ベーシックコース
-  standard: スタンダードコース
-  advance: アドバンスコース
-  professional: プロ育成コース
-
 courses:
   - course: basic
-    title: ベーシックコース
-
-    - スクラッチ
-    - Ruby(1)
-  standard:
-    - 開発環境(1)
-    - 開発環境(2)
-    - Ruby(1)
-    - Ruby2D(1)
-    - Ruby(2)
-    - Ruby2D(2)
-  advance:
-    - 開発環境(1)
-  professional:
-    - 開発環境(1)
-
-page_excepts: true
+    title: べーシックコース
+    parts:
+      - スクラッチ
+      - Ruby(1)
+  - course: standard
+    title: スタンダードコース
+    parts:
+      - 開発環境(1)
+      - 開発環境(2)
+      - Ruby(1)
+      - Ruby2D(1)
+      - Ruby(2)
+      - Ruby2D(2)
+  - course: advance
+    title: アドバンスコース
+    parts:
+      - 開発環境(1)
+  - course: professional
+    title: プロフェッショナル
+    parts:
+      - 開発環境(1)
 
 curriculums:
   - title: スクラッチ

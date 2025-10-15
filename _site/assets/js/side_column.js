@@ -78,14 +78,11 @@ window.onload = function() {
   
   // current_course name get sessionStrage
   const courseData = {
-    basic: "ベーシックコース",
-    standard: "スタンダードコース",
-    advance: "アドバンスコース",
-    professional: "プロ育成コース"
+    COURSES_DATA
   }
   const currentCourse = sessionStorage.getItem("currentCourse")
   const currentCourseLink = document.querySelector('.current-course-link')
   const currentCourseName = document.querySelector('.current-course-name')
-  currentCourseName.innerHTML = courseData[currentCourse]
+  currentCourseName.innerHTML = courseData.findcurrentCourse]
   currentCourseLink.setAttribute('href', `/${ currentCourse }.html`) 
 }
