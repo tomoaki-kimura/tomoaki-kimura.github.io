@@ -1,16 +1,15 @@
+{% include global_variables.html %}
 {% include bread_crumb.html %}
-
+{{ current_course }}
 <div class="mx-10 my-10">
   <h1 class="text-4xl font-bold">
-    {% if page.part %}
-      <p>{{ page.part }}</p>
-    {% else %}
-      <p>{{ page.title }}</p>
-    {% endif %}
+    <p>{{ page.title }}</p>
     <p class="text-3xl mt-5 page-chapter">
       {% if page.chapter && page.title %}
         {{ page.chapter }}章 - {{ page.title }}
         <span class="ml-10">セクション</span>
+      {% else %}
+        <span class="params-chapter"></span>
       {% endif %}
     </p>
   </h1>

@@ -1,3 +1,5 @@
+{% include global_variables.html %}
+
 <ul class="mt-4 side-column-close hidden">
   <li class="mb-1 group active">
     <div class="flex">
@@ -16,7 +18,7 @@
     <div class="flex">
       <a href="" class="current-course-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <i class="ri-home-2-line mr-3 text-lg"></i>
-        <span class="text-lg current-course-name">{{ page.course }}</span>
+        <span class="text-lg current-course-name">{{ current_course.title }}</span>
       </a>
       <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
         <i class="ri-arrow-left-circle-fill mr-4"></i>
@@ -25,9 +27,9 @@
   </li>
 
   {% for curriculum in site.curriculums %}
-    {% if site.courses.basic contains curriculum.title %}
+    {% if current_course.parts contains curriculum.title %}
       <li class="mb-1 group">
-        <a href="{{ curriculum.link }}" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <a type="button" href="/{{ current_course.course }}/{{ curriculum.part }}.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
           <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
           <span class="text-sm">{{ curriculum.title }}</span>
           <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
@@ -36,7 +38,7 @@
           <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
             {% for content in curriculum.contents %}
               <li class="mb-4">
-                <a href="/{{ curriculum.part }}.html?chapter={{ content.chapter }}" class="text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                <a href="/{{ current_course.course }}/{{ curriculum.part }}.html?chapter={{ content.chapter }}" class="{{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
                   {{ content.title }}  
                 </a>
               </li>
