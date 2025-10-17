@@ -1,8 +1,9 @@
-<ul id="posts">
-  {% for post in site.posts %}
-    <li class="post {{ post.categories.last }}">
+{% assign posts_order_asc = site.posts | sort %}
+<ul id="posts" class="p-10">
+  {% for post in posts_order_asc %}
+    <li class="post {{ post.categories.last }} text-2xl my-4">
       <a href="{{ post.url }}">
-        {{ post.title }}（{{ post.section }}）
+        section_{{ post.section }}: {{ post.description }}
       </a>
     </li>
   {% endfor %}

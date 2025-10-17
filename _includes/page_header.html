@@ -1,19 +1,23 @@
 {% include global_variables.html %}
 {% include bread_crumb.html %}
 {{ current_course }}
+
 <div class="mx-10 my-10">
   <h1 class="text-4xl font-bold">
-    <p>{{ page.title }}</p>
-    <p class="text-3xl mt-5 page-chapter">
+    {% if page.chapter && page.title %}
+      <p>chapter : {{ page.chapter }} {{ page.title }}</p>
+    {% else %}
+      <p>{{ page.title }}</p>
+    {% endif %}
+    <p class="text-3xl mt-8 ml-5 page-chapter">
       {% if page.chapter && page.title %}
-        {{ page.chapter }}章 - {{ page.title }}
-        <span class="ml-10">セクション</span>
+        <span class="">section{{ page.section }}</span>
       {% else %}
         <span class="params-chapter"></span>
       {% endif %}
     </p>
   </h1>
-  <div class="mt-5">
+  <div class="mt-5 ml-5">
     <p>
       {% if page.chapter && page.title %}
         このセクションで学ぶ内容：
