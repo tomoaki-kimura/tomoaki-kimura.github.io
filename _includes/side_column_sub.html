@@ -13,10 +13,10 @@
   </li>
 </ul>
 
-<ul class="mt-4 side-column-open">
+<ul class="mt-4">
   <li class="mb-1 group active">
     <div class="flex">
-      <a href="" class="current-course-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+      <a href="" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <i class="{{ current_part.icon }} mr-3 text-lg"></i>
         <span class="text-lg current-course-name">{{ page.part }}</span>
       </a>
@@ -25,16 +25,13 @@
       </button>
     </div>
   </li>
-        {% if true %}
-        {{current_part}}
-          <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
-            {% for content in current_chapter.contents %}
-              <li class="mb-4">
-                <a href="/{{ current_course.course }}/{{ curriculum.part }}.html?chapter={{ content.chapter }}" class="{{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
-                  {{ content.title }}  
-                </a>
-              </li>
-            {% endfor %}  
-          </ul>
-        {% endif %}
+  <ul class="pl-7 mt-2 group-data-[state-opened]:block">
+    {% for content in site.posts | %}
+      <li class="mb-4 gropu-data-">
+        <a href="/{{ current_course.course }}/{{ curriculum.part }}.html?chapter={{ content.chapter }}" class="{{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+          {{ content.categories }}
+        </a>
+      </li>
+    {% endfor %}  
+  </ul>
 </ul>
