@@ -73,12 +73,11 @@ if (currentPathNode && currentPathNode.parentNode) {
   currentParentNode.toggleAttribute("data-state-opened")
 }
 
-// current_course name get sessionStrage
-//   const courseData = COURSES_DATA
-//   const currentCourse = sessionStorage.getItem("currentCourse")
-//   console.log(currentCourse)
-//   const currentCourseLink = document.querySelector('.current-course-link')
-//   const currentCourseName = document.querySelector('.current-course-name')
-//   currentCourseName.innerHTML = courseData.find( o => { o.course == currentCourse })
-//   currentCourseLink.setAttribute('href', `/${ currentCourse }.html`) 
+// #side_sub
 
+// top button is back to part
+const currentPartLinks = document.querySelectorAll('.current-part-link')
+if (currentPartLinks.length > 0) {
+  const currentPartUrl = new URL(currentPartLinks[0].href)
+  currentPartLinks.forEach( o => o.setAttribute('href', `/${currentCourse}${currentPartUrl.pathname}${currentPartUrl.search}`))
+}

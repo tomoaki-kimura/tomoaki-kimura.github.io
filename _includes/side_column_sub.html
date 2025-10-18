@@ -3,7 +3,7 @@
 <ul class="mt-4 side-column-close hidden">
   <li class="mb-1 group active">
     <div class="flex">
-      <a href="/" class="flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+      <a href="/{{ page.categories.first }}.html?chapter={{ page.categories.last }}" class="current-part-link flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <span class="text-sm"><br><br></span>
       </a>
       <button type="button" class="text-gray-300 toggle-menu-close">
@@ -13,25 +13,37 @@
   </li>
 </ul>
 
-<ul class="mt-4">
+<ul class="mt-4 side-column-open">
   <li class="mb-1 group active">
     <div class="flex">
-      <a href="" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+      <a href="/{{ page.categories.first }}.html?chapter={{ page.categories.last }}" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <i class="{{ current_part.icon }} mr-3 text-lg"></i>
-        <span class="text-lg current-course-name">{{ page.part }}</span>
+        <span class="text-lg current-course-name">{{ current_part.title }}</span>
       </a>
       <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
         <i class="ri-arrow-left-circle-fill mr-4"></i>
       </button>
     </div>
   </li>
-  <ul class="pl-7 mt-2 group-data-[state-opened]:block">
-    {% for content in site.posts | %}
-      <li class="mb-4 gropu-data-">
-        <a href="/{{ current_course.course }}/{{ curriculum.part }}.html?chapter={{ content.chapter }}" class="{{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
-          {{ content.categories }}
+
+  {% for curriculum in site.curriculums %}
+      <li class="mb-1 group">
+        <a type="button" href="/{{ current_course.course }}/{{ curriculum.part }}.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+          <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
+          <span class="text-sm">{{ curriculum.title }}</span>
+          <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
         </a>
+        {% if curriculum.contents %}
+          <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+            {% for content in curriculum.contents %}
+              <li class="mb-4">
+                <a href="/{{ current_course.course }}/{{ curriculum.part }}.html?chapter={{ content.chapter }}" class="{{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  {{ content.title }}  
+                </a>
+              </li>
+            {% endfor %}  
+          </ul>
+        {% endif %}
       </li>
-    {% endfor %}  
-  </ul>
+  {% endfor %}
 </ul>
