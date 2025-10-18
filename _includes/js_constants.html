@@ -1,7 +1,6 @@
 <script>
   const COURSES_DATA = {{ site.courses | replace: ' =>', ':' }}
   const CURRICULUMS_DATA = {{ site.curriculums | replace: ' =>', ':' }}
-  console.log(COURSES_DATA, CURRICULUMS_DATA)
   const currentCourse = sessionStorage.getItem('currentCourse')
 </script>
 

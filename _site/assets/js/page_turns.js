@@ -1,20 +1,24 @@
 const chapters = document.querySelectorAll('.chapters .chapter')
-let previous;
-let next;
+const previousButton = document.querySelector('.previous-link')
+const nextButton = document.querySelector('.next-link')
+
 if (chapters.length > 1) {
   const currentPageUrl = new URL(location.href)
   chapters.forEach((o, i) => {
     const chapterUrl = new URL(o.href)
     if (chapterUrl.pathname == currentPageUrl.pathname) {
-      const _previous = chapters[i - 1]
-      const _next = chapters[i + 1]
-      if (_previous) {
-        previous = new URL(_previous)
+      const previous = chapters[i - 1]
+      const next = chapters[i + 1]
+      if (previous) {
+        const _previous = new URL(previous)
+        previousButton.setAttribute('href', _previous.pathname)
+        previousButton.classList.remove('hidden')
       }
-      if (_next) {
-        next = new URL(_next)
+      if (next) {
+        const _next = new URL(next)
+        nextButton.setAttribute('href', _next.pathname)
+        nextButton.classList.remove('hidden')
       }
     }
   })
 }
-console.log(previous, next)

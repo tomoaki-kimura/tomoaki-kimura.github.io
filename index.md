@@ -4,11 +4,12 @@ permalink: '/'
 ---
 
 <div class="flex flex-col items-center grid crid-cols-1 h-screen">
-  <div class="flex flex-col items-center h-100 grid grid-cols-1 gap-4">
-    <h1 class="justify-self-center text-4xl">
-      Hearth Side Programing School カリキュラム
+  <div class="flex flex-col items-center">
+    <h1 class="flex mx-auto text-sm sm:text-2xl md:text-3xl py-10">
+      <span class="mr-2">Hearth Side Programing School</span>
+      <span>カリキュラム</span>
     </h1>
-    <div class="justify-self-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
       <a href="basic.html" data-course="basic" class="course bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-6 border border-blue-500 hover:border-transparent rounded">
         ベーシックコース
       </a>
