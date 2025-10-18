@@ -1,10 +1,15 @@
+{% include global_variables.html %}
 {% assign posts_order_asc = site.posts | sort %}
+  {{ current_course }}
+  {{ page.title }}
 <ul id="posts" class="p-10">
   {% for post in posts_order_asc %}
+    {% if current_course.parts contains page.title %}
     <li class="post {{ post.categories.last }} text-2xl my-4">
       <a href="{{ post.url }}">
         section_{{ post.section }}: {{ post.description }}
       </a>
     </li>
+    {% endif %}
   {% endfor %}
 </ul>

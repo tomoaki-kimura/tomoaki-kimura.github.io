@@ -1,4 +1,5 @@
-{% assign current_part = site.curriculums | find: 'part', page.categories.first` %}
+{% assign current_part = site.curriculums | find: 'title', page.part %}
+{% assign sort_posts = site.posts | sort %}
 
 <ul class="mt-4 side-column-close hidden">
   <li class="mb-1 group active">
@@ -18,7 +19,7 @@
     <div class="flex">
       <a href="/{{ page.categories.first }}.html?chapter={{ page.categories.last }}" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <i class="{{ current_part.icon }} mr-3 text-lg"></i>
-        <span class="text-lg current-course-name">{{ current_part.title }}</span>
+        <span class="text-lg current-course-name">{{ page.part }}</span>
       </a>
       <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
         <i class="ri-arrow-left-circle-fill mr-4"></i>
@@ -26,24 +27,22 @@
     </div>
   </li>
 
-  {% for curriculum in site.curriculums %}
-      <li class="mb-1 group">
-        <a type="button" href="/{{ current_course.course }}/{{ curriculum.part }}.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
-          <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
-          <span class="text-sm">{{ curriculum.title }}</span>
-          <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
-        </a>
-        {% if curriculum.contents %}
-          <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
-            {% for content in curriculum.contents %}
-              <li class="mb-4">
-                <a href="/{{ current_course.course }}/{{ curriculum.part }}.html?chapter={{ content.chapter }}" class="{{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
-                  {{ content.title }}  
-                </a>
-              </li>
-            {% endfor %}  
-          </ul>
+  <li class="mb-1 group" data-state-opened>
+    <p class="flex items-center py-2 px-4 text-gray-300 rounded-md">
+      <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
+      <span class="text-xl">chapter{{page.chapter}} :</span>
+      <span class="text-xl">{{ page.title }}</span>
+    </p>
+    <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+      {% for post in sort_posts %}
+        {% if post.categories == page.categories %}
+        <li class="mb-4">
+          <a href="{{ post.url }}" class="{{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section{{ post.section }}:<br>{{ post.section_title }}
+          </a>
+        </li>
         {% endif %}
-      </li>
-  {% endfor %}
+      {% endfor %}  
+    </ul>
+  </li>
 </ul>

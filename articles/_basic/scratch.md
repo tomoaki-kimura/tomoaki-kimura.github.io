@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: スクラッチを学ぼう
+title: スクラッチ
 course: basic
 part: scratch
 ---

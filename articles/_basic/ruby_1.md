@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Rubyを学ぼう(1)
+title: Ruby(1)
 course: basic
 part: ruby_1
 ---
