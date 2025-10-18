@@ -33,11 +33,11 @@
       <span class="text-xl">chapter{{page.chapter}} :</span>
       <span class="text-xl">{{ page.title }}</span>
     </p>
-    <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+    <ul class="chapters pl-7 mt-2 hidden group-data-[state-opened]:block">
       {% for post in sort_posts %}
         {% if post.categories == page.categories %}
         <li class="mb-4">
-          <a href="{{ post.url }}" class="{{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+          <a href="{{ post.url }}" class="chapter {{ content.chapter }} text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
             section{{ post.section }}:<br>{{ post.section_title }}
           </a>
         </li>
