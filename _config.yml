@@ -3,28 +3,28 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "HearthSide KidsPrograming School" # the name of your site, e.g. ACME Corp.
 
 courses:
-  - course: basic
-    title: べーシックコース
-    parts:
-      - スクラッチ
-      - Ruby(1)
+  #- course: basic
+  #  title: べーシックコース
+  #  parts:
+      #- スクラッチ
+      #- Ruby(1)
   - course: standard
     title: スタンダードコース
     parts:
       - 開発環境(1)
-      - 開発環境(2)
-      - Ruby(1)
+      #- 開発環境(2)
+      #- Ruby(1)
       - Ruby2D(1)
-      - Ruby(2)
-      - Ruby2D(2)
-  - course: advance
-    title: アドバンスコース
-    parts:
-      - 開発環境(1)
-  - course: professional
-    title: プロフェッショナル
-    parts:
-      - 開発環境(1)
+      #- Ruby(2)
+      #- Ruby2D(2)
+  #- course: advance
+  #  title: アドバンスコース
+  #  parts:
+  #    - 開発環境(1)
+  #- course: professional
+  #  title: プロフェッショナル
+  #  parts:
+  #    - 開発環境(1)
 
 curriculums:
   - title: スクラッチ
