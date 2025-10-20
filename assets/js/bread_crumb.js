@@ -77,9 +77,12 @@ if (is_sectionPage) {
   const target = [breadCourse, breadPart]
   insertCurrentCourseLink()
   displayBreadCrumb(target)
-  document.querySelectorAll('[data-state-opened]').forEach(o => {
-    delete o.dataset.stateOpened
-  })
+  // const sideColumnMenuSize = document.querySelectorAll('.part').length
+  // if (sideColumnMenuSize > 1) {
+  //   document.querySelectorAll('[data-state-opened]').forEach(o => {
+  //     delete o.dataset.stateOpened
+  //   })
+  // }
 }
 
 

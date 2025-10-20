@@ -48,9 +48,14 @@ checkWindow(mediaQuery);
 
 mediaQuery.addEventListener('change', checkWindow);
 
-//current course link
-const currentCourseLink = document.querySelector('.current-course-link')
-currentCourseLink.setAttribute('href', `/${currentCourse}.html`)
+// #side top link
+// top button is back to course
+const currentCourseLinks = document.querySelectorAll('.current-course-link')
+if (currentCourseLinks.length > 0) {
+  currentCourseLinks.forEach(o => {
+    o.setAttribute('href', `/${currentCourse}.html`)
+  })
+}
 
 //subMenu
 document.querySelectorAll(".sidebar-dropdown-toggle").forEach((item) => {
@@ -77,13 +82,14 @@ if (currentPathNode && currentPathNode.parentNode) {
   currentParentNode.toggleAttribute("data-state-opened")
 }
 
-// #side_sub
-
+// #side_sub top link
 // top button is back to part
 const currentPartLinks = document.querySelectorAll('.current-part-link')
 if (currentPartLinks.length > 0) {
-  const currentPartUrl = new URL(currentPartLinks[0].href)
-  currentPartLinks.forEach( o => o.setAttribute('href', `/${currentCourse}${currentPartUrl.pathname}${currentPartUrl.search}`))
+  const currentPath = new URL(location.href).pathname
+  const splitPath = currentPath.split('/')
+  const currentPart = splitPath[1]
+  currentPartLinks.forEach( o => {
+    o.setAttribute('href', `/${currentCourse}/${currentPart}.html`)
+  })
 }
-
-
