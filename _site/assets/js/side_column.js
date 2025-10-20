@@ -48,6 +48,10 @@ checkWindow(mediaQuery);
 
 mediaQuery.addEventListener('change', checkWindow);
 
+//current course link
+const currentCourseLink = document.querySelector('.current-course-link')
+currentCourseLink.setAttribute('href', `/${currentCourse}.html`)
+
 //subMenu
 document.querySelectorAll(".sidebar-dropdown-toggle").forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -81,3 +85,5 @@ if (currentPartLinks.length > 0) {
   const currentPartUrl = new URL(currentPartLinks[0].href)
   currentPartLinks.forEach( o => o.setAttribute('href', `/${currentCourse}${currentPartUrl.pathname}${currentPartUrl.search}`))
 }
+
+

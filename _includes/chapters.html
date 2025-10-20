@@ -1,9 +1,0 @@
-<ul id="posts">
-  {% for post in site.posts %}
-    <li class="post {{ post.categories.last }}">
-      <a href="{{ post.url }}">
-        {{ post.title }}（{{ post.section }}）
-      </a>
-    </li>
-  {% endfor %}
-</ul>

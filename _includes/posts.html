@@ -1,27 +1,27 @@
 {% assign posts_order_asc = site.posts | sort %}
 
-<div class="relative overflow-x-auto p-10">
-<table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-  <thead class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-    <tr>
-      <th scope="col" class="px-6 py-3">セクション</th>
-      <th scope="col" class="px-6 py-3">タイトル</th>
-    </tr>
-  </thead>
-  <tbody id="posts">
-    {% for post in posts_order_asc %}
-      {% if post.categories contains page.part %}
-      <tr class="post {{ post.categories.last }} text-xl my-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-        <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ post.section }}</th>
-        <td class="px-6 py-4">
-          <a href="{{ post.url }}">
-            {{ post.section_title }}
-          </a>
-        </td>
+<div class=" relative overflow-x-auto p-10">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <!--<thead class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th scope="col" class="px-6 py-3">セクション</th>
+        <th scope="col" class="px-6 py-3">タイトル</th>
       </tr>
-      {% endif %}
-    {% endfor %}
-  </tbody>
-</table>
+    </thead>-->
+    <tbody id="posts">
+      {% for post in posts_order_asc %}
+        {% if post.categories contains page.part %}
+        <tr class="post {{ post.categories.last }} text-xl my-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+          <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ post.section }}</th>
+          <td class="px-6 py-4">
+            <a href="{{ post.url }}">
+              {{ post.section_title }}
+            </a>
+          </td>
+        </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 
