@@ -1,6 +1,6 @@
 <script>
-  const COURSES_DATA = {{ site.courses | replace: ' =>', ':' }}
-  const CURRICULUMS_DATA = {{ site.curriculums | replace: ' =>', ':' }}
+  const COURSES_DATA = JSON.parse({{ site.courses | json }})
+  const CURRICULUMS_DATA = JSON.parse({{ site.curriculums | json }})
   const currentCourse = sessionStorage.getItem('currentCourse')
   const currentUrl = new URL(location.href)
 </script>
