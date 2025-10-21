@@ -34,8 +34,10 @@ const insertCurrentChapterString = (currentPart) => {
   const currentPartData = CURRICULUMS_DATA.find(o => o.part == currentPart)
   const currentChaptersData = currentPartData.contents
   const currentChapter = currentUrl.searchParams.get('chapter')
-  const currentChapterName = currentChaptersData.find(o => o.chapter == currentChapter).title
-  breadChapter.querySelector('a').innerHTML = currentChapterName
+  if (currentChaptersData) {
+    const currentChapterName = currentChaptersData.find(o => o.chapter == currentChapter).title
+    breadChapter.querySelector('a').innerHTML = currentChapterName
+  }
 }
 
 const insertCurrentChapterLink = () => {

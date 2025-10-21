@@ -2,5 +2,6 @@
   const COURSES_DATA = {{ site.courses | replace: ' =>', ':' }}
   const CURRICULUMS_DATA = {{ site.curriculums | replace: ' =>', ':' }}
   const currentCourse = sessionStorage.getItem('currentCourse')
+  const currentUrl = new URL(location.href)
 </script>
 
