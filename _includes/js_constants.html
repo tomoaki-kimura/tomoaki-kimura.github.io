@@ -1,7 +1,7 @@
-<% raw %>
+{% raw %}
 <div class="courses-data hidden" data-courses="{{ site.courses | replace: '"', '\'}}"></div>
 <div class="curriculums-data hidden" data-curriculums="{{ site.curriculums | replace: '"', '\'}}"></div>
-<% rawend %>
+{% endraw %}
 <script>
   const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses.replaceAll("\\", '"').replaceAll("=>", ":"))
   const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums.replaceAll("\\", '"').replaceAll("=>", ":"))
