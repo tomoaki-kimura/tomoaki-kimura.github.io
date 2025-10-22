@@ -31,7 +31,7 @@
   {% for curriculum in site.curriculums %}
     {% if side_current_course.parts contains curriculum.title %}
       <li class="mb-1 part group">
-        <a type="button" href="/{{ side_current_course.course }}/{{ curriculum.part }}.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <a type="button" href="/{{ page.course }}/{{ curriculum.part }}.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
           <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
           <span class="text-sm">{{ curriculum.title }}</span>
           <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>

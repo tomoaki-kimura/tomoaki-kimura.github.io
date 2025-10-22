@@ -26,7 +26,7 @@
       <div class="flex h-screen">
   <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900">
     
-<p class="text-gray-300">{"course" => "basic", "title" => "べーシックコース", "parts" => ["スクラッチ", "Ruby(1)"]}</p>
+<p class="text-gray-300">{"course" => "standard", "title" => "スタンダードコース", "parts" => ["開発環境(1)", "開発環境(2)", "Ruby(1)", "Ruby2D(1)", "Ruby(2)", "Ruby2D(2)"]}</p>
 <p class="text-gray-300">professional</p>
 
 <ul class="mt-4 side-column-close hidden">
@@ -47,7 +47,7 @@
     <div class="flex">
       <a href="" class="current-course-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <i class="ri-home-2-line mr-3 text-lg"></i>
-        <span class="text-lg current-course-name">べーシックコース</span>
+        <span class="text-lg current-course-name">スタンダードコース</span>
       </a>
       <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
         <i class="ri-arrow-left-circle-fill mr-4"></i>
@@ -57,30 +57,26 @@
 
   
     
+  
+    
       <li class="mb-1 part group">
-        <a type="button" href="//scratch.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
-          <i class="lo-scratch-line mr-3 text-lg side-column-lo-icon"></i>
-          <span class="text-sm">スクラッチ</span>
+        <a type="button" href="/professional/development_environment_1.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+          <i class="ri-computer-line mr-3 text-lg side-column-lo-icon"></i>
+          <span class="text-sm">開発環境(1)</span>
           <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
         </a>
         
           <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
             
               <li class="mb-4">
-                <a href="//scratch.html?chapter=meiro" class="meiro text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
-                  迷路ゲーム  
+                <a href="//development_environment_1.html?chapter=vs_code" class="vs_code text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  VSCode  
                 </a>
               </li>
             
               <li class="mb-4">
-                <a href="//scratch.html?chapter=jump_game" class="jump_game text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
-                  ジャンプゲーム  
-                </a>
-              </li>
-            
-              <li class="mb-4">
-                <a href="//scratch.html?chapter=hebi" class="hebi text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
-                  ヘビゲーム  
+                <a href="//development_environment_1.html?chapter=git" class="git text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  Git  
                 </a>
               </li>
               
@@ -96,12 +92,35 @@
     
   
     
-  
+      <li class="mb-1 part group">
+        <a type="button" href="/professional/davelopent_environment_2.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+          <i class="ri-computer-line mr-3 text-lg side-column-lo-icon"></i>
+          <span class="text-sm">開発環境(2)</span>
+          <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+        </a>
+        
+          <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+            
+              <li class="mb-4">
+                <a href="//davelopent_environment_2.html?chapter=wsl" class="wsl text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  WSL  
+                </a>
+              </li>
+            
+              <li class="mb-4">
+                <a href="//davelopent_environment_2.html?chapter=asdf" class="asdf text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  asdf  
+                </a>
+              </li>
+              
+          </ul>
+        
+      </li>
     
   
     
       <li class="mb-1 part group">
-        <a type="button" href="//ruby_1.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+        <a type="button" href="/professional/ruby_1.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
           <i class="lo-ruby-line mr-3 text-lg side-column-lo-icon"></i>
           <span class="text-sm">Ruby(1)</span>
           <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
@@ -133,9 +152,84 @@
     
   
     
-  
+      <li class="mb-1 part group">
+        <a type="button" href="/professional/ruby2d_1.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+          <i class="lo-ruby-line mr-3 text-lg side-column-lo-icon"></i>
+          <span class="text-sm">Ruby2D(1)</span>
+          <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+        </a>
+        
+          <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+            
+              <li class="mb-4">
+                <a href="//ruby2d_1.html?chapter=ruby2d_basic" class="ruby2d_basic text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  基礎  
+                </a>
+              </li>
+            
+              <li class="mb-4">
+                <a href="//ruby2d_1.html?chapter=hebi" class="hebi text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  ヘビゲーム  
+                </a>
+              </li>
+              
+          </ul>
+        
+      </li>
     
   
+    
+      <li class="mb-1 part group">
+        <a type="button" href="/professional/ruby_2.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+          <i class="lo-ruby-line mr-3 text-lg side-column-lo-icon"></i>
+          <span class="text-sm">Ruby(2)</span>
+          <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+        </a>
+        
+          <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+            
+              <li class="mb-4">
+                <a href="//ruby_2.html?chapter=ruby_advance" class="ruby_advance text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  Ruby応用  
+                </a>
+              </li>
+              
+          </ul>
+        
+      </li>
+    
+  
+    
+      <li class="mb-1 part group">
+        <a type="button" href="/professional/ruby2d_2.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
+          <i class="lo-ruby-line mr-3 text-lg side-column-lo-icon"></i>
+          <span class="text-sm">Ruby2D(2)</span>
+          <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
+        </a>
+        
+          <ul class="pl-7 mt-2 hidden group-data-[state-opened]:block">
+            
+              <li class="mb-4">
+                <a href="//ruby2d_2.html?chapter=blocks" class="blocks text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  ブロックくずし  
+                </a>
+              </li>
+            
+              <li class="mb-4">
+                <a href="//ruby2d_2.html?chapter=shooting" class="shooting text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  シューティングゲーム  
+                </a>
+              </li>
+            
+              <li class="mb-4">
+                <a href="//ruby2d_2.html?chapter=tetris" class="tetris text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+                  テトリス  
+                </a>
+              </li>
+              
+          </ul>
+        
+      </li>
     
   
     
