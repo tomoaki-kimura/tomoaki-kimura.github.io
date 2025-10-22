@@ -1,6 +1,6 @@
 
-<div class="courses-data hidden" data-courses='{{ site.courses | replace: "=>", ":"}}'></div>
-<div class="curriculums-data hidden" data-curriculums='{{ site.curriculums | replace: "=>", ":"}}'></div>
+<div class="courses-data hidden" data-courses='{{ site.courses | jsonify }}'></div>
+<div class="curriculums-data hidden" data-curriculums='{{ site.curriculums | jsonify }}'></div>
 
 <script>
   const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)
