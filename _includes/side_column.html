@@ -1,5 +1,5 @@
-{% assign current_course = site.courses.first %}
-<p class="text-gray-300">{{ current_course }}</p>
+{% assign side_current_course = site.courses.first %}
+<p class="text-gray-300">{{ side_current_course }}</p>
 <p class="text-gray-300">{{ page.course }}</p>
 
 <ul class="mt-4 side-column-close hidden">
@@ -20,7 +20,7 @@
     <div class="flex">
       <a href="" class="current-course-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
         <i class="ri-home-2-line mr-3 text-lg"></i>
-        <span class="text-lg current-course-name">{{ current_course.title }}</span>
+        <span class="text-lg current-course-name">{{ side_current_course.title }}</span>
       </a>
       <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
         <i class="ri-arrow-left-circle-fill mr-4"></i>
@@ -29,7 +29,7 @@
   </li>
 
   {% for curriculum in site.curriculums %}
-    {% if current_course.parts contains curriculum.title %}
+    {% if side_current_course.parts contains curriculum.title %}
       <li class="mb-1 part group">
         <a type="button" href="/{{ current_course.course }}/{{ curriculum.part }}.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
           <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
