@@ -1,4 +1,4 @@
-{% assign current_course = site.courses | find: 'course', 'standard' %}
+{% assign current_course = site.courses.first %}
 <p class="text-gray-300">{{ current_course }}</p>
 <p class="text-gray-300">{{ page.course }}</p>
 
