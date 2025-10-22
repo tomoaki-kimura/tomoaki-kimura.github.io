@@ -1,11 +1,12 @@
-<div class="courses-data hidden" data-courses='{{ site.courses | replace: "=>", ":" | replace: "'", "\" }}'></div>
-<div class="curriculums-data hidden" data-curriculums='{{ site.curriculums | replace: "=>", ":"| replace: "'", "\" }}'></div>
+<% raw %>
+<div class="courses-data hidden" data-courses="{{ site.courses | replace: '"', '\'}}"></div>
+<div class="curriculums-data hidden" data-curriculums="{{ site.curriculums | replace: '"', '\'}}"></div>
+<% rawend %>
 <script>
-  const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)
-  const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums)
+  const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses.replaceAll("\\", '"').replaceAll("=>", ":"))
+  const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums.replaceAll("\\", '"').replaceAll("=>", ":"))
+  console.log(CURRICULUMS_DATA)
   const currentCourse = sessionStorage.getItem('currentCourse')
   const currentUrl = new URL(location.href)
-  console.log(COURSES_DATA)
-  console.log(CURRICULUMS_DATA)
 </script>
 
