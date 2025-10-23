@@ -7,26 +7,24 @@ courses:
     title: べーシックコース
     parts:
       - スクラッチ
-      #- Ruby(1)
+      - Ruby(1)
   - course: standard
     title: スタンダードコース
     parts:
-      #- 開発環境(1)
-      #- 開発環境(2)
-      #- Ruby(1)
+      - 開発環境(1)
+      - 開発環境(2)
+      - Ruby(1)
       - Ruby2D(1)
-      #- Ruby(2)
+      - Ruby(2)
       - Ruby2D(2)
-      #- Git
-      #- RubyOnRails(1)
-  #- course: advance
-  #  title: アドバンスコース
-  #  parts:
-  #    - 開発環境(1)
-  #- course: professional
-  #  title: プロフェッショナル
-  #  parts:
-  #    - 開発環境(1)
+  - course: advance
+    title: アドバンスコース
+    parts:
+      - 開発環境(1)
+  - course: professional
+    title: プロフェッショナル
+    parts:
+      - 開発環境(1)
 
 curriculums:
   - title: スクラッチ
@@ -127,10 +125,10 @@ curriculums:
     contents:
       - title: ブロックくずし
         chapter: blocks
-      #- title: シューティングゲーム
-      #  chapter: shooting
-      #- title: テトリス
-      #  chapter: tetris
+      - title: シューティングゲーム
+        chapter: shooting
+      - title: テトリス
+        chapter: tetris
   - title: Github
     icon: ri-github-line
     part: github
