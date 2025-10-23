@@ -16,7 +16,9 @@ courses:
       #- Ruby(1)
       - Ruby2D(1)
       #- Ruby(2)
-      #- Ruby2D(2)
+      - Ruby2D(2)
+      #- Git
+      #- RubyOnRails(1)
   #- course: advance
   #  title: アドバンスコース
   #  parts:
@@ -125,10 +127,10 @@ curriculums:
     contents:
       - title: ブロックくずし
         chapter: blocks
-      - title: シューティングゲーム
-        chapter: shooting
-      - title: テトリス
-        chapter: tetris
+      #- title: シューティングゲーム
+      #  chapter: shooting
+      #- title: テトリス
+      #  chapter: tetris
   - title: Github
     icon: ri-github-line
     part: github

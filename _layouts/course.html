@@ -4,13 +4,11 @@ layout: default
 
 <div class="flex h-screen">
   <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900 overflow-y-auto">
-    {% include side_column_sub.html %}
+    {% include side_column.html %}
   </aside>
   <main id="content" class="w-screen ml-64 min-h-screen">
     {% include page_header.html %}
-    <div class="markdown-body">
-      {{ content }}
-    </div>
-    {% include page_turns.html %}
+    {{ content }}
+    {% include parts.html %}
   </main>
 </div>

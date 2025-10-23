@@ -1,0 +1,26 @@
+{% assign current_courses = site.courses | where: 'course', page.course %}
+{% assign parts = current_courses.first.parts %}
+
+<div class="p-10">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <tbody id="parts">
+      {% for curriculum in site.curriculums %}
+        {% if parts contains curriculum.title %}
+          <tr class="part text-xl my-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+            <th class="group px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+              <a href="/{{ page.course }}/{{ curriculum.part }}.html">
+                <i class="{{ curriculum.icon }}"></i>
+              </a>
+            </th>
+            <td class="px-6 py-4">
+              <a href="/{{ page.course }}/{{ curriculum.part }}.html">
+                {{ curriculum.title }}
+              </a>
+            </td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+

@@ -27,6 +27,36 @@
   }
 }
 
+#parts {
+  .part .group i {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 62.5px;
+    height: 62.5px;
+  }
+  .part .group i::before {
+    font-size: 300%;
+    color: #818b98;
+  }
+  .lo-ruby-line {
+    background-image: url('/assets/images/icons/ruby-svg-line_b.svg');
+  }
+  .lo-rails-line {
+    background-image: url('/assets/images/icons/rubyonrails-svg-line_b.svg');
+  }
+  .lo-scratch-line {
+    background-image: url('/assets/images/icons/scratch-svg-line_b.svg');
+  }
+  .lo-jekyll-line {
+    background-image: url('/assets/images/icons/jekyll-svg-line_b.svg');
+  }
+  .lo-sinatra-line {
+    background-image: url('/assets/images/icons/sinatra-svg-line_b.svg');
+  }
+}
+
 .markdown-body {
   box-sizing: border-box;
   min-width: 200px;
