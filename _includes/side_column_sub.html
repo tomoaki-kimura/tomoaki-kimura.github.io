@@ -1,5 +1,5 @@
 {% assign current_parts = site.curriculums | where: 'title', page.part %}
-{% assign current_part = current_parts[0] %}
+{% assign current_part = current_parts.first %}
 {% assign sort_posts = site.posts | sort %}
 
 <ul class="mt-4 side-column-close hidden">
