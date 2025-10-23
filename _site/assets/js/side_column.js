@@ -11,7 +11,7 @@ if (location.pathname != "/") {
     sideColumn.classList.remove('w-64')
     sideColumn.classList.add('w-9')
     main.classList.remove('ml-64')
-    main.classList.add('ml-9')
+    main.classList.add('ml-5')
     main.classList.add('w-screen')
     sideColumnOpen.classList.add('hidden')
     sideColumnClose.classList.remove('hidden')
@@ -21,7 +21,7 @@ if (location.pathname != "/") {
     if (sideColumn) {
       sideColumn.classList.remove('w-9')
       sideColumn.classList.add('w-64')
-      main.classList.remove('ml-9')
+      main.classList.remove('ml-5')
       main.classList.add('ml-64')
       sideColumnClose.classList.add('hidden')
       sideColumnOpen.classList.remove('hidden')
