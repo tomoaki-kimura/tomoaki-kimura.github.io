@@ -1,7 +1,5 @@
 {% assign side_current_courses = site.courses | where: 'course', page.course %}
 {% assign side_current_course = side_current_courses.first %}
-<p class="text-gray-300">{{ side_current_course.first }}</p>
-<p class="text-gray-300">{{ page.course }}</p>
 
 <ul class="mt-4 side-column-close hidden">
   <li class="mb-1 group active">
