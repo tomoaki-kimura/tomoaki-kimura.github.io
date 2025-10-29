@@ -1,30 +1,51 @@
 {% include global_variables.html %}
 {% include bread_crumb.html %}
+{% assign current_curriculums = site.curriculums | where: "title", page.title %}
+{% assign current_icon = current_curriculums.first.icon %}
 
-<div class="mx-10 my-10">
-  <h1 class="text-4xl font-bold">
+<div class="px-10 pt-10 pb-10 bg-gray-600 text-white">
+  <h1 class="page-header-title text-4xl font-bold">
     {% if page.chapter && page.title %}
-      <p>chapter : {{ page.chapter }} {{ page.title }}</p>
+      <p class="title border-b-4 pb-1">
+        <i class="ri-book-line mr-3"></i>
+        chapter {{ page.chapter }}: {{ page.title }}
+      </p>
     {% else %}
-      <p>{{ page.title }}</p>
+      <p class="title border-b-4 pb-2">
+        <i class="
+          {% if current_icon %}
+            {{ current_icon }}
+          {% else %}
+             ri-home-2-line
+          {% endif %}
+          mr-3 -mb-1"
+        >
+        </i>
+        {{ page.title }}
+      </p>
     {% endif %}
-    <p class="text-3xl mt-8 ml-5 page-chapter">
+    <p class="title text-3xl mt-8 ml-5 page-chapter">
       {% if page.chapter && page.title %}
-        <span class="">section{{ page.section }}</span>
+        <i class="ri-code-box-line"></i>
+        <span class="px-3 py-1">section{{ page.section }}:</span>{{ page.section_title }}
       {% else %}
         <span class="params-chapter"></span>
       {% endif %}
     </p>
   </h1>
   <div class="mt-5 ml-5">
-    <p>
-      {% if page.chapter && page.title %}
-        このセクションで学ぶ内容：
-      {% elsif page.description %}
-        ページ概要:
-      {% endif %}
+    {% if page.chapter && page.title || page.description %}
+    <div class="text-black bg-gray-100 p-4 mt-6 rounded-xl">
+      <p class="mb-3 font-bold">
+        {% if page.chapter && page.title %}
+          このセクションで学ぶ内容:
+        {% elsif page.description %}
+          ページ概要:
+        {% endif %}
+      </p>
       {{ page.description }}
-    </p>
+    </div>
+    {% endif %}
   </div>
 </div>
 

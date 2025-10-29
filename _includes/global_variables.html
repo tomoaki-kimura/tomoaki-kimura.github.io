@@ -1,1 +1,2 @@
-{% assign current_course = site.courses | find: 'course', page.course %}
+{% assign current_courses = site.courses | where: 'course', page.course %}
+{% assign current_course = current_courses.first %}

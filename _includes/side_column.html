@@ -17,8 +17,8 @@
 <ul class="mt-4 side-column-open">
   <li class="mb-1 group active">
     <div class="flex">
-      <a href="" class="current-course-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
-        <i class="ri-home-2-line mr-3 text-lg"></i>
+      <a href="" class="current-course-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
+        <i class="ri-home-2-line mr-1 text-lg"></i>
         <span class="text-lg current-course-name">{{ side_current_course.title }}</span>
       </a>
       <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
@@ -31,7 +31,7 @@
     {% if side_current_course.parts contains curriculum.title %}
       <li class="mb-1 part group">
         <a type="button" href="/{{ page.course }}/{{ curriculum.part }}.html" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-data-[state-opened]:bg-gray-950 group-data-[state-opened]:text-gray-100 sidebar-dropdown-toggle">
-          <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 text-lg side-column-lo-icon"></i>
+          <i class="{{ curriculum.icon | default: ri-instance-line }} mr-3 -mt-2 text-lg side-column-lo-icon"></i>
           <span class="text-sm">{{ curriculum.title }}</span>
           <i class="ri-arrow-right-s-line ml-auto group-data-[state-opened]:rotate-90"></i>
         </a>
