@@ -2,57 +2,92 @@
 ---
 @use 'base';
 
-.side-column-open {
+.side-column-open, .page-header-title {
   .group i {
+    display: inline-block;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 18px;
     height: 18px;
   }
+  .title i {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+  .title i::before {
+    color: #d1d9e0;
+  }
   .lo-ruby-line {
+    margin-bottom: -2px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/ruby-svg-line.svg');
   }
   .lo-rails-line {
+    margin-bottom: -2px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/rubyonrails-svg-line.svg');
   }
   .lo-scratch-line {
+    margin-bottom: -2px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/scratch-svg-line.svg');
   }
   .lo-jekyll-line {
+    margin-bottom: -2px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/jekyll-svg-line.svg');
   }
   .lo-sinatra-line {
+    margin-bottom: -2px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/sinatra-svg-line.svg');
   }
 }
 
 #parts {
+  .part .group a {
+    display: inline-block;
+  }
   .part .group i {
     display: block;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 62.5px;
-    height: 62.5px;
+    width: 60px;
+    height: 60px;
   }
   .part .group i::before {
     font-size: 300%;
     color: #818b98;
   }
   .lo-ruby-line {
+    margin-bottom: -5px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/ruby-svg-line_b.svg');
   }
   .lo-rails-line {
+    margin-bottom: -5px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/rubyonrails-svg-line_b.svg');
   }
   .lo-scratch-line {
+    margin-bottom: -5px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/scratch-svg-line_b.svg');
   }
   .lo-jekyll-line {
+    margin-bottom: -5px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/jekyll-svg-line_b.svg');
   }
   .lo-sinatra-line {
+    margin-bottom: -5px;
+    margin-top: 0px;
     background-image: url('/assets/images/icons/sinatra-svg-line_b.svg');
   }
 }

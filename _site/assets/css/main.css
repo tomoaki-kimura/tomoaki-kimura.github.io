@@ -4,54 +4,89 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.side-column-open .group i {
+.side-column-open .group i, .page-header-title .group i {
+  display: inline-block;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 18px;
   height: 18px;
 }
-.side-column-open .lo-ruby-line {
+.side-column-open .title i, .page-header-title .title i {
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+}
+.side-column-open .title i::before, .page-header-title .title i::before {
+  color: #d1d9e0;
+}
+.side-column-open .lo-ruby-line, .page-header-title .lo-ruby-line {
+  margin-bottom: -2px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/ruby-svg-line.svg");
 }
-.side-column-open .lo-rails-line {
+.side-column-open .lo-rails-line, .page-header-title .lo-rails-line {
+  margin-bottom: -2px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/rubyonrails-svg-line.svg");
 }
-.side-column-open .lo-scratch-line {
+.side-column-open .lo-scratch-line, .page-header-title .lo-scratch-line {
+  margin-bottom: -2px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/scratch-svg-line.svg");
 }
-.side-column-open .lo-jekyll-line {
+.side-column-open .lo-jekyll-line, .page-header-title .lo-jekyll-line {
+  margin-bottom: -2px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/jekyll-svg-line.svg");
 }
-.side-column-open .lo-sinatra-line {
+.side-column-open .lo-sinatra-line, .page-header-title .lo-sinatra-line {
+  margin-bottom: -2px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/sinatra-svg-line.svg");
 }
 
+#parts .part .group a {
+  display: inline-block;
+}
 #parts .part .group i {
   display: block;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 62.5px;
-  height: 62.5px;
+  width: 60px;
+  height: 60px;
 }
 #parts .part .group i::before {
   font-size: 300%;
   color: #818b98;
 }
 #parts .lo-ruby-line {
+  margin-bottom: -5px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/ruby-svg-line_b.svg");
 }
 #parts .lo-rails-line {
+  margin-bottom: -5px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/rubyonrails-svg-line_b.svg");
 }
 #parts .lo-scratch-line {
+  margin-bottom: -5px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/scratch-svg-line_b.svg");
 }
 #parts .lo-jekyll-line {
+  margin-bottom: -5px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/jekyll-svg-line_b.svg");
 }
 #parts .lo-sinatra-line {
+  margin-bottom: -5px;
+  margin-top: 0px;
   background-image: url("/assets/images/icons/sinatra-svg-line_b.svg");
 }
 

@@ -7,7 +7,7 @@ if (location.pathname != "/") {
 
   const chapterMaterial = `
     <tr class="text-xl my-4 bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-      <th class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"></th>
+      <th class="w-20 px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"></th>
       <td class="px-6 py-4">
         <a></a>
       </td>
@@ -30,7 +30,10 @@ if (location.pathname != "/") {
     const currentChapterData = currentPartChapters[currentChapterIndex]
     if (currentChapterData) {
       const currentChapterTitle = currentChapterData.title
-      pageHeaderTitle.innerHTML = `chapter${ currentChapterIndex + 1 }:　${ currentChapterTitle }`
+      pageHeaderTitle.innerHTML = `
+        <i class="ri-book-line"></i>
+        chapter${ currentChapterIndex + 1 }:　${ currentChapterTitle }
+      `
     } else {
       postsWrapper.innerHTML = ""
       currentPartChapters.forEach((o, i) => {
