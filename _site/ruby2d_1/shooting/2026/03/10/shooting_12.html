@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title> 
+      アイテム取得とパワーアップ - 
+      シューティングゲーム | 
+      HearthSide Programing School
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <div class="fixed w-full py-2 px-4 hg-white flex items-center shadow-md shadow-black/5 bg-gray-900">
+  <ul class="flex items-center ml-auto">
+    <li class="mr-2">
+      <a href="/" class="text-gray-300 text-sm hover:text-gray-100 mr-3">
+        HearthSide Programing School
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div class="bg-white dark:bg-gray-800 pt-10">
+      <div class="flex h-screen">
+  <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900 overflow-y-auto">
+    
+
+
+
+<ul class="mt-4 side-column-close hidden">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="" class="current-part-link flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <span class="text-sm"><br><br></span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-close">
+        <i class="ri-arrow-right-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ul class="mt-4 side-column-open">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="/ruby2d_1.html?chapter=shooting" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
+        <i class="lo-ruby-line mr-1 text-lg"></i>
+        <span class="text-lg current-course-name">Ruby2D(1)</span>
+      </a>
+      <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
+        <i class="ri-arrow-left-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+
+  <li class="mb-1 group" data-state-opened>
+    <p class="flex items-center py-2 px-4 text-gray-300 rounded-md">
+      <i class=" mr-3 text-lg side-column-lo-icon"></i>
+      <span class="text-xl">chapter1 :</span>
+      <span class="text-xl">シューティングゲーム</span>
+    </p>
+    <ul class="chapters pl-7 mt-2 hidden group-data-[state-opened]:block">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/02/27/shooting_01.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section1:<br>ファイルの作成
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/02/28/shooting_02.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section2:<br>タイトル画面を作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/01/shooting_03.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section3:<br>Statusクラスとゲーム開始
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/02/shooting_04.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section4:<br>Spriteクラスで自機を作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/03/shooting_05.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section5:<br>自機を動かす
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/04/shooting_06.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section6:<br>自機の傾きとオープニング
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/05/shooting_07.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section7:<br>Bulletクラスを作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/06/shooting_08.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section8:<br>弾を動かす
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/07/shooting_09.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section9:<br>弾のパワーアップ
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/08/shooting_10.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section10:<br>背景の星を作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/09/shooting_11.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section11:<br>パワーアップアイテムを作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/10/shooting_12.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section12:<br>アイテム取得とパワーアップ
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/11/shooting_13.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section13:<br>Enemy1クラスを作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/12/shooting_14.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section14:<br>敵を動かして消す
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/13/shooting_15.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section15:<br>弾の当たり判定とBurnアニメーション
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/14/shooting_16.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section16:<br>自機の当たり判定
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/15/shooting_17.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section17:<br>ライフ減少と無敵時間
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/16/shooting_18.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section18:<br>ゲームオーバーとリスタート
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/17/shooting_19.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section19:<br>スコアを実装する
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/18/shooting_20.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section20:<br>Enemy2を作る（ジグザグ型）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/19/shooting_21.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section21:<br>Enemy3を作る（小型高速型）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/20/shooting_22.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section22:<br>出現パターンと難易度調整
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/21/shooting_23.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section23:<br>ハイスコア表示
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/shooting/2026/03/22/shooting_24.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section24:<br>最終確認・まとめ
+          </a>
+        </li>
+        
+        
+    </ul>
+  </li>
+</ul>
+
+  </aside>
+  <main id="content" class="w-screen ml-64 min-h-screen">
+    
+
+
+<div class="wrap-break-word pt-1 pl-5 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <span class="bread-course hidden">
+    <a class="">シューティングゲーム</a>
+  </span>
+  <span class="bread-part hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">シューティングゲーム</a>
+  </span>
+  <span class="bread-chapter hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">シューティングゲーム</a>
+  </span>
+  <span class="bread-section hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">アイテム取得とパワーアップ</a>
+  </span>
+</div>
+
+
+
+
+<div class="px-10 pt-10 pb-10 bg-gray-600 text-white">
+  <h1 class="page-header-title text-4xl font-bold">
+    
+      <p class="title border-b-4 pb-1">
+        <i class="ri-book-line mr-3"></i>
+        chapter 1: シューティングゲーム
+      </p>
+    
+    <p class="title text-3xl mt-8 ml-5 page-chapter">
+      
+        <i class="ri-code-box-line"></i>
+        <span class="px-3 py-1">section12:</span>アイテム取得とパワーアップ
+      
+    </p>
+  </h1>
+  <div class="mt-5 ml-5">
+    
+    <div class="text-black bg-gray-100 p-4 mt-6 rounded-xl">
+      <p class="mb-3 font-bold">
+        
+          このセクションで学ぶ内容:
+        
+      </p>
+      自機がアイテムに触れるとレベルが上がる処理を実装します。当たり判定用の座標配列を学びます。
+    </div>
+    
+  </div>
+</div>
+
+
+    <div class="markdown-body">
+      <h2 id="アイテム取得とパワーアップ">アイテム取得とパワーアップ</h2>
+
+<h3 id="当たり判定エリアを作る">当たり判定エリアを作る</h3>
+
+<p>Spriteは四角形なので、中心付近の4点で当たり判定をとります。Fighter クラスに <code class="language-plaintext highlighter-rouge">hit_area</code> メソッドを追加します。</p>
+
+<p>app/models/fighter.rb（メソッドを追加）</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hit_area</span>
+  <span class="n">offset</span> <span class="o">=</span> <span class="mi">10</span>
+  <span class="n">offset_map</span> <span class="o">=</span> <span class="p">[</span><span class="n">offset</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">offset</span><span class="p">]</span>
+  <span class="n">area</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">offset_map</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">y</span><span class="o">|</span>
+    <span class="n">offset_map</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+      <span class="n">area</span> <span class="o">&lt;&lt;</span> <span class="p">[</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">+</span> <span class="nb">self</span><span class="p">.</span><span class="nf">width</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">,</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">+</span> <span class="nb">self</span><span class="p">.</span><span class="nf">height</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span>
+      <span class="p">]</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">area</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>自機の中心から上下左右に <code class="language-plaintext highlighter-rouge">offset</code> ずらした4点の座標を配列で返します。</p>
+
+<h3 id="itempow-に-touch-メソッドを追加する">ItemPow に touch メソッドを追加する</h3>
+
+<p>app/models/item_pow.rb</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ItemPow</span> <span class="o">&lt;</span> <span class="no">Sprite</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:speed</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="k">super</span><span class="p">(</span><span class="s2">"./app/images/item_pow.png"</span><span class="p">,</span>
+      <span class="ss">width: </span><span class="mi">30</span><span class="p">,</span>
+      <span class="ss">height: </span><span class="mi">30</span>
+    <span class="p">)</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span> <span class="o">=</span> <span class="mi">3</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">move</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">+=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">touch</span><span class="p">(</span><span class="n">fighter</span><span class="p">,</span> <span class="n">items</span><span class="p">)</span>
+    <span class="n">fighter</span><span class="p">.</span><span class="nf">hit_area</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">point</span><span class="o">|</span>
+      <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">contains?</span><span class="p">(</span><span class="o">*</span><span class="n">point</span><span class="p">)</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">remove</span>
+        <span class="n">items</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+        <span class="n">fighter</span><span class="p">.</span><span class="nf">power_up</span>
+        <span class="k">break</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">items</span><span class="p">)</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">new</span>
+    <span class="n">item</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="n">position</span><span class="p">.</span><span class="nf">first</span>
+    <span class="n">item</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="n">position</span><span class="p">.</span><span class="nf">last</span>
+    <span class="n">items</span> <span class="o">&lt;&lt;</span> <span class="n">item</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="fighter-に-power_up--power_down-メソッドを追加する">Fighter に power_up / power_down メソッドを追加する</h3>
+
+<p>app/models/fighter.rb</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">power_up</span>
+  <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">&lt;</span> <span class="mi">3</span>
+    <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">&lt;</span> <span class="mi">2</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">power_down</span>
+  <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">-=</span> <span class="mi">1</span> <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">&gt;</span> <span class="mi">0</span>
+  <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>アイテムを3個取るたびにレベルが1上がります（最大3）。</p>
+
+<h3 id="appmainrb-に-touch-の呼び出しを追加する動作確認用">app/main.rb に touch の呼び出しを追加する（動作確認用）</h3>
+
+<p>アイテムの本番スポーンは敵を倒したとき（セクション15）に実装します。今は動作確認のため、<code class="language-plaintext highlighter-rouge">I</code> キーで手動スポーンして <code class="language-plaintext highlighter-rouge">touch</code> が動くか確かめましょう。</p>
+
+<p>app/main.rb（:start ブロックに touch の呼び出しを追加）</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">when</span> <span class="ss">:start</span>
+  <span class="n">fighter</span><span class="p">.</span><span class="nf">opening_action</span>
+  <span class="no">Bullet</span><span class="p">.</span><span class="nf">move</span><span class="p">(</span><span class="n">bullets</span><span class="p">)</span>
+  <span class="n">items</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="n">item</span><span class="p">.</span><span class="nf">move</span> <span class="p">}</span>
+  <span class="n">items</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="n">item</span><span class="p">.</span><span class="nf">touch</span><span class="p">(</span><span class="n">fighter</span><span class="p">,</span> <span class="n">items</span><span class="p">)</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>app/main.rb（key_down に確認用のIキーを追加 ※セクション15で削除）</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">when</span> <span class="s2">"i"</span>
+  <span class="no">ItemPow</span><span class="p">.</span><span class="nf">set</span><span class="p">([</span><span class="n">fighter</span><span class="p">.</span><span class="nf">x</span><span class="p">,</span> <span class="n">fighter</span><span class="p">.</span><span class="nf">y</span> <span class="o">-</span> <span class="mi">50</span><span class="p">],</span> <span class="n">items</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="ファイルの実行">ファイルの実行</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shooting <span class="nv">$ </span>bundle <span class="nb">exec </span>rake
+</code></pre></div></div>
+
+<h3 id="結果">結果</h3>
+
+<p>Iキーを押すと自機の上にアイテムが出現し、自機が触れるとレベルが上がる。Jキーの弾の本数が増えることを確認しよう。</p>
+
+<h4 id="ここで試したいこと">*ここで試したいこと</h4>
+
+<ul>
+  <li>アイテムを3個取るとレベルが上がることを確認しよう。</li>
+  <li><code class="language-plaintext highlighter-rouge">hit_area</code> の <code class="language-plaintext highlighter-rouge">offset</code> を変えて当たり判定の範囲を広げてみよう。</li>
+</ul>
+
+<h3 id="ここまでのコード">ここまでのコード</h3>
+
+<p>app/models/item_pow.rb</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ItemPow</span> <span class="o">&lt;</span> <span class="no">Sprite</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:speed</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="k">super</span><span class="p">(</span><span class="s2">"./app/images/item_pow.png"</span><span class="p">,</span>
+      <span class="ss">width: </span><span class="mi">30</span><span class="p">,</span>
+      <span class="ss">height: </span><span class="mi">30</span>
+    <span class="p">)</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span> <span class="o">=</span> <span class="mi">3</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">move</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">+=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">touch</span><span class="p">(</span><span class="n">fighter</span><span class="p">,</span> <span class="n">items</span><span class="p">)</span>
+    <span class="n">fighter</span><span class="p">.</span><span class="nf">hit_area</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">point</span><span class="o">|</span>
+      <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">contains?</span><span class="p">(</span><span class="o">*</span><span class="n">point</span><span class="p">)</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">remove</span>
+        <span class="n">items</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="nb">self</span><span class="p">)</span>
+        <span class="n">fighter</span><span class="p">.</span><span class="nf">power_up</span>
+        <span class="k">break</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">items</span><span class="p">)</span>
+    <span class="n">item</span> <span class="o">=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">new</span>
+    <span class="n">item</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="n">position</span><span class="p">.</span><span class="nf">first</span>
+    <span class="n">item</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="n">position</span><span class="p">.</span><span class="nf">last</span>
+    <span class="n">items</span> <span class="o">&lt;&lt;</span> <span class="n">item</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>app/models/fighter.rb（hit_area・power_up・power_down を追加した全文）</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Fighter</span> <span class="o">&lt;</span> <span class="no">Sprite</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:speed</span><span class="p">,</span> <span class="ss">:tick</span><span class="p">,</span> <span class="ss">:status</span><span class="p">,</span> <span class="ss">:pow</span><span class="p">,</span> <span class="ss">:level</span><span class="p">,</span> <span class="ss">:life</span><span class="p">,</span> <span class="ss">:life_gauge</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="k">super</span><span class="p">(</span><span class="s2">"app/images/fighter.png"</span><span class="p">)</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">width</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">height</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">clip_width</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">clip_height</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span> <span class="o">=</span> <span class="mf">3.0</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">remove</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">tick</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">status</span> <span class="o">=</span> <span class="kp">nil</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">life</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">life_gauge</span> <span class="o">=</span> <span class="no">Text</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Life: </span><span class="si">#{</span><span class="nb">self</span><span class="p">.</span><span class="nf">life</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="ss">x: </span><span class="mi">20</span><span class="p">,</span> <span class="ss">y: </span><span class="mi">15</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="n">right_move</span> <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">"d"</span>
+    <span class="n">left_move</span>  <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">"a"</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">-=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span> <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">"w"</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">+=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span> <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">"s"</span>
+    <span class="n">window_limit</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">nutral</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="n">center_image</span> <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">"d"</span> <span class="o">||</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">"a"</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">opening_action</span>
+    <span class="k">case</span> <span class="nb">self</span><span class="p">.</span><span class="nf">status</span>
+    <span class="k">when</span> <span class="ss">:clear</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="p">(</span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span> <span class="o">-</span> <span class="nb">self</span><span class="p">.</span><span class="nf">width</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span> <span class="o">-</span> <span class="nb">self</span><span class="p">.</span><span class="nf">height</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">status</span> <span class="o">=</span> <span class="ss">:starting</span>
+    <span class="k">when</span> <span class="ss">:starting</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">-=</span> <span class="mi">1</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">color</span> <span class="o">=</span> <span class="s2">"random"</span>
+      <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">&lt;</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">3</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">status</span> <span class="o">=</span> <span class="ss">:ready</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">color</span> <span class="o">=</span> <span class="s2">"white"</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">hit_area</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">offset_map</span> <span class="o">=</span> <span class="p">[</span><span class="n">offset</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">offset</span><span class="p">]</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">offset_map</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">y</span><span class="o">|</span>
+      <span class="n">offset_map</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+        <span class="n">area</span> <span class="o">&lt;&lt;</span> <span class="p">[</span>
+          <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">+</span> <span class="nb">self</span><span class="p">.</span><span class="nf">width</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">,</span>
+          <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">+</span> <span class="nb">self</span><span class="p">.</span><span class="nf">height</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span>
+        <span class="p">]</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="n">area</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">power_up</span>
+    <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">&lt;</span> <span class="mi">3</span>
+      <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">&lt;</span> <span class="mi">2</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="k">else</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">power_down</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">-=</span> <span class="mi">1</span> <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">level</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">pow</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="k">def</span> <span class="nf">right_move</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">+=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">clip_x</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">flip_sprite</span><span class="p">(</span><span class="kp">nil</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">left_move</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">-=</span> <span class="nb">self</span><span class="p">.</span><span class="nf">speed</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">clip_x</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">flip_sprite</span><span class="p">(</span><span class="ss">:horizontal</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">center_image</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">clip_x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">flip_sprite</span><span class="p">(</span><span class="kp">nil</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">window_limit</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">&lt;</span> <span class="mi">0</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span> <span class="o">-</span> <span class="nb">self</span><span class="p">.</span><span class="nf">height</span> <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">y</span> <span class="o">&gt;</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span> <span class="o">-</span> <span class="nb">self</span><span class="p">.</span><span class="nf">height</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">&lt;</span> <span class="mi">0</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="no">Window</span><span class="p">.</span><span class="nf">width</span> <span class="o">-</span> <span class="nb">self</span><span class="p">.</span><span class="nf">width</span> <span class="k">if</span> <span class="nb">self</span><span class="p">.</span><span class="nf">x</span> <span class="o">&gt;</span> <span class="no">Window</span><span class="p">.</span><span class="nf">width</span> <span class="o">-</span> <span class="nb">self</span><span class="p">.</span><span class="nf">width</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+    </div>
+    <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <div>
+  <a href="" class="previous-link hidden">
+    <i class="ri-arrow-left-double-fill"></i>
+    <span>前のセクション</span>
+  </a>
+  </div>
+  <div>
+  <a href="" class="next-link hidden">
+    <span>次のセクション</span>
+    <i class="ri-arrow-right-double-fill"></i>
+  </a>
+  </div>
+</nav>
+
+  </main>
+</div>
+
+    </div>
+    
+<div class="courses-data hidden" data-courses='[{"course":"basic","title":"べーシックコース","parts":["スクラッチ","Ruby(1)"]},{"course":"standard","title":"スタンダードコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby2D(1)","Ruby(2)","Ruby2D(2)"]},{"course":"advance","title":"アドバンスコース","parts":["開発環境(1)"]},{"course":"professional","title":"プロフェッショナル","parts":["開発環境(1)"]}]'></div>
+<div class="curriculums-data hidden" data-curriculums='[{"title":"スクラッチ","icon":"lo-scratch-line","part":"scratch","contents":[{"title":"迷路ゲーム","chapter":"meiro"},{"title":"ジャンプゲーム","chapter":"jump_game"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"開発環境(1)","icon":"ri-computer-line","part":"development_environment_1","contents":[{"title":"VSCode","chapter":"vs_code"},{"title":"Git","chapter":"git"}]},{"title":"HTML/CSS","icon":"ri-html5-line","part":"html_css","contents":[{"title":"HTML","chapter":"html"},{"title":"CSS","chapter":"css"},{"title":"webサイト","chapter":"my_site"}]},{"title":"CSS","icon":"ri-css3-line","part":"css","contents":[{"title":"２カラムデザイン","chapter":"two_column"},{"title":"パネルデザイン","chapter":"panel"},{"title":"フォーム","chapter":"form"},{"title":"レスポンシブデザイン","chapter":"response"}]},{"title":"JavaScript(1)","icon":"ri-javascript-line","part":"javescript_1","contents":[{"title":"JavaScript基礎","chapter":"java_script_basic"},{"title":"シングルページ","chapter":"single_page"}]},{"title":"開発環境(2)","icon":"ri-computer-line","part":"davelopent_environment_2","contents":[{"title":"WSL","chapter":"wsl"},{"title":"asdf","chapter":"asdf"}]},{"title":"Ruby(1)","icon":"lo-ruby-line","part":"ruby_1","contents":[{"title":"ruby基礎","chapter":"ruby_basic"},{"title":"RubyGems","chapter":"ruby_gems"}]},{"title":"Rspec(1)","icon":"lo-ruby-line","part":"rspec_1"},{"title":"WebAssembly","icon":"lo-ruby-line","part":"wasm"},{"title":"Git","icon":"ri-git-branch-line","part":"git","contents":[{"title":"Git基礎","chapter":"git"},{"title":"github.io","chapter":"git"}]},{"title":"Ruby2D(1)","icon":"lo-ruby-line","part":"ruby2d_1","contents":[{"title":"基礎","chapter":"ruby2d_basic"},{"title":"ヘビゲーム","chapter":"hebi"},{"title":"ブロック崩し","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"}]},{"title":"Ruby(2)","icon":"lo-ruby-line","part":"ruby_2","contents":[{"title":"Ruby応用","chapter":"ruby_advance"}]},{"title":"Ruby2D(2)","icon":"lo-ruby-line","part":"ruby2d_2","contents":[{"title":"ブロックくずし","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"},{"title":"テトリス","chapter":"tetris"}]},{"title":"Github","icon":"ri-github-line","part":"github","contents":[{"title":"Github基礎","chapter":"link"}]},{"title":"Jekyll","icon":"lo-jekyll-line","part":"jekll","contents":[{"title":"ブログサイト","chapter":"ruby"},{"title":"webサイトのリプレイス","chapter":"ruby"}]},{"title":"sinatra","icon":"lo-sinatra-line","part":"sinatra","contents":[{"title":"時間割","chapter":"ruby"},{"title":"Api","chapter":"ruby"}]},{"title":"SQL(1)","icon":"ri-database-2-line","part":"sql_1","contents":[{"title":"SQLite","chapter":"ruby"},{"title":"時間割（２）","chapter":"ruby"}]},{"title":"RubyOnRails(1)","icon":"lo-rails-line","part":"ruby_on_rails_1","contents":[{"title":"タスクリスト","chapter":"tasklist"},{"title":"SNS","chapter":"link"}]},{"title":"JavaScript(2)","icon":"ri-javascript-line","part":"javescript_2","contents":[{"title":"TypeScript","chapter":"link"},{"title":"Stimulus","chapter":"stimulus"}]},{"title":"SQL(2)","icon":"ri-database-2-line","part":"sql_2","contents":[{"title":"PostgreSQL","chapter":"link"}]},{"title":"設計","icon":"ri-file-line","part":"app_design","contents":[{"title":"企画書","chapter":"kikaku"},{"title":"画面遷移図","chapter":"senizu"},{"title":"画面詳細図","chapter":"shousai"},{"title":"ER図","chapter":"er"},{"title":"テーブル設計書","chapter":"teble"},{"title":"URL設計書","chapter":"url"},{"title":"要件定義書","chapter":"youken"}]},{"title":"RubyOnRails(2)","icon":"lo-rails-line","part":"ruby_on_rails_2","contents":[{"title":"ECサイト","chapter":"tasklist"}]},{"title":"本番環境(1)","icon":"ri-server-line","part":"production_environment_1","contents":[{"title":"AWS","chapter":"link"}]},{"title":"卒業制作","icon":"ri-layout-5-line","part":"total_test","contents":[{"title":"企画","chapter":"kikaku"},{"title":"設計","chapter":"sekkei"},{"title":"制作","chapter":"seisaku"},{"title":"デプロイ","chapter":"deploy"}]},{"title":"本番環境(2)","icon":"ri-server-line","part":"production_environment_2","contents":[{"title":"ドメイン","chapter":"link"},{"title":"SSL","chapter":"link"},{"title":"自動デプロイ","chapter":"link"}]}]'></div>
+
+<script>
+  const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)
+  const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums)
+  const currentCourse = sessionStorage.getItem('currentCourse')
+  const currentUrl = new URL(location.href)
+</script>
+
+
+  </body>
+</html>
