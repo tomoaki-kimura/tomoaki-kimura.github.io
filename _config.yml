@@ -113,6 +113,10 @@ curriculums:
         chapter: ruby2d_basic
       - title: ヘビゲーム
         chapter: hebi
+      - title: ブロック崩し
+        chapter: blocks
+      - title: シューティングゲーム
+        chapter: shooting
   - title: Ruby(2)
     icon: lo-ruby-line
     part: ruby_2
