@@ -1,0 +1,18 @@
+# _config.yml の curriculums: セクションへの追加テンプレート
+#
+# 既存パートに1レッスン追加する場合は、該当パートの contents: に
+# 以下のエントリを1つ足すだけでよい。
+#
+#   contents:
+#     - title: ブロック崩し    # ← 追加するカリキュラムのタイトル（サイト表示名）
+#       chapter: blocks        # ← articles/_posts/{part}/{chapter}/ のフォルダ名
+
+# 新しいパートを丸ごと追加する場合は以下の形でブロックごと追加する。
+- title: パートのタイトル       # サイトのメニューに表示される名前
+  icon: lo-ruby-line            # アイコン名（既存パートを参考に選ぶ）
+  part: part_key                # articles/_posts/{part}/ のフォルダ名・カテゴリキー
+  contents:
+    - title: レッスン1のタイトル
+      chapter: chapter_key_1
+    - title: レッスン2のタイトル
+      chapter: chapter_key_2
