@@ -111,12 +111,10 @@ curriculums:
     contents:
       - title: 基礎
         chapter: ruby2d_basic
+      - title: 川下りゲーム
+        chapter: river
       - title: ヘビゲーム
         chapter: hebi
-      - title: ブロック崩し
-        chapter: blocks
-      - title: シューティングゲーム
-        chapter: shooting
   - title: Ruby(2)
     icon: lo-ruby-line
     part: ruby_2
