@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title> 
+      岩を1つ流す - 
+      川下りゲーム | 
+      HearthSide Programing School
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <div class="fixed w-full py-2 px-4 hg-white flex items-center shadow-md shadow-black/5 bg-gray-900">
+  <ul class="flex items-center ml-auto">
+    <li class="mr-2">
+      <a href="/" class="text-gray-300 text-sm hover:text-gray-100 mr-3">
+        HearthSide Programing School
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div class="bg-white dark:bg-gray-800 pt-10">
+      <div class="flex h-screen">
+  <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900 overflow-y-auto">
+    
+
+
+
+<ul class="mt-4 side-column-close hidden">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="" class="current-part-link flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <span class="text-sm"><br><br></span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-close">
+        <i class="ri-arrow-right-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ul class="mt-4 side-column-open">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="/ruby2d_1.html?chapter=river" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
+        <i class="lo-ruby-line mr-1 text-lg"></i>
+        <span class="text-lg current-course-name">Ruby2D(1)</span>
+      </a>
+      <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
+        <i class="ri-arrow-left-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+
+  <li class="mb-1 group" data-state-opened>
+    <p class="flex items-center py-2 px-4 text-gray-300 rounded-md">
+      <i class=" mr-3 text-lg side-column-lo-icon"></i>
+      <span class="text-xl">chapter1 :</span>
+      <span class="text-xl">川下りゲーム</span>
+    </p>
+    <ul class="chapters pl-7 mt-2 hidden group-data-[state-opened]:block">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/river/2025/12/01/river_01.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section1:<br>川とボートを表示する
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/river/2025/12/02/river_02.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section2:<br>キー操作でボートを動かす
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/river/2025/12/03/river_03.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section3:<br>岩を1つ流す
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/river/2025/12/04/river_04.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section4:<br>衝突判定でゲームオーバー
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_1/river/2025/12/05/river_05.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section5:<br>岩を複数・ランダムに流す
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+    </ul>
+  </li>
+</ul>
+
+  </aside>
+  <main id="content" class="w-screen ml-64 min-h-screen">
+    
+
+
+<div class="wrap-break-word pt-1 pl-5 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <span class="bread-course hidden">
+    <a class="">川下りゲーム</a>
+  </span>
+  <span class="bread-part hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">川下りゲーム</a>
+  </span>
+  <span class="bread-chapter hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">川下りゲーム</a>
+  </span>
+  <span class="bread-section hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">岩を1つ流す</a>
+  </span>
+</div>
+
+
+
+
+<div class="px-10 pt-10 pb-10 bg-gray-600 text-white">
+  <h1 class="page-header-title text-4xl font-bold">
+    
+      <p class="title border-b-4 pb-1">
+        <i class="ri-book-line mr-3"></i>
+        chapter 1: 川下りゲーム
+      </p>
+    
+    <p class="title text-3xl mt-8 ml-5 page-chapter">
+      
+        <i class="ri-code-box-line"></i>
+        <span class="px-3 py-1">section3:</span>岩を1つ流す
+      
+    </p>
+  </h1>
+  <div class="mt-5 ml-5">
+    
+    <div class="text-black bg-gray-100 p-4 mt-6 rounded-xl">
+      <p class="mb-3 font-bold">
+        
+          このセクションで学ぶ内容:
+        
+      </p>
+      update doを使って、岩を上から下へ流れさせます。画面の外に出たら上に戻します。
+    </div>
+    
+  </div>
+</div>
+
+
+    <div class="markdown-body">
+      <h2 id="岩を1つ流す">岩を1つ流す</h2>
+
+<h3 id="岩を表示する">岩を表示する</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Circle</code> で岩を作ります。</p>
+
+<p>main.rb</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">略</span><span class="p">)</span>
+
+<span class="c1"># 岩</span>
+<span class="n">rock</span> <span class="o">=</span> <span class="no">Circle</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">radius: </span><span class="mi">15</span><span class="p">,</span> <span class="ss">color: </span><span class="s2">"gray"</span><span class="p">)</span>
+<span class="n">rock</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span><span class="p">)</span>
+<span class="n">rock</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">on</span> <span class="ss">:key_down</span> <span class="k">do</span> <span class="o">|</span><span class="n">event</span><span class="o">|</span>
+<span class="p">(</span><span class="n">略</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">rand(0..Window.width)</code> で、岩の横位置をランダムな数にしています。</p>
+
+<h3 id="岩を毎フレーム動かす">岩を毎フレーム動かす</h3>
+
+<p><code class="language-plaintext highlighter-rouge">update do</code> の中に書いた処理は、画面が描画されるたびに（1秒間に何十回も）くり返し実行されます。</p>
+
+<p>main.rb</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">略</span><span class="p">)</span>
+
+<span class="n">update</span> <span class="k">do</span>
+  <span class="n">rock</span><span class="p">.</span><span class="nf">y</span> <span class="o">+=</span> <span class="mi">4</span>
+  <span class="k">if</span> <span class="n">rock</span><span class="p">.</span><span class="nf">y</span> <span class="o">&gt;</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span>
+    <span class="n">rock</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">rock</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">show</span>
+</code></pre></div></div>
+
+<p>岩が画面の下（<code class="language-plaintext highlighter-rouge">Window.height</code> より下）まで流れたら、<code class="language-plaintext highlighter-rouge">rock.y</code> を <code class="language-plaintext highlighter-rouge">0</code> に戻し、<code class="language-plaintext highlighter-rouge">rock.x</code> も新しいランダムな位置に変えることで、岩がずっと流れ続けているように見せています。</p>
+
+<h3 id="ファイルの実行">ファイルの実行</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby2d/river <span class="nv">$ </span>ruby main.rb
+</code></pre></div></div>
+
+<h3 id="結果">結果</h3>
+
+<p>岩がランダムな横位置から下に向かって流れ、画面の外に出るとまた上から流れてくる。</p>
+
+<h4 id="ここで試したいこと">*ここで試したいこと</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rock.y += 4</code> の <code class="language-plaintext highlighter-rouge">4</code> を変えて、岩の流れる速さを変えてみよう。</li>
+</ul>
+
+<h3 id="ここまでのコード">ここまでのコード</h3>
+
+<p>main.rb</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s2">"ruby2d"</span>
+
+<span class="c1"># 川（背景）</span>
+<span class="n">river</span> <span class="o">=</span> <span class="no">Rectangle</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">width: </span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span><span class="p">,</span> <span class="ss">height: </span><span class="no">Window</span><span class="p">.</span><span class="nf">height</span><span class="p">,</span> <span class="ss">color: </span><span class="s2">"blue"</span><span class="p">)</span>
+
+<span class="c1"># ボート</span>
+<span class="n">boat</span> <span class="o">=</span> <span class="no">Rectangle</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">width: </span><span class="mi">60</span><span class="p">,</span> <span class="ss">height: </span><span class="mi">30</span><span class="p">,</span> <span class="ss">color: </span><span class="s2">"brown"</span><span class="p">)</span>
+<span class="n">boat</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="p">(</span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span> <span class="o">-</span> <span class="n">boat</span><span class="p">.</span><span class="nf">width</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">boat</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span> <span class="o">-</span> <span class="n">boat</span><span class="p">.</span><span class="nf">height</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="c1"># 岩</span>
+<span class="n">rock</span> <span class="o">=</span> <span class="no">Circle</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">radius: </span><span class="mi">15</span><span class="p">,</span> <span class="ss">color: </span><span class="s2">"gray"</span><span class="p">)</span>
+<span class="n">rock</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span><span class="p">)</span>
+<span class="n">rock</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">on</span> <span class="ss">:key_down</span> <span class="k">do</span> <span class="o">|</span><span class="n">event</span><span class="o">|</span>
+  <span class="k">case</span> <span class="n">event</span><span class="p">.</span><span class="nf">key</span>
+  <span class="k">when</span> <span class="s2">"left"</span>
+    <span class="n">boat</span><span class="p">.</span><span class="nf">x</span> <span class="o">-=</span> <span class="mi">20</span> <span class="k">if</span> <span class="n">boat</span><span class="p">.</span><span class="nf">x</span> <span class="o">&gt;</span> <span class="mi">0</span>
+  <span class="k">when</span> <span class="s2">"right"</span>
+    <span class="n">boat</span><span class="p">.</span><span class="nf">x</span> <span class="o">+=</span> <span class="mi">20</span> <span class="k">if</span> <span class="n">boat</span><span class="p">.</span><span class="nf">x</span> <span class="o">&lt;</span> <span class="no">Window</span><span class="p">.</span><span class="nf">width</span> <span class="o">-</span> <span class="n">boat</span><span class="p">.</span><span class="nf">width</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">update</span> <span class="k">do</span>
+  <span class="n">rock</span><span class="p">.</span><span class="nf">y</span> <span class="o">+=</span> <span class="mi">4</span>
+  <span class="k">if</span> <span class="n">rock</span><span class="p">.</span><span class="nf">y</span> <span class="o">&gt;</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span>
+    <span class="n">rock</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">rock</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">show</span>
+</code></pre></div></div>
+
+    </div>
+    <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <div>
+  <a href="" class="previous-link hidden">
+    <i class="ri-arrow-left-double-fill"></i>
+    <span>前のセクション</span>
+  </a>
+  </div>
+  <div>
+  <a href="" class="next-link hidden">
+    <span>次のセクション</span>
+    <i class="ri-arrow-right-double-fill"></i>
+  </a>
+  </div>
+</nav>
+
+  </main>
+</div>
+
+    </div>
+    
+<div class="courses-data hidden" data-courses='[{"course":"basic","title":"べーシックコース","parts":["スクラッチ","Ruby(1)"]},{"course":"standard","title":"スタンダードコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby2D(1)","Ruby(2)","Ruby2D(2)"]},{"course":"advance","title":"アドバンスコース","parts":["開発環境(1)"]},{"course":"professional","title":"プロフェッショナル","parts":["開発環境(1)"]}]'></div>
+<div class="curriculums-data hidden" data-curriculums='[{"title":"スクラッチ","icon":"lo-scratch-line","part":"scratch","contents":[{"title":"迷路ゲーム","chapter":"meiro"},{"title":"ジャンプゲーム","chapter":"jump_game"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"開発環境(1)","icon":"ri-computer-line","part":"development_environment_1","contents":[{"title":"VSCode","chapter":"vs_code"},{"title":"Git","chapter":"git"}]},{"title":"HTML/CSS","icon":"ri-html5-line","part":"html_css","contents":[{"title":"HTML","chapter":"html"},{"title":"CSS","chapter":"css"},{"title":"webサイト","chapter":"my_site"}]},{"title":"CSS","icon":"ri-css3-line","part":"css","contents":[{"title":"２カラムデザイン","chapter":"two_column"},{"title":"パネルデザイン","chapter":"panel"},{"title":"フォーム","chapter":"form"},{"title":"レスポンシブデザイン","chapter":"response"}]},{"title":"JavaScript(1)","icon":"ri-javascript-line","part":"javescript_1","contents":[{"title":"JavaScript基礎","chapter":"java_script_basic"},{"title":"シングルページ","chapter":"single_page"}]},{"title":"開発環境(2)","icon":"ri-computer-line","part":"davelopent_environment_2","contents":[{"title":"WSL","chapter":"wsl"},{"title":"asdf","chapter":"asdf"}]},{"title":"Ruby(1)","icon":"lo-ruby-line","part":"ruby_1","contents":[{"title":"ruby基礎","chapter":"ruby_basic"},{"title":"RubyGems","chapter":"ruby_gems"}]},{"title":"Rspec(1)","icon":"lo-ruby-line","part":"rspec_1"},{"title":"WebAssembly","icon":"lo-ruby-line","part":"wasm"},{"title":"Git","icon":"ri-git-branch-line","part":"git","contents":[{"title":"Git基礎","chapter":"git"},{"title":"github.io","chapter":"git"}]},{"title":"Ruby2D(1)","icon":"lo-ruby-line","part":"ruby2d_1","contents":[{"title":"基礎","chapter":"ruby2d_basic"},{"title":"川下りゲーム","chapter":"river"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"Ruby(2)","icon":"lo-ruby-line","part":"ruby_2","contents":[{"title":"Ruby応用","chapter":"ruby_advance"}]},{"title":"Ruby2D(2)","icon":"lo-ruby-line","part":"ruby2d_2","contents":[{"title":"ブロックくずし","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"},{"title":"テトリス","chapter":"tetris"}]},{"title":"Github","icon":"ri-github-line","part":"github","contents":[{"title":"Github基礎","chapter":"link"}]},{"title":"Jekyll","icon":"lo-jekyll-line","part":"jekll","contents":[{"title":"ブログサイト","chapter":"ruby"},{"title":"webサイトのリプレイス","chapter":"ruby"}]},{"title":"sinatra","icon":"lo-sinatra-line","part":"sinatra","contents":[{"title":"時間割","chapter":"ruby"},{"title":"Api","chapter":"ruby"}]},{"title":"SQL(1)","icon":"ri-database-2-line","part":"sql_1","contents":[{"title":"SQLite","chapter":"ruby"},{"title":"時間割（２）","chapter":"ruby"}]},{"title":"RubyOnRails(1)","icon":"lo-rails-line","part":"ruby_on_rails_1","contents":[{"title":"タスクリスト","chapter":"tasklist"},{"title":"SNS","chapter":"link"}]},{"title":"JavaScript(2)","icon":"ri-javascript-line","part":"javescript_2","contents":[{"title":"TypeScript","chapter":"link"},{"title":"Stimulus","chapter":"stimulus"}]},{"title":"SQL(2)","icon":"ri-database-2-line","part":"sql_2","contents":[{"title":"PostgreSQL","chapter":"link"}]},{"title":"設計","icon":"ri-file-line","part":"app_design","contents":[{"title":"企画書","chapter":"kikaku"},{"title":"画面遷移図","chapter":"senizu"},{"title":"画面詳細図","chapter":"shousai"},{"title":"ER図","chapter":"er"},{"title":"テーブル設計書","chapter":"teble"},{"title":"URL設計書","chapter":"url"},{"title":"要件定義書","chapter":"youken"}]},{"title":"RubyOnRails(2)","icon":"lo-rails-line","part":"ruby_on_rails_2","contents":[{"title":"ECサイト","chapter":"tasklist"}]},{"title":"本番環境(1)","icon":"ri-server-line","part":"production_environment_1","contents":[{"title":"AWS","chapter":"link"}]},{"title":"卒業制作","icon":"ri-layout-5-line","part":"total_test","contents":[{"title":"企画","chapter":"kikaku"},{"title":"設計","chapter":"sekkei"},{"title":"制作","chapter":"seisaku"},{"title":"デプロイ","chapter":"deploy"}]},{"title":"本番環境(2)","icon":"ri-server-line","part":"production_environment_2","contents":[{"title":"ドメイン","chapter":"link"},{"title":"SSL","chapter":"link"},{"title":"自動デプロイ","chapter":"link"}]}]'></div>
+
+<script>
+  const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)
+  const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums)
+  const currentCourse = sessionStorage.getItem('currentCourse')
+  const currentUrl = new URL(location.href)
+</script>
+
+
+  </body>
+</html>
