@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title> 
+      pluginを追加してRubyのバージョンを管理する - 
+      asdf | 
+      HearthSide Programing School
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <div class="fixed w-full py-2 px-4 hg-white flex items-center shadow-md shadow-black/5 bg-gray-900">
+  <ul class="flex items-center ml-auto">
+    <li class="mr-2">
+      <a href="/" class="text-gray-300 text-sm hover:text-gray-100 mr-3">
+        HearthSide Programing School
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div class="bg-white dark:bg-gray-800 pt-10">
+      <div class="flex h-screen">
+  <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900 overflow-y-auto">
+    
+
+
+
+<ul class="mt-4 side-column-close hidden">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="" class="current-part-link flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <span class="text-sm"><br><br></span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-close">
+        <i class="ri-arrow-right-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ul class="mt-4 side-column-open">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="/development_environment_2.html?chapter=asdf" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
+        <i class="ri-computer-line mr-1 text-lg"></i>
+        <span class="text-lg current-course-name">開発環境(2)</span>
+      </a>
+      <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
+        <i class="ri-arrow-left-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+
+  <li class="mb-1 group" data-state-opened>
+    <p class="flex items-center py-2 px-4 text-gray-300 rounded-md">
+      <i class=" mr-3 text-lg side-column-lo-icon"></i>
+      <span class="text-xl">chapter1 :</span>
+      <span class="text-xl">asdf</span>
+    </p>
+    <ul class="chapters pl-7 mt-2 hidden group-data-[state-opened]:block">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <li class="mb-4">
+          <a href="/development_environment_2/asdf/2025/12/12/asdf_01.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section1:<br>asdfをインストールする
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/development_environment_2/asdf/2025/12/13/asdf_02.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section2:<br>pluginを追加してRubyのバージョンを管理する
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+    </ul>
+  </li>
+</ul>
+
+  </aside>
+  <main id="content" class="w-screen ml-64 min-h-screen">
+    
+
+
+<div class="wrap-break-word pt-1 pl-5 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <span class="bread-course hidden">
+    <a class="">asdf</a>
+  </span>
+  <span class="bread-part hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">asdf</a>
+  </span>
+  <span class="bread-chapter hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">asdf</a>
+  </span>
+  <span class="bread-section hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">pluginを追加してRubyのバージョンを管理する</a>
+  </span>
+</div>
+
+
+
+
+<div class="px-10 pt-10 pb-10 bg-gray-600 text-white">
+  <h1 class="page-header-title text-4xl font-bold">
+    
+      <p class="title border-b-4 pb-1">
+        <i class="ri-book-line mr-3"></i>
+        chapter 1: asdf
+      </p>
+    
+    <p class="title text-3xl mt-8 ml-5 page-chapter">
+      
+        <i class="ri-code-box-line"></i>
+        <span class="px-3 py-1">section2:</span>pluginを追加してRubyのバージョンを管理する
+      
+    </p>
+  </h1>
+  <div class="mt-5 ml-5">
+    
+    <div class="text-black bg-gray-100 p-4 mt-6 rounded-xl">
+      <p class="mb-3 font-bold">
+        
+          このセクションで学ぶ内容:
+        
+      </p>
+      asdfにRubyのpluginを追加し、バージョンをインストール・切り替えます。
+    </div>
+    
+  </div>
+</div>
+
+
+    <div class="markdown-body">
+      <h2 id="pluginを追加してrubyのバージョンを管理する">pluginを追加してRubyのバージョンを管理する</h2>
+
+<h3 id="pluginを追加する">pluginを追加する</h3>
+
+<p>asdfは、言語ごとに「plugin」という形で対応を追加していきます。まずはRuby用のpluginを追加します。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>asdf plugin add ruby
+</code></pre></div></div>
+
+<h3 id="インストールできるバージョンを確認する">インストールできるバージョンを確認する</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>asdf list all ruby
+</code></pre></div></div>
+
+<p>インストール可能なRubyのバージョンが、たくさん一覧表示されます。</p>
+
+<h3 id="バージョンをインストールする">バージョンをインストールする</h3>
+
+<p>使いたいバージョンを指定してインストールします。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>asdf <span class="nb">install </span>ruby 3.4.3
+</code></pre></div></div>
+
+<h3 id="バージョンを切り替える">バージョンを切り替える</h3>
+
+<p>インストールしただけでは、まだそのバージョンが使われるわけではありません。<code class="language-plaintext highlighter-rouge">asdf set</code> で「どこで、どのバージョンを使うか」を設定します。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>asdf <span class="nb">set </span>ruby 3.4.3
+</code></pre></div></div>
+
+<p>これを実行したディレクトリに <code class="language-plaintext highlighter-rouge">.tool-versions</code> というファイルが作られ、そこに使用するバージョンが記録されます。</p>
+
+<h3 id="tool-versionsファイルを見てみる">.tool-versionsファイルを見てみる</h3>
+
+<p>実は、このカリキュラムサイト自身のリポジトリにも <code class="language-plaintext highlighter-rouge">.tool-versions</code> があります。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat</span> .tool-versions
+ruby 3.4.3
+</code></pre></div></div>
+
+<p>このファイルがあるディレクトリ以下では、<code class="language-plaintext highlighter-rouge">ruby</code> コマンドを実行すると自動的にここに書かれたバージョンが使われます。プロジェクトごとにこのファイルを持たせることで、複数のプロジェクトで違うバージョンのRubyを同時に使い分けられます。</p>
+
+<h3 id="確認する">確認する</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ruby <span class="nt">-v</span>
+ruby 3.4.3 ...
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">.tool-versions</code> に書いたバージョンが使われていることを確認できます。</p>
+
+<h4 id="ここで試したいこと">*ここで試したいこと</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">asdf current</code> を実行して、現在使われているバージョン一覧を確認してみよう。</li>
+</ul>
+
+    </div>
+    <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <div>
+  <a href="" class="previous-link hidden">
+    <i class="ri-arrow-left-double-fill"></i>
+    <span>前のセクション</span>
+  </a>
+  </div>
+  <div>
+  <a href="" class="next-link hidden">
+    <span>次のセクション</span>
+    <i class="ri-arrow-right-double-fill"></i>
+  </a>
+  </div>
+</nav>
+
+  </main>
+</div>
+
+    </div>
+    
+<div class="courses-data hidden" data-courses='[{"course":"basic","title":"べーシックコース","parts":["スクラッチ","Ruby(1)"]},{"course":"standard","title":"スタンダードコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby2D(1)","Ruby(2)","Ruby2D(2)"]},{"course":"advance","title":"アドバンスコース","parts":["開発環境(1)"]},{"course":"professional","title":"プロフェッショナル","parts":["開発環境(1)"]}]'></div>
+<div class="curriculums-data hidden" data-curriculums='[{"title":"スクラッチ","icon":"lo-scratch-line","part":"scratch","contents":[{"title":"迷路ゲーム","chapter":"meiro"},{"title":"ジャンプゲーム","chapter":"jump_game"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"開発環境(1)","icon":"ri-computer-line","part":"development_environment_1","contents":[{"title":"VSCode","chapter":"vs_code"},{"title":"Git","chapter":"git"}]},{"title":"HTML/CSS","icon":"ri-html5-line","part":"html_css","contents":[{"title":"HTML","chapter":"html"},{"title":"CSS","chapter":"css"},{"title":"webサイト","chapter":"my_site"}]},{"title":"CSS","icon":"ri-css3-line","part":"css","contents":[{"title":"２カラムデザイン","chapter":"two_column"},{"title":"パネルデザイン","chapter":"panel"},{"title":"フォーム","chapter":"form"},{"title":"レスポンシブデザイン","chapter":"response"}]},{"title":"JavaScript(1)","icon":"ri-javascript-line","part":"javescript_1","contents":[{"title":"JavaScript基礎","chapter":"java_script_basic"},{"title":"シングルページ","chapter":"single_page"}]},{"title":"開発環境(2)","icon":"ri-computer-line","part":"development_environment_2","contents":[{"title":"WSL","chapter":"wsl"},{"title":"asdf","chapter":"asdf"}]},{"title":"Ruby(1)","icon":"lo-ruby-line","part":"ruby_1","contents":[{"title":"ruby基礎","chapter":"ruby_basic"},{"title":"RubyGems","chapter":"ruby_gems"}]},{"title":"Rspec(1)","icon":"lo-ruby-line","part":"rspec_1"},{"title":"WebAssembly","icon":"lo-ruby-line","part":"wasm"},{"title":"Ruby2D(1)","icon":"lo-ruby-line","part":"ruby2d_1","contents":[{"title":"基礎","chapter":"ruby2d_basic"},{"title":"川下りゲーム","chapter":"river"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"Ruby(2)","icon":"lo-ruby-line","part":"ruby_2","contents":[{"title":"Ruby応用","chapter":"ruby_advance"}]},{"title":"Ruby2D(2)","icon":"lo-ruby-line","part":"ruby2d_2","contents":[{"title":"ブロックくずし","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"},{"title":"テトリス","chapter":"tetris"}]},{"title":"Git/GitHub","icon":"ri-github-line","part":"git_github","contents":[{"title":"Git基礎","chapter":"git_basic"},{"title":"GitHubの使い方","chapter":"github_basic"},{"title":"GitHub Pagesで公開","chapter":"github_pages"}]},{"title":"Jekyll","icon":"lo-jekyll-line","part":"jekll","contents":[{"title":"ブログサイト","chapter":"ruby"},{"title":"webサイトのリプレイス","chapter":"ruby"}]},{"title":"sinatra","icon":"lo-sinatra-line","part":"sinatra","contents":[{"title":"時間割","chapter":"ruby"},{"title":"Api","chapter":"ruby"}]},{"title":"SQL(1)","icon":"ri-database-2-line","part":"sql_1","contents":[{"title":"SQLite","chapter":"ruby"},{"title":"時間割（２）","chapter":"ruby"}]},{"title":"RubyOnRails(1)","icon":"lo-rails-line","part":"ruby_on_rails_1","contents":[{"title":"タスクリスト","chapter":"tasklist"},{"title":"SNS","chapter":"link"}]},{"title":"JavaScript(2)","icon":"ri-javascript-line","part":"javescript_2","contents":[{"title":"TypeScript","chapter":"link"},{"title":"Stimulus","chapter":"stimulus"}]},{"title":"SQL(2)","icon":"ri-database-2-line","part":"sql_2","contents":[{"title":"PostgreSQL","chapter":"link"}]},{"title":"設計","icon":"ri-file-line","part":"app_design","contents":[{"title":"企画書","chapter":"kikaku"},{"title":"画面遷移図","chapter":"senizu"},{"title":"画面詳細図","chapter":"shousai"},{"title":"ER図","chapter":"er"},{"title":"テーブル設計書","chapter":"teble"},{"title":"URL設計書","chapter":"url"},{"title":"要件定義書","chapter":"youken"}]},{"title":"RubyOnRails(2)","icon":"lo-rails-line","part":"ruby_on_rails_2","contents":[{"title":"ECサイト","chapter":"tasklist"}]},{"title":"本番環境(1)","icon":"ri-server-line","part":"production_environment_1","contents":[{"title":"AWS","chapter":"link"}]},{"title":"卒業制作","icon":"ri-layout-5-line","part":"total_test","contents":[{"title":"企画","chapter":"kikaku"},{"title":"設計","chapter":"sekkei"},{"title":"制作","chapter":"seisaku"},{"title":"デプロイ","chapter":"deploy"}]},{"title":"本番環境(2)","icon":"ri-server-line","part":"production_environment_2","contents":[{"title":"ドメイン","chapter":"link"},{"title":"SSL","chapter":"link"},{"title":"自動デプロイ","chapter":"link"}]}]'></div>
+
+<script>
+  const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)
+  const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums)
+  const currentCourse = sessionStorage.getItem('currentCourse')
+  const currentUrl = new URL(location.href)
+</script>
+
+
+  </body>
+</html>
