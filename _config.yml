@@ -77,7 +77,7 @@ curriculums:
         chapter: single_page
   - title: 開発環境(2)
     icon: ri-computer-line
-    part: davelopent_environment_2
+    part: development_environment_2
     contents:
       - title: WSL
         chapter: wsl
@@ -97,14 +97,6 @@ curriculums:
   - title: WebAssembly
     icon: lo-ruby-line
     part: wasm
-  - title: Git
-    icon: ri-git-branch-line
-    part: git
-    contents:
-      - title: Git基礎
-        chapter: git
-      - title: github.io
-        chapter: git
   - title: Ruby2D(1)
     icon: lo-ruby-line
     part: ruby2d_1
@@ -131,12 +123,16 @@ curriculums:
         chapter: shooting
       - title: テトリス
         chapter: tetris
-  - title: Github
+  - title: Git/GitHub
     icon: ri-github-line
-    part: github
+    part: git_github
     contents:
-      - title: Github基礎
-        chapter: link
+      - title: Git基礎
+        chapter: git_basic
+      - title: GitHubの使い方
+        chapter: github_basic
+      - title: GitHub Pagesで公開
+        chapter: github_pages
   - title: Jekyll
     icon: lo-jekyll-line
     part: jekll
