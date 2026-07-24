@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title> 
-      GitHub Pagesを有効にする - 
-      GitHub Pagesで公開 | 
+      BundlerとGemfile - 
+      RubyGems | 
       HearthSide Programing School
     </title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -47,9 +47,9 @@
 <ul class="mt-4 side-column-open">
   <li class="mb-1 group active">
     <div class="flex">
-      <a href="/git_github.html?chapter=github_pages" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
-        <i class="ri-github-line mr-1 text-lg"></i>
-        <span class="text-lg current-course-name">Git/GitHub</span>
+      <a href="/ruby_1.html?chapter=ruby_gems" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
+        <i class="lo-ruby-line mr-1 text-lg"></i>
+        <span class="text-lg current-course-name">Ruby(1)</span>
       </a>
       <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
         <i class="ri-arrow-left-circle-fill mr-4"></i>
@@ -61,7 +61,7 @@
     <p class="flex items-center py-2 px-4 text-gray-300 rounded-md">
       <i class=" mr-3 text-lg side-column-lo-icon"></i>
       <span class="text-xl">chapter1 :</span>
-      <span class="text-xl">GitHub Pagesで公開</span>
+      <span class="text-xl">RubyGems</span>
     </p>
     <ul class="chapters pl-7 mt-2 hidden group-data-[state-opened]:block">
       
@@ -204,19 +204,31 @@
         
       
         
+      
+        
+      
+        
         <li class="mb-4">
-          <a href="/git_github/github_pages/2025/12/19/github_pages_01.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
-            section1:<br>GitHub Pagesを有効にする
+          <a href="/ruby_1/ruby_gems/2025/12/21/ruby_gems_01.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section1:<br>RubyGemsとは
           </a>
         </li>
         
       
         
-      
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_gems/2025/12/22/ruby_gems_02.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section2:<br>BundlerとGemfile
+          </a>
+        </li>
         
       
         
-      
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_gems/2025/12/23/ruby_gems_03.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section3:<br>bundle installとGemfile.lock
+          </a>
+        </li>
         
       
         
@@ -278,19 +290,19 @@
 
 <div class="wrap-break-word pt-1 pl-5 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
   <span class="bread-course hidden">
-    <a class="">GitHub Pagesで公開</a>
+    <a class="">RubyGems</a>
   </span>
   <span class="bread-part hidden">
     <i class="ri-arrow-drop-right-fill"></i>
-    <a class="">GitHub Pagesで公開</a>
+    <a class="">RubyGems</a>
   </span>
   <span class="bread-chapter hidden">
     <i class="ri-arrow-drop-right-fill"></i>
-    <a class="">GitHub Pagesで公開</a>
+    <a class="">RubyGems</a>
   </span>
   <span class="bread-section hidden">
     <i class="ri-arrow-drop-right-fill"></i>
-    <a class="">GitHub Pagesを有効にする</a>
+    <a class="">BundlerとGemfile</a>
   </span>
 </div>
 
@@ -302,13 +314,13 @@
     
       <p class="title border-b-4 pb-1">
         <i class="ri-book-line mr-3"></i>
-        chapter 1: GitHub Pagesで公開
+        chapter 1: RubyGems
       </p>
     
     <p class="title text-3xl mt-8 ml-5 page-chapter">
       
         <i class="ri-code-box-line"></i>
-        <span class="px-3 py-1">section1:</span>GitHub Pagesを有効にする
+        <span class="px-3 py-1">section2:</span>BundlerとGemfile
       
     </p>
   </h1>
@@ -320,7 +332,7 @@
           このセクションで学ぶ内容:
         
       </p>
-      GitHub Pagesの設定を行い、リポジトリの内容をWebサイトとして公開します。
+      複数のgemをまとめて管理するBundlerと、Gemfileの書き方を学びます。
     </div>
     
   </div>
@@ -328,45 +340,58 @@
 
 
     <div class="markdown-body">
-      <h2 id="github-pagesを有効にする">GitHub Pagesを有効にする</h2>
+      <h2 id="bundlerとgemfile">BundlerとGemfile</h2>
 
-<h3 id="github-pagesとは">GitHub Pagesとは</h3>
+<h3 id="bundlerとは">Bundlerとは</h3>
 
-<p>GitHub Pagesは、GitHubのリポジトリの中身を、そのままWebサイトとして公開できる機能です。このカリキュラムサイト自体も、GitHub Pagesを使って公開されています。</p>
+<p>プロジェクトが大きくなると、使うgemの数も増えていきます。「このプロジェクトはrakeとrspecを使う」「あのプロジェクトはrailsを使う」というように、プロジェクトごとに必要なgemの組み合わせをまとめて管理してくれるのがBundlerです。</p>
 
-<h3 id="公開する内容を用意する">公開する内容を用意する</h3>
+<h3 id="bundlerをインストールする">Bundlerをインストールする</h3>
 
-<p>まずは公開したいHTMLファイルをリポジトリに用意します。試しに <code class="language-plaintext highlighter-rouge">index.html</code> を作ってpushしてみましょう。</p>
+<p>Bundlerもgemの1つなので、<code class="language-plaintext highlighter-rouge">gem install</code> で入れられます。</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sample_app <span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"&lt;h1&gt;はじめてのGitHub Pages&lt;/h1&gt;"</span> <span class="o">&gt;</span> index.html
-sample_app <span class="nv">$ </span>git add index.html
-sample_app <span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"index.htmlを追加"</span>
-sample_app <span class="nv">$ </span>git push
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>bundler
 </code></pre></div></div>
 
-<h3 id="github-pagesを有効にする-1">GitHub Pagesを有効にする</h3>
+<p>確認します。</p>
 
-<p>ブラウザでリポジトリのページを開き、「Settings」タブを開きます。左側のメニューから「Pages」を選びます。</p>
-
-<p>「Build and deployment」の「Source」で、公開したいブランチ（<code class="language-plaintext highlighter-rouge">main</code> など）と、公開するフォルダ（ルートディレクトリの場合は <code class="language-plaintext highlighter-rouge">/ (root)</code>）を選び、「Save」を押します。</p>
-
-<h3 id="公開されたurlを確認する">公開されたURLを確認する</h3>
-
-<p>保存すると、少し時間が経ってから、以下の形のURLでページが公開されます。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://ユーザー名.github.io/リポジトリ名/
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle <span class="nt">--version</span>
+Bundler version 2.x.x
 </code></pre></div></div>
 
-<p>このURLにアクセスして、<code class="language-plaintext highlighter-rouge">index.html</code> の内容が表示されていれば成功です。</p>
+<h3 id="gemfileを作る">Gemfileを作る</h3>
 
-<h3 id="更新する">更新する</h3>
+<p>適当なフォルダを作って移動し、<code class="language-plaintext highlighter-rouge">bundle init</code> を実行します。</p>
 
-<p>以降、<code class="language-plaintext highlighter-rouge">index.html</code> などの内容を変更して <code class="language-plaintext highlighter-rouge">git push</code> すると、しばらくして自動的に公開ページも更新されます。</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>sample_gems
+<span class="nv">$ </span><span class="nb">cd </span>sample_gems
+sample_gems <span class="nv">$ </span>bundle init
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Gemfile</code> というファイルが作られます。中身を見てみましょう。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># frozen_string_literal: true</span>
+
+<span class="n">source</span> <span class="s2">"https://rubygems.org"</span>
+
+<span class="c1"># gem "rails"</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">source</code> は、gemをどこから取得するかの指定です。<code class="language-plaintext highlighter-rouge"># gem "rails"</code> はコメントアウトされたサンプルで、ここに使いたいgemを書いていきます。</p>
+
+<h3 id="gemを追記する">gemを追記する</h3>
+
+<p><code class="language-plaintext highlighter-rouge">rake</code> を使いたい場合、以下の行を追加します。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"rake"</span>
+</code></pre></div></div>
+
+<p>Gemfileは「このプロジェクトで使うgemのリスト」だと考えるとイメージしやすいです。</p>
 
 <h4 id="ここで試したいこと">*ここで試したいこと</h4>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">index.html</code> の内容を変更してpushし、公開ページが更新されるまでの時間を確認してみよう。</li>
+  <li>Gemfileに <code class="language-plaintext highlighter-rouge">gem "rspec"</code> も追加して、2つのgemが並んでいる状態にしてみよう。</li>
 </ul>
 
     </div>
