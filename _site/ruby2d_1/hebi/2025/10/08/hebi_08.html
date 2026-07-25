@@ -470,8 +470,8 @@ head = Circle.new(radius: 10)
 head.x = Window.width / 2
 head.y = Window.height / 2
 speed = 3
-x_flug = true
-y_flug = false
+x_flag = true
+y_flag = false
 status = :stop
 
 # ヘビの胴体
@@ -516,44 +516,44 @@ on :key_down do |event|
     status = :stop
     head.x = Window.width / 2
     head.y = Window.height / 2
-    x_flug = true
-    y_flug = false
+    x_flag = true
+    y_flag = false
     logs = (body_size * speed + 1).times.map { |i| [head.x - speed * i, head.y + speed * i] }
     bodies.each { |body| body.remove }
     bodies = body_size.times.map { |i| Circle.new(radius: 8, x: logs[speed * i].first, y: logs[speed * i].last) }
     message.each { |text| text.remove }
   end
   # 右上に移動の時
-  if x_flug &amp;&amp; !y_flug
+  if x_flag &amp;&amp; !y_flag
     case event.key
     when "right"
-      y_flug = true
+      y_flag = true
     when "left"
-      x_flug = false
+      x_flag = false
     end
   # 左上に移動の時
-  elsif !x_flug &amp;&amp; !y_flug
+  elsif !x_flag &amp;&amp; !y_flag
     case event.key
     when "right"
-      x_flug = true
+      x_flag = true
     when "left"
-      y_flug = true
+      y_flag = true
     end
   # 右下に移動の時
-  elsif x_flug &amp;&amp; y_flug
+  elsif x_flag &amp;&amp; y_flag
     case event.key
     when "right"
-      x_flug = false
+      x_flag = false
     when "left"
-      y_flug = false
+      y_flag = false
     end
   # 左下に移動の時
-  elsif !x_flug &amp;&amp; y_flug
+  elsif !x_flag &amp;&amp; y_flag
     case event.key
     when "right"
-      y_flug = false
+      y_flag = false
     when "left"
-      x_flug = true
+      x_flag = true
     end
   end
 end
@@ -567,12 +567,12 @@ update do
       message.each { |text| text.add }
     end
     # 移動方向の管理
-    if x_flug
+    if x_flag
       head.x += speed
     else
       head.x -= speed
     end
-    if y_flug
+    if y_flag
       head.y += speed
     else
       head.y -= speed

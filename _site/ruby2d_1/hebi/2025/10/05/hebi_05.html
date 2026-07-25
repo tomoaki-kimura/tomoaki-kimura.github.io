@@ -389,8 +389,8 @@
 <p>main.rb</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(略)
 speed = 1
-x_flug = true
-y_flug = false
+x_flag = true
+y_flag = false
 status = :stop
 
 on :key_down do |event|
@@ -399,7 +399,7 @@ on :key_down do |event|
     status = :game_start if status == :stop
   end
   # 右上に移動の時
-  if x_flug &amp;&amp; !y_flug
+  if x_flag &amp;&amp; !y_flag
     case event.key
 (略)
 
@@ -407,12 +407,12 @@ on :key_down do |event|
 update do
   case status
   when :game_start
-    if x_flug
+    if x_flag
       head.x += speed
     else
       head.x -= speed
     end
-    if y_flug
+    if y_flag
       head.y += speed
     else
       head.y -= speed
@@ -440,7 +440,7 @@ show
 
 <p>main.rb</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(略)
-y_flug = false
+y_flag = false
 status = :stop
 
 def hit(head)
@@ -467,12 +467,12 @@ update do
       status = :game_over
     end
     # 移動方向の管理
-    if x_flug
+    if x_flag
       head.x += speed
     else
       head.x -= speed
     end
-    if y_flug
+    if y_flag
       head.y += speed
     else
       head.y -= speed
@@ -503,7 +503,7 @@ on :key_down do |event|
     status = :game_start if status == :stop
   end
   # 右上に移動の時
-  if x_flug &amp;&amp; !y_flug
+  if x_flag &amp;&amp; !y_flag
     case event.key
 (略)
 </code></pre></div></div>
@@ -530,8 +530,8 @@ head = Circle.new(radius: 10)
 head.x = Window.width / 2
 head.y = Window.height / 2
 speed = 1
-x_flug = true
-y_flug = false
+x_flag = true
+y_flag = false
 status = :stop
 
 # ゲームオーバー画面
@@ -596,8 +596,8 @@ message = [
 ]
 message.each { |text| text.remove }
 
-x_flug = true
-y_flug = false
+x_flag = true
+y_flag = false
 
 def hit(head)
   #上の当たり判定
@@ -617,36 +617,36 @@ on :key_down do |event|
     status = :game_start if status == :stop
   end
   #右上に移動の時
-  if x_flug &amp;&amp; !y_flug
+  if x_flag &amp;&amp; !y_flag
     case event.key
     when "right"
-      y_flug = true
+      y_flag = true
     when "left"
-      x_flug = false
+      x_flag = false
     end
   #左上に移動の時
-  elsif !x_flug &amp;&amp; !y_flug
+  elsif !x_flag &amp;&amp; !y_flag
     case event.key
     when "right"
-      x_flug = true
+      x_flag = true
     when "left"
-      y_flug = true
+      y_flag = true
     end
   #右下に移動の時
-  elsif x_flug &amp;&amp; y_flug
+  elsif x_flag &amp;&amp; y_flag
     case event.key
     when "right"
-      x_flug = false
+      x_flag = false
     when "left"
-      y_flug = false
+      y_flag = false
     end
   #左下に移動の時
-  elsif !x_flug &amp;&amp; y_flug
+  elsif !x_flag &amp;&amp; y_flag
     case event.key
     when "right"
-      y_flug = false
+      y_flag = false
     when "left"
-      x_flug = true
+      x_flag = true
     end
   end
 end
@@ -660,12 +660,12 @@ update do
       message.each { |text| text.add }
     end
     #移動方向の管理
-    if x_flug
+    if x_flag
       head.x += speed
     else
       head.x -= speed
     end
-    if y_flug
+    if y_flag
       head.y += speed
     else
       head.y -= speed
