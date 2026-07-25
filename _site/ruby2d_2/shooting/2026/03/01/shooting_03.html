@@ -537,7 +537,9 @@
 <span class="n">show</span>
 </code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">@status</code> の <code class="language-plaintext highlighter-rouge">@</code> は、<code class="language-plaintext highlighter-rouge">update do</code> ブロックや <code class="language-plaintext highlighter-rouge">on :key_down do</code> ブロックの中からも使えるインスタンス変数です。</p>
+<p><code class="language-plaintext highlighter-rouge">@status</code> の <code class="language-plaintext highlighter-rouge">@</code> はインスタンス変数を表します。<code class="language-plaintext highlighter-rouge">update do</code> や <code class="language-plaintext highlighter-rouge">on :key_down do</code> のブロックの中は、実はローカル変数のままでも問題なく参照できるので、ブロックのためだけならインスタンス変数にする必要はありません。</p>
+
+<p>あえてインスタンス変数にしているのは、この先 <code class="language-plaintext highlighter-rouge">main.rb</code> に <code class="language-plaintext highlighter-rouge">def</code> で自作のメソッドを追加したときのためです。<code class="language-plaintext highlighter-rouge">def</code> で定義したメソッドは、ブロックと違って外側のローカル変数を直接参照できませんが、インスタンス変数はメソッドの中からもそのまま参照できます。</p>
 
 <h3 id="ファイルの実行">ファイルの実行</h3>
 
