@@ -152,6 +152,140 @@
         
       
         
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/20/ruby_basic_02.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section2:<br>変数とデータ型
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/21/ruby_basic_03.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section3:<br>文字列の操作
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/22/ruby_basic_04.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section4:<br>配列
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/23/ruby_basic_05.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section5:<br>ハッシュ
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/24/ruby_basic_06.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section6:<br>繰り返し（times）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/25/ruby_basic_07.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section7:<br>繰り返し（each）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/26/ruby_basic_08.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section8:<br>繰り返し（while・until）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/27/ruby_basic_09.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section9:<br>条件分岐（if）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/28/ruby_basic_10.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section10:<br>条件分岐（unless・比較演算子・&&・||）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/29/ruby_basic_11.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section11:<br>条件分岐（case）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby_1/ruby_basic/2025/10/30/ruby_basic_12.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section12:<br>メソッドの定義
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
@@ -262,6 +396,44 @@
     <div class="markdown-body">
       <h2 id="最初に書くコード">最初に書くコード</h2>
 
+<h3 id="irbを起動する">irbを起動する</h3>
+
+<p><code class="language-plaintext highlighter-rouge">irb</code>（Interactive Ruby）は、Rubyのコードを1行ずつ試しながら実行できるツールです。ターミナルで以下を実行しましょう。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>irb
+irb<span class="o">(</span>main<span class="o">)</span>:001&gt;
+</code></pre></div></div>
+
+<p>こうなれば起動できています。ここにRubyのコードを書いてEnterを押すと、その場で実行されます。終了するときは <code class="language-plaintext highlighter-rouge">exit</code> と入力します。</p>
+
+<h3 id="puts-で出力する">puts で出力する</h3>
+
+<p><code class="language-plaintext highlighter-rouge">puts</code> は、文字列や数値を画面に表示するためのメソッドです。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">001</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="s2">"こんにちは"</span>
+<span class="n">こんにちは</span>
+<span class="o">=&gt;</span> <span class="kp">nil</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">こんにちは</code> が出力の内容、<code class="language-plaintext highlighter-rouge">=&gt; nil</code> は <code class="language-plaintext highlighter-rouge">puts</code> というメソッド自体が返した値です。<code class="language-plaintext highlighter-rouge">puts</code> は「表示すること」が仕事なので、返す値は常に <code class="language-plaintext highlighter-rouge">nil</code>（何もないことを表すRubyの値）になります。</p>
+
+<h3 id="p-で出力する">p で出力する</h3>
+
+<p><code class="language-plaintext highlighter-rouge">p</code> も出力用のメソッドですが、<code class="language-plaintext highlighter-rouge">puts</code> と少し挙動が違います。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">001</span><span class="o">&gt;</span> <span class="nb">p</span> <span class="s2">"こんにちは"</span>
+<span class="s2">"こんにちは"</span>
+<span class="o">=&gt;</span> <span class="s2">"こんにちは"</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">p</code> は文字列を <code class="language-plaintext highlighter-rouge">"</code> で囲んだまま表示し、渡した値そのものを返します。デバッグ（コードの動作確認）でよく使われます。</p>
+
+<h4 id="ここで試したいこと">*ここで試したいこと</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">puts 1 + 1</code> と <code class="language-plaintext highlighter-rouge">p 1 + 1</code> を両方試して、出力の違いを比べてみよう。</li>
+</ul>
+
     </div>
     <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
   <div>
@@ -284,7 +456,7 @@
     </div>
     
 <div class="courses-data hidden" data-courses='[{"course":"basic","title":"べーシックコース","parts":["スクラッチ","Ruby(1)"]},{"course":"standard","title":"スタンダードコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby2D(1)","Ruby(2)","Ruby2D(2)"]},{"course":"advance","title":"アドバンスコース","parts":["開発環境(1)"]},{"course":"professional","title":"プロフェッショナル","parts":["開発環境(1)"]}]'></div>
-<div class="curriculums-data hidden" data-curriculums='[{"title":"スクラッチ","icon":"lo-scratch-line","part":"scratch","contents":[{"title":"迷路ゲーム","chapter":"meiro"},{"title":"ジャンプゲーム","chapter":"jump_game"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"開発環境(1)","icon":"ri-computer-line","part":"development_environment_1","contents":[{"title":"VSCode","chapter":"vs_code"},{"title":"Git","chapter":"git"}]},{"title":"HTML/CSS","icon":"ri-html5-line","part":"html_css","contents":[{"title":"HTML","chapter":"html"},{"title":"CSS","chapter":"css"},{"title":"webサイト","chapter":"my_site"}]},{"title":"CSS","icon":"ri-css3-line","part":"css","contents":[{"title":"２カラムデザイン","chapter":"two_column"},{"title":"パネルデザイン","chapter":"panel"},{"title":"フォーム","chapter":"form"},{"title":"レスポンシブデザイン","chapter":"response"}]},{"title":"JavaScript(1)","icon":"ri-javascript-line","part":"javescript_1","contents":[{"title":"JavaScript基礎","chapter":"java_script_basic"},{"title":"シングルページ","chapter":"single_page"}]},{"title":"開発環境(2)","icon":"ri-computer-line","part":"davelopent_environment_2","contents":[{"title":"WSL","chapter":"wsl"},{"title":"asdf","chapter":"asdf"}]},{"title":"Ruby(1)","icon":"lo-ruby-line","part":"ruby_1","contents":[{"title":"ruby基礎","chapter":"ruby_basic"},{"title":"RubyGems","chapter":"ruby_gems"}]},{"title":"Rspec(1)","icon":"lo-ruby-line","part":"rspec_1"},{"title":"WebAssembly","icon":"lo-ruby-line","part":"wasm"},{"title":"Git","icon":"ri-git-branch-line","part":"git","contents":[{"title":"Git基礎","chapter":"git"},{"title":"github.io","chapter":"git"}]},{"title":"Ruby2D(1)","icon":"lo-ruby-line","part":"ruby2d_1","contents":[{"title":"基礎","chapter":"ruby2d_basic"},{"title":"ヘビゲーム","chapter":"hebi"},{"title":"ブロック崩し","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"}]},{"title":"Ruby(2)","icon":"lo-ruby-line","part":"ruby_2","contents":[{"title":"Ruby応用","chapter":"ruby_advance"}]},{"title":"Ruby2D(2)","icon":"lo-ruby-line","part":"ruby2d_2","contents":[{"title":"ブロックくずし","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"},{"title":"テトリス","chapter":"tetris"}]},{"title":"Github","icon":"ri-github-line","part":"github","contents":[{"title":"Github基礎","chapter":"link"}]},{"title":"Jekyll","icon":"lo-jekyll-line","part":"jekll","contents":[{"title":"ブログサイト","chapter":"ruby"},{"title":"webサイトのリプレイス","chapter":"ruby"}]},{"title":"sinatra","icon":"lo-sinatra-line","part":"sinatra","contents":[{"title":"時間割","chapter":"ruby"},{"title":"Api","chapter":"ruby"}]},{"title":"SQL(1)","icon":"ri-database-2-line","part":"sql_1","contents":[{"title":"SQLite","chapter":"ruby"},{"title":"時間割（２）","chapter":"ruby"}]},{"title":"RubyOnRails(1)","icon":"lo-rails-line","part":"ruby_on_rails_1","contents":[{"title":"タスクリスト","chapter":"tasklist"},{"title":"SNS","chapter":"link"}]},{"title":"JavaScript(2)","icon":"ri-javascript-line","part":"javescript_2","contents":[{"title":"TypeScript","chapter":"link"},{"title":"Stimulus","chapter":"stimulus"}]},{"title":"SQL(2)","icon":"ri-database-2-line","part":"sql_2","contents":[{"title":"PostgreSQL","chapter":"link"}]},{"title":"設計","icon":"ri-file-line","part":"app_design","contents":[{"title":"企画書","chapter":"kikaku"},{"title":"画面遷移図","chapter":"senizu"},{"title":"画面詳細図","chapter":"shousai"},{"title":"ER図","chapter":"er"},{"title":"テーブル設計書","chapter":"teble"},{"title":"URL設計書","chapter":"url"},{"title":"要件定義書","chapter":"youken"}]},{"title":"RubyOnRails(2)","icon":"lo-rails-line","part":"ruby_on_rails_2","contents":[{"title":"ECサイト","chapter":"tasklist"}]},{"title":"本番環境(1)","icon":"ri-server-line","part":"production_environment_1","contents":[{"title":"AWS","chapter":"link"}]},{"title":"卒業制作","icon":"ri-layout-5-line","part":"total_test","contents":[{"title":"企画","chapter":"kikaku"},{"title":"設計","chapter":"sekkei"},{"title":"制作","chapter":"seisaku"},{"title":"デプロイ","chapter":"deploy"}]},{"title":"本番環境(2)","icon":"ri-server-line","part":"production_environment_2","contents":[{"title":"ドメイン","chapter":"link"},{"title":"SSL","chapter":"link"},{"title":"自動デプロイ","chapter":"link"}]}]'></div>
+<div class="curriculums-data hidden" data-curriculums='[{"title":"スクラッチ","icon":"lo-scratch-line","part":"scratch","contents":[{"title":"迷路ゲーム","chapter":"meiro"},{"title":"ジャンプゲーム","chapter":"jump_game"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"開発環境(1)","icon":"ri-computer-line","part":"development_environment_1","contents":[{"title":"VSCode","chapter":"vs_code"},{"title":"Git","chapter":"git"}]},{"title":"HTML/CSS","icon":"ri-html5-line","part":"html_css","contents":[{"title":"HTML","chapter":"html"},{"title":"CSS","chapter":"css"},{"title":"webサイト","chapter":"my_site"}]},{"title":"CSS","icon":"ri-css3-line","part":"css","contents":[{"title":"２カラムデザイン","chapter":"two_column"},{"title":"パネルデザイン","chapter":"panel"},{"title":"フォーム","chapter":"form"},{"title":"レスポンシブデザイン","chapter":"response"}]},{"title":"JavaScript(1)","icon":"ri-javascript-line","part":"javescript_1","contents":[{"title":"JavaScript基礎","chapter":"java_script_basic"},{"title":"シングルページ","chapter":"single_page"}]},{"title":"開発環境(2)","icon":"ri-computer-line","part":"development_environment_2","contents":[{"title":"WSL","chapter":"wsl"},{"title":"asdf","chapter":"asdf"}]},{"title":"Ruby(1)","icon":"lo-ruby-line","part":"ruby_1","contents":[{"title":"ruby基礎","chapter":"ruby_basic"},{"title":"RubyGems","chapter":"ruby_gems"}]},{"title":"Rspec(1)","icon":"lo-ruby-line","part":"rspec_1"},{"title":"WebAssembly","icon":"lo-ruby-line","part":"wasm"},{"title":"Ruby2D(1)","icon":"lo-ruby-line","part":"ruby2d_1","contents":[{"title":"基礎","chapter":"ruby2d_basic"},{"title":"川下りゲーム","chapter":"river"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"Ruby(2)","icon":"lo-ruby-line","part":"ruby_2","contents":[{"title":"Ruby応用","chapter":"ruby_advance"}]},{"title":"Ruby2D(2)","icon":"lo-ruby-line","part":"ruby2d_2","contents":[{"title":"ブロックくずし","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"},{"title":"テトリス","chapter":"tetris"}]},{"title":"Git/GitHub","icon":"ri-github-line","part":"git_github","contents":[{"title":"Git基礎","chapter":"git_basic"},{"title":"GitHubの使い方","chapter":"github_basic"},{"title":"GitHub Pagesで公開","chapter":"github_pages"}]},{"title":"Jekyll","icon":"lo-jekyll-line","part":"jekll","contents":[{"title":"ブログサイト","chapter":"ruby"},{"title":"webサイトのリプレイス","chapter":"ruby"}]},{"title":"sinatra","icon":"lo-sinatra-line","part":"sinatra","contents":[{"title":"時間割","chapter":"ruby"},{"title":"Api","chapter":"ruby"}]},{"title":"SQL(1)","icon":"ri-database-2-line","part":"sql_1","contents":[{"title":"SQLite","chapter":"ruby"},{"title":"時間割（２）","chapter":"ruby"}]},{"title":"RubyOnRails(1)","icon":"lo-rails-line","part":"ruby_on_rails_1","contents":[{"title":"タスクリスト","chapter":"tasklist"},{"title":"SNS","chapter":"link"}]},{"title":"JavaScript(2)","icon":"ri-javascript-line","part":"javescript_2","contents":[{"title":"TypeScript","chapter":"link"},{"title":"Stimulus","chapter":"stimulus"}]},{"title":"SQL(2)","icon":"ri-database-2-line","part":"sql_2","contents":[{"title":"PostgreSQL","chapter":"link"}]},{"title":"設計","icon":"ri-file-line","part":"app_design","contents":[{"title":"企画書","chapter":"kikaku"},{"title":"画面遷移図","chapter":"senizu"},{"title":"画面詳細図","chapter":"shousai"},{"title":"ER図","chapter":"er"},{"title":"テーブル設計書","chapter":"teble"},{"title":"URL設計書","chapter":"url"},{"title":"要件定義書","chapter":"youken"}]},{"title":"RubyOnRails(2)","icon":"lo-rails-line","part":"ruby_on_rails_2","contents":[{"title":"ECサイト","chapter":"tasklist"}]},{"title":"本番環境(1)","icon":"ri-server-line","part":"production_environment_1","contents":[{"title":"AWS","chapter":"link"}]},{"title":"卒業制作","icon":"ri-layout-5-line","part":"total_test","contents":[{"title":"企画","chapter":"kikaku"},{"title":"設計","chapter":"sekkei"},{"title":"制作","chapter":"seisaku"},{"title":"デプロイ","chapter":"deploy"}]},{"title":"本番環境(2)","icon":"ri-server-line","part":"production_environment_2","contents":[{"title":"ドメイン","chapter":"link"},{"title":"SSL","chapter":"link"},{"title":"自動デプロイ","chapter":"link"}]}]'></div>
 
 <script>
   const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)

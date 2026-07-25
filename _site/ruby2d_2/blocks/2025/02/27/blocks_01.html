@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title> 
+      バーを表示する - 
+      ブロック崩し | 
+      HearthSide Programing School
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <div class="fixed w-full py-2 px-4 hg-white flex items-center shadow-md shadow-black/5 bg-gray-900">
+  <ul class="flex items-center ml-auto">
+    <li class="mr-2">
+      <a href="/" class="text-gray-300 text-sm hover:text-gray-100 mr-3">
+        HearthSide Programing School
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div class="bg-white dark:bg-gray-800 pt-10">
+      <div class="flex h-screen">
+  <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900 overflow-y-auto">
+    
+
+
+
+<ul class="mt-4 side-column-close hidden">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="" class="current-part-link flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <span class="text-sm"><br><br></span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-close">
+        <i class="ri-arrow-right-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ul class="mt-4 side-column-open">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="/ruby2d_2.html?chapter=blocks" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
+        <i class="lo-ruby-line mr-1 text-lg"></i>
+        <span class="text-lg current-course-name">Ruby2D(2)</span>
+      </a>
+      <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
+        <i class="ri-arrow-left-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+
+  <li class="mb-1 group" data-state-opened>
+    <p class="flex items-center py-2 px-4 text-gray-300 rounded-md">
+      <i class=" mr-3 text-lg side-column-lo-icon"></i>
+      <span class="text-xl">chapter1 :</span>
+      <span class="text-xl">ブロック崩し</span>
+    </p>
+    <ul class="chapters pl-7 mt-2 hidden group-data-[state-opened]:block">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/02/27/blocks_01.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section1:<br>バーを表示する
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/02/28/blocks_02.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section2:<br>バーを動かす
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/01/blocks_03.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section3:<br>ボールを表示・壁で跳ね返す
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/02/blocks_04.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section4:<br>ボールをバーに追従させる
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/03/blocks_05.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section5:<br>ボールの落下と復帰
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/04/blocks_06.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section6:<br>Barクラスを作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/05/blocks_07.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section7:<br>Barクラス - privateとmove
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/06/blocks_08.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section8:<br>Ballクラスを作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/07/blocks_09.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section9:<br>Ballクラス - privateと壁反射
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/08/blocks_10.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section10:<br>ファイルを分ける
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/09/blocks_11.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section11:<br>BarとBallを連携させる
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/10/blocks_12.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section12:<br>Blockクラスを作る・並べる
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/11/blocks_13.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section13:<br>ブロックの当たり判定（上・下）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/12/blocks_14.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section14:<br>ブロックの当たり判定（左・右）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/13/blocks_15.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section15:<br>スコア表示
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/14/blocks_16.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section16:<br>ライフと落下
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/15/blocks_17.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section17:<br>GameOverクラスを作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/ruby2d_2/blocks/2025/03/16/blocks_18.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section18:<br>最終確認・改造遊び
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+    </ul>
+  </li>
+</ul>
+
+  </aside>
+  <main id="content" class="w-screen ml-64 min-h-screen">
+    
+
+
+<div class="wrap-break-word pt-1 pl-5 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <span class="bread-course hidden">
+    <a class="">ブロック崩し</a>
+  </span>
+  <span class="bread-part hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">ブロック崩し</a>
+  </span>
+  <span class="bread-chapter hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">ブロック崩し</a>
+  </span>
+  <span class="bread-section hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">バーを表示する</a>
+  </span>
+</div>
+
+
+
+
+<div class="px-10 pt-10 pb-10 bg-gray-600 text-white">
+  <h1 class="page-header-title text-4xl font-bold">
+    
+      <p class="title border-b-4 pb-1">
+        <i class="ri-book-line mr-3"></i>
+        chapter 1: ブロック崩し
+      </p>
+    
+    <p class="title text-3xl mt-8 ml-5 page-chapter">
+      
+        <i class="ri-code-box-line"></i>
+        <span class="px-3 py-1">section1:</span>バーを表示する
+      
+    </p>
+  </h1>
+  <div class="mt-5 ml-5">
+    
+    <div class="text-black bg-gray-100 p-4 mt-6 rounded-xl">
+      <p class="mb-3 font-bold">
+        
+          このセクションで学ぶ内容:
+        
+      </p>
+      ゲーム画面を立ち上げ、自機となるバーを表示します。
+    </div>
+    
+  </div>
+</div>
+
+
+    <div class="markdown-body">
+      <h2 id="バーを表示する">バーを表示する</h2>
+
+<h3 id="ファイルの作成">ファイルの作成</h3>
+
+<p>ターミナルで以下を実行して、<code class="language-plaintext highlighter-rouge">blocks</code> ディレクトリと <code class="language-plaintext highlighter-rouge">main.rb</code> を作ります。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>ruby2d/blocks
+<span class="nv">$ </span><span class="nb">cd </span>ruby2d/blocks
+ruby2d/blocks <span class="nv">$ </span><span class="nb">touch </span>main.rb
+</code></pre></div></div>
+
+<h3 id="バーを表示する-1">バーを表示する</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Rectangle</code> クラスを使ってバーを表示します。</p>
+
+<p>main.rb</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s2">"ruby2d"</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="no">Rectangle</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">width: </span><span class="mi">100</span><span class="p">,</span> <span class="ss">height: </span><span class="mi">15</span><span class="p">)</span>
+<span class="n">bar</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="p">(</span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span> <span class="o">-</span> <span class="n">bar</span><span class="p">.</span><span class="nf">width</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">bar</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span> <span class="o">-</span> <span class="n">bar</span><span class="p">.</span><span class="nf">height</span> <span class="o">*</span> <span class="mi">3</span>
+
+<span class="n">show</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(Window.width - bar.width) / 2</code> でバーを横方向に中央に配置しています。</p>
+
+<h3 id="ファイルの実行">ファイルの実行</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby2d/blocks <span class="nv">$ </span>ruby main.rb
+</code></pre></div></div>
+
+<h3 id="結果">結果</h3>
+
+<p>ウィンドウが立ち上がり、画面下部にバーが表示される。</p>
+
+<h4 id="ここで試したいこと">*ここで試したいこと</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">width</code> と <code class="language-plaintext highlighter-rouge">height</code> を変えてバーの大きさを変えてみよう。</li>
+  <li><code class="language-plaintext highlighter-rouge">bar.y</code> の値を変えてバーの位置を上下させてみよう。</li>
+</ul>
+
+<h3 id="ここまでのコード">ここまでのコード</h3>
+
+<p>main.rb</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s2">"ruby2d"</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="no">Rectangle</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">width: </span><span class="mi">100</span><span class="p">,</span> <span class="ss">height: </span><span class="mi">15</span><span class="p">)</span>
+<span class="n">bar</span><span class="p">.</span><span class="nf">x</span> <span class="o">=</span> <span class="p">(</span><span class="no">Window</span><span class="p">.</span><span class="nf">width</span> <span class="o">-</span> <span class="n">bar</span><span class="p">.</span><span class="nf">width</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">bar</span><span class="p">.</span><span class="nf">y</span> <span class="o">=</span> <span class="no">Window</span><span class="p">.</span><span class="nf">height</span> <span class="o">-</span> <span class="n">bar</span><span class="p">.</span><span class="nf">height</span> <span class="o">*</span> <span class="mi">3</span>
+
+<span class="n">show</span>
+</code></pre></div></div>
+
+    </div>
+    <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <div>
+  <a href="" class="previous-link hidden">
+    <i class="ri-arrow-left-double-fill"></i>
+    <span>前のセクション</span>
+  </a>
+  </div>
+  <div>
+  <a href="" class="next-link hidden">
+    <span>次のセクション</span>
+    <i class="ri-arrow-right-double-fill"></i>
+  </a>
+  </div>
+</nav>
+
+  </main>
+</div>
+
+    </div>
+    
+<div class="courses-data hidden" data-courses='[{"course":"basic","title":"べーシックコース","parts":["スクラッチ","Ruby(1)"]},{"course":"standard","title":"スタンダードコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby2D(1)","Ruby(2)","Ruby2D(2)"]},{"course":"advance","title":"アドバンスコース","parts":["開発環境(1)"]},{"course":"professional","title":"プロフェッショナル","parts":["開発環境(1)"]}]'></div>
+<div class="curriculums-data hidden" data-curriculums='[{"title":"スクラッチ","icon":"lo-scratch-line","part":"scratch","contents":[{"title":"迷路ゲーム","chapter":"meiro"},{"title":"ジャンプゲーム","chapter":"jump_game"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"開発環境(1)","icon":"ri-computer-line","part":"development_environment_1","contents":[{"title":"VSCode","chapter":"vs_code"},{"title":"Git","chapter":"git"}]},{"title":"HTML/CSS","icon":"ri-html5-line","part":"html_css","contents":[{"title":"HTML","chapter":"html"},{"title":"CSS","chapter":"css"},{"title":"webサイト","chapter":"my_site"}]},{"title":"CSS","icon":"ri-css3-line","part":"css","contents":[{"title":"２カラムデザイン","chapter":"two_column"},{"title":"パネルデザイン","chapter":"panel"},{"title":"フォーム","chapter":"form"},{"title":"レスポンシブデザイン","chapter":"response"}]},{"title":"JavaScript(1)","icon":"ri-javascript-line","part":"javescript_1","contents":[{"title":"JavaScript基礎","chapter":"java_script_basic"},{"title":"シングルページ","chapter":"single_page"}]},{"title":"開発環境(2)","icon":"ri-computer-line","part":"development_environment_2","contents":[{"title":"WSL","chapter":"wsl"},{"title":"asdf","chapter":"asdf"}]},{"title":"Ruby(1)","icon":"lo-ruby-line","part":"ruby_1","contents":[{"title":"ruby基礎","chapter":"ruby_basic"},{"title":"RubyGems","chapter":"ruby_gems"}]},{"title":"Rspec(1)","icon":"lo-ruby-line","part":"rspec_1"},{"title":"WebAssembly","icon":"lo-ruby-line","part":"wasm"},{"title":"Ruby2D(1)","icon":"lo-ruby-line","part":"ruby2d_1","contents":[{"title":"基礎","chapter":"ruby2d_basic"},{"title":"川下りゲーム","chapter":"river"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"Ruby(2)","icon":"lo-ruby-line","part":"ruby_2","contents":[{"title":"Ruby応用","chapter":"ruby_advance"}]},{"title":"Ruby2D(2)","icon":"lo-ruby-line","part":"ruby2d_2","contents":[{"title":"ブロックくずし","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"},{"title":"テトリス","chapter":"tetris"}]},{"title":"Git/GitHub","icon":"ri-github-line","part":"git_github","contents":[{"title":"Git基礎","chapter":"git_basic"},{"title":"GitHubの使い方","chapter":"github_basic"},{"title":"GitHub Pagesで公開","chapter":"github_pages"}]},{"title":"Jekyll","icon":"lo-jekyll-line","part":"jekll","contents":[{"title":"ブログサイト","chapter":"ruby"},{"title":"webサイトのリプレイス","chapter":"ruby"}]},{"title":"sinatra","icon":"lo-sinatra-line","part":"sinatra","contents":[{"title":"時間割","chapter":"ruby"},{"title":"Api","chapter":"ruby"}]},{"title":"SQL(1)","icon":"ri-database-2-line","part":"sql_1","contents":[{"title":"SQLite","chapter":"ruby"},{"title":"時間割（２）","chapter":"ruby"}]},{"title":"RubyOnRails(1)","icon":"lo-rails-line","part":"ruby_on_rails_1","contents":[{"title":"タスクリスト","chapter":"tasklist"},{"title":"SNS","chapter":"link"}]},{"title":"JavaScript(2)","icon":"ri-javascript-line","part":"javescript_2","contents":[{"title":"TypeScript","chapter":"link"},{"title":"Stimulus","chapter":"stimulus"}]},{"title":"SQL(2)","icon":"ri-database-2-line","part":"sql_2","contents":[{"title":"PostgreSQL","chapter":"link"}]},{"title":"設計","icon":"ri-file-line","part":"app_design","contents":[{"title":"企画書","chapter":"kikaku"},{"title":"画面遷移図","chapter":"senizu"},{"title":"画面詳細図","chapter":"shousai"},{"title":"ER図","chapter":"er"},{"title":"テーブル設計書","chapter":"teble"},{"title":"URL設計書","chapter":"url"},{"title":"要件定義書","chapter":"youken"}]},{"title":"RubyOnRails(2)","icon":"lo-rails-line","part":"ruby_on_rails_2","contents":[{"title":"ECサイト","chapter":"tasklist"}]},{"title":"本番環境(1)","icon":"ri-server-line","part":"production_environment_1","contents":[{"title":"AWS","chapter":"link"}]},{"title":"卒業制作","icon":"ri-layout-5-line","part":"total_test","contents":[{"title":"企画","chapter":"kikaku"},{"title":"設計","chapter":"sekkei"},{"title":"制作","chapter":"seisaku"},{"title":"デプロイ","chapter":"deploy"}]},{"title":"本番環境(2)","icon":"ri-server-line","part":"production_environment_2","contents":[{"title":"ドメイン","chapter":"link"},{"title":"SSL","chapter":"link"},{"title":"自動デプロイ","chapter":"link"}]}]'></div>
+
+<script>
+  const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)
+  const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums)
+  const currentCourse = sessionStorage.getItem('currentCourse')
+  const currentUrl = new URL(location.href)
+</script>
+
+
+  </body>
+</html>
