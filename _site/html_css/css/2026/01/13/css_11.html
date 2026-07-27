@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title> 
+      レスポンシブとメディアクエリ - 
+      CSS | 
+      HearthSide Programing School
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <div class="fixed w-full py-2 px-4 hg-white flex items-center shadow-md shadow-black/5 bg-gray-900">
+  <ul class="flex items-center ml-auto">
+    <li class="mr-2">
+      <a href="/" class="text-gray-300 text-sm hover:text-gray-100 mr-3">
+        HearthSide Programing School
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div class="bg-white dark:bg-gray-800 pt-10">
+      <div class="flex h-screen">
+  <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900 overflow-y-auto">
+    
+
+
+
+<ul class="mt-4 side-column-close hidden">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="" class="current-part-link flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <span class="text-sm"><br><br></span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-close">
+        <i class="ri-arrow-right-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ul class="mt-4 side-column-open">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="/html_css.html?chapter=css" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
+        <i class="ri-html5-line mr-1 text-lg"></i>
+        <span class="text-lg current-course-name">HTML/CSS</span>
+      </a>
+      <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
+        <i class="ri-arrow-left-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+
+  <li class="mb-1 group" data-state-opened>
+    <p class="flex items-center py-2 px-4 text-gray-300 rounded-md">
+      <i class=" mr-3 text-lg side-column-lo-icon"></i>
+      <span class="text-xl">chapter1 :</span>
+      <span class="text-xl">CSS</span>
+    </p>
+    <ul class="chapters pl-7 mt-2 hidden group-data-[state-opened]:block">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/03/css_01.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section1:<br>CSSの歴史と基本構文
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/04/css_02.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section2:<br>タグ・id・classセレクタ
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/05/css_03.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section3:<br>優先度（詳細度）
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/06/css_04.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section4:<br>フォント系プロパティと色・単位
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/07/css_05.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section5:<br>BlockとInlineの違い
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/08/css_06.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section6:<br>ボックスモデル・marginとpaddingの違い
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/09/css_07.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section7:<br>overflow
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/10/css_08.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section8:<br>positionとz-index
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/11/css_09.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section9:<br>Flexboxの遍歴とhover
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/12/css_10.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section10:<br>クラス設計の考え方
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/13/css_11.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section11:<br>レスポンシブとメディアクエリ
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/html_css/css/2026/01/14/css_12.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section12:<br>background-image
+          </a>
+        </li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+    </ul>
+  </li>
+</ul>
+
+  </aside>
+  <main id="content" class="w-screen ml-64 min-h-screen">
+    
+
+
+<div class="wrap-break-word pt-1 pl-5 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <span class="bread-course hidden">
+    <a class="">CSS</a>
+  </span>
+  <span class="bread-part hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">CSS</a>
+  </span>
+  <span class="bread-chapter hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">CSS</a>
+  </span>
+  <span class="bread-section hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">レスポンシブとメディアクエリ</a>
+  </span>
+</div>
+
+
+
+
+<div class="px-10 pt-10 pb-10 bg-gray-600 text-white">
+  <h1 class="page-header-title text-4xl font-bold">
+    
+      <p class="title border-b-4 pb-1">
+        <i class="ri-book-line mr-3"></i>
+        chapter 1: CSS
+      </p>
+    
+    <p class="title text-3xl mt-8 ml-5 page-chapter">
+      
+        <i class="ri-code-box-line"></i>
+        <span class="px-3 py-1">section11:</span>レスポンシブとメディアクエリ
+      
+    </p>
+  </h1>
+  <div class="mt-5 ml-5">
+    
+    <div class="text-black bg-gray-100 p-4 mt-6 rounded-xl">
+      <p class="mb-3 font-bold">
+        
+          このセクションで学ぶ内容:
+        
+      </p>
+      画面幅によってスタイルを切り替えるメディアクエリを使い、横並びのレイアウトを縦並びに変える方法を学びます。
+    </div>
+    
+  </div>
+</div>
+
+
+    <div class="markdown-body">
+      <h2 id="レスポンシブとメディアクエリ">レスポンシブとメディアクエリ</h2>
+
+<h3 id="レスポンシブとは">レスポンシブとは</h3>
+
+<p>パソコンとスマートフォンでは、画面の横幅が大きく違います。パソコンでは横並びでちょうどよいレイアウトも、スマートフォンの狭い画面でそのまま表示すると、文字が小さすぎたり、はみ出したりしてしまいます。画面の幅に応じてレイアウトを切り替えることを<strong>レスポンシブデザイン</strong>と呼びます。</p>
+
+<h3 id="メディアクエリの基本">メディアクエリの基本</h3>
+
+<p><code class="language-plaintext highlighter-rouge">@media</code>を使うと、「画面の幅が〇〇px以下のときだけ」といった条件でCSSを切り替えられます。</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">flex</span><span class="p">;</span>
+  <span class="nl">gap</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">600px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.container</span> <span class="p">{</span>
+    <span class="nl">flex-direction</span><span class="p">:</span> <span class="nb">column</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">flex-direction: column</code>は、Flexboxの並ぶ向きを「横」から「縦」に変えるプロパティです。画面幅が<code class="language-plaintext highlighter-rouge">600px</code>以下になったときだけこのスタイルが適用され、横並びだった要素が縦並びに切り替わります。</p>
+
+<h3 id="なぜmax-widthで書くことが多いか">なぜmax-widthで書くことが多いか</h3>
+
+<p><code class="language-plaintext highlighter-rouge">@media (max-width: 600px)</code>は「600px以下のとき」という意味です。まずパソコン向けの見た目を基本として書いておき、画面が狭くなったときにスマートフォン向けの調整を<code class="language-plaintext highlighter-rouge">@media</code>で上書きする、という書き方（デスクトップファースト）がよく使われます。</p>
+
+<h3 id="viewportの指定を忘れずに">viewportの指定を忘れずに</h3>
+
+<p>メディアクエリを使う前提として、<code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>に以下の記述が必要です。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>これが無いと、スマートフォンのブラウザが「本当はパソコン用の幅で作られたページ」と誤解して、縮小表示してしまい、メディアクエリが意図通りに効きません。忘れずにセットで書く決まりごとだと覚えておきましょう。</p>
+
+<h4 id="ここで試したいこと">*ここで試したいこと</h4>
+
+<ul>
+  <li>ブラウザの表示幅を狭くしてみて（開発者ツールのレスポンシブ表示モードが便利です）、<code class="language-plaintext highlighter-rouge">600px</code>をまたいだ瞬間にレイアウトが切り替わることを確認してみよう。</li>
+</ul>
+
+    </div>
+    <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <div>
+  <a href="" class="previous-link hidden">
+    <i class="ri-arrow-left-double-fill"></i>
+    <span>前のセクション</span>
+  </a>
+  </div>
+  <div>
+  <a href="" class="next-link hidden">
+    <span>次のセクション</span>
+    <i class="ri-arrow-right-double-fill"></i>
+  </a>
+  </div>
+</nav>
+
+  </main>
+</div>
+
+    </div>
+    
+<div class="courses-data hidden" data-courses='[{"course":"basic","title":"べーシックコース","parts":["スクラッチ","Ruby(1)"]},{"course":"standard","title":"スタンダードコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby2D(1)","Ruby(2)","Ruby2D(2)"]},{"course":"advance","title":"アドバンスコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby(2)","HTML/CSS","Bootstrap","Git/GitHub","Jekyll","SQL(1)","sinatra","JavaScript(1)"]},{"course":"professional","title":"プロフェッショナル","parts":["開発環境(1)"]}]'></div>
+<div class="curriculums-data hidden" data-curriculums='[{"title":"スクラッチ","icon":"lo-scratch-line","part":"scratch","contents":[{"title":"迷路ゲーム","chapter":"meiro"},{"title":"ジャンプゲーム","chapter":"jump_game"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"開発環境(1)","icon":"ri-computer-line","part":"development_environment_1","contents":[{"title":"VSCode","chapter":"vs_code"},{"title":"Git","chapter":"git"}]},{"title":"開発環境(2)","icon":"ri-computer-line","part":"development_environment_2","contents":[{"title":"WSL","chapter":"wsl"},{"title":"asdf","chapter":"asdf"}]},{"title":"Ruby(1)","icon":"lo-ruby-line","part":"ruby_1","contents":[{"title":"ruby基礎","chapter":"ruby_basic"},{"title":"RubyGems","chapter":"ruby_gems"}]},{"title":"Ruby2D(1)","icon":"lo-ruby-line","part":"ruby2d_1","contents":[{"title":"基礎","chapter":"ruby2d_basic"},{"title":"川下りゲーム","chapter":"river"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"Ruby(2)","icon":"lo-ruby-line","part":"ruby_2","contents":[{"title":"Ruby応用","chapter":"ruby_advance"}]},{"title":"Ruby2D(2)","icon":"lo-ruby-line","part":"ruby2d_2","contents":[{"title":"ブロックくずし","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"},{"title":"テトリス","chapter":"tetris"}]},{"title":"HTML/CSS","icon":"ri-html5-line","part":"html_css","contents":[{"title":"HTML","chapter":"html"},{"title":"CSS","chapter":"css"},{"title":"webサイト","chapter":"my_site"}]},{"title":"Bootstrap","icon":"ri-layout-line","part":"bootstrap","contents":[{"title":"Bootstrap基礎","chapter":"bootstrap_basic"},{"title":"コーポレートサイト制作","chapter":"corporate_site"}]},{"title":"Git/GitHub","icon":"ri-github-line","part":"git_github","contents":[{"title":"Git基礎","chapter":"git_basic"},{"title":"GitHubの使い方","chapter":"github_basic"},{"title":"GitHub Pagesで公開","chapter":"github_pages"}]},{"title":"Jekyll","icon":"lo-jekyll-line","part":"jekyll","contents":[{"title":"ブログサイト","chapter":"blog"},{"title":"webサイトのリプレイス","chapter":"replace"},{"title":"GitHub Actionsで自動デプロイ","chapter":"github_actions"}]},{"title":"SQL(1)","icon":"ri-database-2-line","part":"sql_1","contents":[{"title":"SQLite","chapter":"sqlite"},{"title":"コーポサイトのデータをSQLで触る","chapter":"corporate_site"}]},{"title":"sinatra","icon":"lo-sinatra-line","part":"sinatra","contents":[{"title":"Sinatra基礎","chapter":"sinatra_basic"},{"title":"コーポサイトをSinatraでリプレイス","chapter":"corporate_site"}]},{"title":"JavaScript(1)","icon":"ri-javascript-line","part":"javescript_1","contents":[{"title":"JavaScript基礎","chapter":"java_script_basic"},{"title":"シングルページ","chapter":"single_page"}]},{"title":"CSS","icon":"ri-css3-line","part":"css","contents":[{"title":"２カラムデザイン","chapter":"two_column"},{"title":"パネルデザイン","chapter":"panel"},{"title":"フォーム","chapter":"form"},{"title":"レスポンシブデザイン","chapter":"response"}]},{"title":"Rspec(1)","icon":"lo-ruby-line","part":"rspec_1"},{"title":"WebAssembly","icon":"lo-ruby-line","part":"wasm"},{"title":"RubyOnRails(1)","icon":"lo-rails-line","part":"ruby_on_rails_1","contents":[{"title":"タスクリスト","chapter":"tasklist"},{"title":"SNS","chapter":"link"}]},{"title":"JavaScript(2)","icon":"ri-javascript-line","part":"javescript_2","contents":[{"title":"TypeScript","chapter":"link"},{"title":"Stimulus","chapter":"stimulus"}]},{"title":"SQL(2)","icon":"ri-database-2-line","part":"sql_2","contents":[{"title":"PostgreSQL","chapter":"link"}]},{"title":"設計","icon":"ri-file-line","part":"app_design","contents":[{"title":"企画書","chapter":"kikaku"},{"title":"画面遷移図","chapter":"senizu"},{"title":"画面詳細図","chapter":"shousai"},{"title":"ER図","chapter":"er"},{"title":"テーブル設計書","chapter":"teble"},{"title":"URL設計書","chapter":"url"},{"title":"要件定義書","chapter":"youken"}]},{"title":"RubyOnRails(2)","icon":"lo-rails-line","part":"ruby_on_rails_2","contents":[{"title":"ECサイト","chapter":"tasklist"}]},{"title":"本番環境(1)","icon":"ri-server-line","part":"production_environment_1","contents":[{"title":"AWS","chapter":"link"}]},{"title":"卒業制作","icon":"ri-layout-5-line","part":"total_test","contents":[{"title":"企画","chapter":"kikaku"},{"title":"設計","chapter":"sekkei"},{"title":"制作","chapter":"seisaku"},{"title":"デプロイ","chapter":"deploy"}]},{"title":"本番環境(2)","icon":"ri-server-line","part":"production_environment_2","contents":[{"title":"ドメイン","chapter":"link"},{"title":"SSL","chapter":"link"},{"title":"自動デプロイ","chapter":"link"}]}]'></div>
+
+<script>
+  const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)
+  const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums)
+  const currentCourse = sessionStorage.getItem('currentCourse')
+  const currentUrl = new URL(location.href)
+</script>
+
+
+  </body>
+</html>
