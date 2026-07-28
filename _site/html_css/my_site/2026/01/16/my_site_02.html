@@ -468,6 +468,44 @@
   <li><code class="language-plaintext highlighter-rouge">.hero</code>の<code class="language-plaintext highlighter-rouge">height</code>を<code class="language-plaintext highlighter-rouge">500px</code>や<code class="language-plaintext highlighter-rouge">300px</code>に変えて、写真の見え方がどう変わるか確認してみよう。</li>
 </ul>
 
+<h3 id="ここまでのコード">ここまでのコード</h3>
+
+<p>index.htmlは前回から変わっていません。</p>
+
+<p>style.css</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span> <span class="p">{</span>
+  <span class="nl">box-sizing</span><span class="p">:</span> <span class="nb">border-box</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Hiragino Sans"</span><span class="p">,</span> <span class="s1">"Noto Sans JP"</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.7</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.hero</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="nf">url</span><span class="p">(</span><span class="s1">"images/hero.jpg"</span><span class="p">);</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="nb">cover</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.hero</span> <span class="nt">h1</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="nf">translate</span><span class="p">(</span><span class="m">-50%</span><span class="p">,</span> <span class="m">-50%</span><span class="p">);</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nx">white</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">2rem</span><span class="p">;</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">text-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">2px</span> <span class="m">8px</span> <span class="nf">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.6</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
     </div>
     <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
   <div>

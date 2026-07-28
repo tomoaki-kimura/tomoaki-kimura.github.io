@@ -482,6 +482,59 @@ my_site <span class="nv">$ </span><span class="nb">touch </span>index.html style
   <li>ブラウザで開いて、CSSが無い状態の見た目（ブラウザの初期スタイル）を確認しておこう。次回以降との違いが分かりやすくなります。</li>
 </ul>
 
+<h3 id="ここまでのコード">ここまでのコード</h3>
+
+<p>index.html</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"ja"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>水が結ぶ、八幡製鉄所の記憶<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"hero"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>水が支えた、近代製鉄の記憶<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+
+  <span class="nt">&lt;main&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"intro"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2&gt;</span>今も現役で稼働する、産業遺産<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        鉄をつくるには、大量の水が必要です。鋼1トンをつくるのに200トン以上の水が使われるといわれています。
+        官営八幡製鐵所の拡張とともに、水を確保するための2つの施設が作られました。
+        どちらも建設から100年以上たった今も、現役で稼働し続けています。
+      <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"panels"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>河内貯水池<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>1927年完成。堰堤は高さ43.1m、貯水量約700万トン。<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/article&gt;</span>
+      <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>遠賀川水源地ポンプ室<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>1910年建設・操業開始。今も工業用水の約7割を送り続けています。<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/article&gt;</span>
+      <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">"panel"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>官営八幡製鐵所<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>1901年操業開始。日本で最初の本格的な官営製鉄所です。<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/article&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;/main&gt;</span>
+
+  <span class="nt">&lt;footer&gt;</span>
+    <span class="nt">&lt;address&gt;</span>
+      北九州市・中間市 産業遺産めぐり
+    <span class="nt">&lt;/address&gt;</span>
+    <span class="nt">&lt;small&gt;</span><span class="ni">&amp;copy;</span> 2026 HearthSide プログラミングスクール<span class="nt">&lt;/small&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
     </div>
     <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
   <div>
