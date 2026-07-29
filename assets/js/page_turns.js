@@ -10,12 +10,12 @@ if (chapters.length > 1) {
       const previous = chapters[i - 1]
       const next = chapters[i + 1]
       if (previous) {
-        const _previous = new URL(previous)
+        const _previous = new URL(previous.href)
         previousButton.setAttribute('href', _previous.pathname)
         previousButton.classList.remove('hidden')
       }
       if (next) {
-        const _next = new URL(next)
+        const _next = new URL(next.href)
         nextButton.setAttribute('href', _next.pathname)
         nextButton.classList.remove('hidden')
       }
