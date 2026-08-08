@@ -440,20 +440,34 @@
     <div class="markdown-body">
       <h2 id="インストールとはじめての表示">インストールとはじめての表示</h2>
 
+<h3 id="ディレクトリを作る">ディレクトリを作る</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>ruby2d
+<span class="nv">$ </span><span class="nb">cd </span>ruby2d
+</code></pre></div></div>
+
+<h3 id="rubyのバージョンを切り替える">Rubyのバージョンを切り替える</h3>
+
+<p>ruby2d はバージョン1.0.0からRuby 4.0以上が必須になりました。このカリキュラムサイトの環境構築で使っているRuby 3.4系とは別に、このディレクトリだけRuby 4系を使うように切り替えます。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby2d <span class="nv">$ </span>asdf <span class="nb">install </span>ruby 4.0.1
+ruby2d <span class="nv">$ </span>asdf <span class="nb">set </span>ruby 4.0.1
+ruby2d <span class="nv">$ </span>ruby <span class="nt">-v</span>
+ruby 4.0.1 ...
+</code></pre></div></div>
+
 <h3 id="ruby2d-をインストールする">ruby2d をインストールする</h3>
 
-<p>ターミナルで以下を実行します。</p>
+<p>このディレクトリの中で、以下を実行します。</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>ruby2d
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby2d <span class="nv">$ </span>gem <span class="nb">install </span>ruby2d
 </code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">Successfully installed ruby2d</code> と表示されればOKです。</p>
 
-<h3 id="ディレクトリとファイルを作る">ディレクトリとファイルを作る</h3>
+<h3 id="basicディレクトリとファイルを作る">basicディレクトリとファイルを作る</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>ruby2d
-<span class="nv">$ </span><span class="nb">cd </span>ruby2d
-ruby2d <span class="nv">$ </span><span class="nb">mkdir </span>basic
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby2d <span class="nv">$ </span><span class="nb">mkdir </span>basic
 ruby2d <span class="nv">$ </span><span class="nb">cd </span>basic
 ruby2d/basic <span class="nv">$ </span><span class="nb">touch </span>main.rb
 </code></pre></div></div>
