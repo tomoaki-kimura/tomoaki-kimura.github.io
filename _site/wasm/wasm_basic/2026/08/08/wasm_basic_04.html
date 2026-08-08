@@ -464,9 +464,15 @@
 <h3 id="次のステップ">次のステップ</h3>
 
 <ul>
-  <li>Ruby2D(1)基礎のプロジェクト以外にも、これまで作った他のRuby2Dアプリに同じ手順を試してみよう。</li>
   <li><code class="language-plaintext highlighter-rouge">ruby2d build --web --single-file main.rb</code> で1ファイルにまとめてから公開してみよう。</li>
+  <li>ヘビゲームや川下りゲームなど、<code class="language-plaintext highlighter-rouge">main.rb</code> 1ファイルで完結しているプロジェクトなら、同じ手順でそのままWASM化できる。</li>
 </ul>
+
+<h4 id="複数ファイルのプロジェクトをwasm化するには">*複数ファイルのプロジェクトをWASM化するには</h4>
+
+<p><code class="language-plaintext highlighter-rouge">ruby2d build --web</code> は、渡した1つのファイルの中身だけをコンパイルします。シューティングゲームやブロックくずしのように <code class="language-plaintext highlighter-rouge">require "./config"</code> や <code class="language-plaintext highlighter-rouge">app/models/</code> でファイルを分けているプロジェクトは、このままではビルドはできても実行時に <code class="language-plaintext highlighter-rouge">undefined method 'require'</code> エラーになり動きません。</p>
+
+<p>試すなら、<code class="language-plaintext highlighter-rouge">require</code> の行を消しながら、必要なファイルの中身をコピペで1つの<code class="language-plaintext highlighter-rouge">.rb</code>ファイルに結合してからビルドしてみましょう（クラスの定義順序と、<code class="language-plaintext highlighter-rouge">rake</code>・<code class="language-plaintext highlighter-rouge">byebug</code>などmrubyが対応していないgemに依存していないかに注意）。</p>
 
 <h4 id="最後に試したいこと">*最後に試したいこと</h4>
 
