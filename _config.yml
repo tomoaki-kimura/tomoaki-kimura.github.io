@@ -179,6 +179,9 @@ curriculums:
   - title: WebAssembly
     icon: lo-ruby-line
     part: wasm
+    contents:
+      - title: WASMビルド
+        chapter: wasm_basic
   - title: RubyOnRails(1)
     icon: lo-rails-line
     part: ruby_on_rails_1
