@@ -33,6 +33,7 @@ courses:
       - SQL(1)
       - sinatra
       - JavaScript(1)
+      - WebAssembly
   - course: professional
     title: プロフェッショナル
     parts:
