@@ -185,6 +185,8 @@ curriculums:
         chapter: wasm_basic
       - title: ヘビゲームをWASM公開する
         chapter: wasm_hebi
+      - title: ブロックパズルをWASM公開する
+        chapter: wasm_block_puzzle
   - title: RubyOnRails(1)
     icon: lo-rails-line
     part: ruby_on_rails_1

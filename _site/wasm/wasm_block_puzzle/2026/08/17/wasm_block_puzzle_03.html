@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title> 
+      カスタム HTML テンプレートを作る - 
+      ブロックパズルをWASM公開する | 
+      HearthSide Programing School
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body>
+    <div class="fixed w-full py-2 px-4 hg-white flex items-center shadow-md shadow-black/5 bg-gray-900">
+  <ul class="flex items-center ml-auto">
+    <li class="mr-2">
+      <a href="/" class="text-gray-300 text-sm hover:text-gray-100 mr-3">
+        HearthSide Programing School
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div class="bg-white dark:bg-gray-800 pt-10">
+      <div class="flex h-screen">
+  <aside class="fixed left-0 top-0 w-64 h-full bg-gray-900 overflow-y-auto">
+    
+
+
+
+<ul class="mt-4 side-column-close hidden">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="" class="current-part-link flex items-center py-2 px-1 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white">
+        <span class="text-sm"><br><br></span>
+      </a>
+      <button type="button" class="text-gray-300 toggle-menu-close">
+        <i class="ri-arrow-right-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ul class="mt-4 side-column-open">
+  <li class="mb-1 group active">
+    <div class="flex">
+      <a href="/wasm.html?chapter=wasm_block_puzzle" class="current-part-link flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md group-[.active]:text-white inline-block">
+        <i class="lo-ruby-line mr-1 text-lg"></i>
+        <span class="text-lg current-course-name">WebAssembly</span>
+      </a>
+      <button type="button" class="text-gray-300 ml-auto toggle-menu-open">
+        <i class="ri-arrow-left-circle-fill mr-4"></i>
+      </button>
+    </div>
+  </li>
+
+  <li class="mb-1 group" data-state-opened>
+    <p class="flex items-center py-2 px-4 text-gray-300 rounded-md">
+      <i class=" mr-3 text-lg side-column-lo-icon"></i>
+      <span class="text-xl">chapter3 :</span>
+      <span class="text-xl">ブロックパズルをWASM公開する</span>
+    </p>
+    <ul class="chapters pl-7 mt-2 hidden group-data-[state-opened]:block">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        <li class="mb-4">
+          <a href="/wasm/wasm_block_puzzle/2026/08/17/wasm_block_puzzle_01.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section1:<br>このチャプターについて・複数ファイル構成の課題
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/wasm/wasm_block_puzzle/2026/08/17/wasm_block_puzzle_02.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section2:<br>Rakefile でファイルをバンドルする
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/wasm/wasm_block_puzzle/2026/08/17/wasm_block_puzzle_03.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section3:<br>カスタム HTML テンプレートを作る
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/wasm/wasm_block_puzzle/2026/08/17/wasm_block_puzzle_04.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section4:<br>rake wasm でビルド・ローカルで確認する
+          </a>
+        </li>
+        
+      
+        
+        <li class="mb-4">
+          <a href="/wasm/wasm_block_puzzle/2026/08/17/wasm_block_puzzle_05.html" class="chapter  text-gray-300 text-sm flex items-center hover:text-gray-100 before:contents-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3">
+            section5:<br>GitHub Pages に公開する・振り返り
+          </a>
+        </li>
+        
+        
+    </ul>
+  </li>
+</ul>
+
+  </aside>
+  <main id="content" class="w-screen ml-64 min-h-screen">
+    
+
+
+<div class="wrap-break-word pt-1 pl-5 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <span class="bread-course hidden">
+    <a class="">ブロックパズルをWASM公開する</a>
+  </span>
+  <span class="bread-part hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">ブロックパズルをWASM公開する</a>
+  </span>
+  <span class="bread-chapter hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">ブロックパズルをWASM公開する</a>
+  </span>
+  <span class="bread-section hidden">
+    <i class="ri-arrow-drop-right-fill"></i>
+    <a class="">カスタム HTML テンプレートを作る</a>
+  </span>
+</div>
+
+
+
+
+<div class="px-10 pt-10 pb-10 bg-gray-600 text-white">
+  <h1 class="page-header-title text-4xl font-bold">
+    
+      <p class="title border-b-4 pb-1">
+        <i class="ri-book-line mr-3"></i>
+        chapter 3: ブロックパズルをWASM公開する
+      </p>
+    
+    <p class="title text-3xl mt-8 ml-5 page-chapter">
+      
+        <i class="ri-code-box-line"></i>
+        <span class="px-3 py-1">section3:</span>カスタム HTML テンプレートを作る
+      
+    </p>
+  </h1>
+  <div class="mt-5 ml-5">
+    
+    <div class="text-black bg-gray-100 p-4 mt-6 rounded-xl">
+      <p class="mb-3 font-bold">
+        
+          このセクションで学ぶ内容:
+        
+      </p>
+      デフォルトのHTMLを使わず、操作説明を加えた自分好みのページを作ります。
+    </div>
+    
+  </div>
+</div>
+
+
+    <div class="markdown-body">
+      <h2 id="カスタム-html-テンプレートを作る">カスタム HTML テンプレートを作る</h2>
+
+<h3 id="なぜカスタム-html-が必要か">なぜカスタム HTML が必要か</h3>
+
+<p><code class="language-plaintext highlighter-rouge">ruby2d build --web</code> が自動生成する <code class="language-plaintext highlighter-rouge">app.html</code> は、ゲームを動かすのに必要な最低限の内容だけが含まれています。<br />
+操作説明を追加したり、背景色を変えたりするには、自分で HTML を用意する方が簡単です。</p>
+
+<h3 id="webindexhtml-を作る"><code class="language-plaintext highlighter-rouge">web/index.html</code> を作る</h3>
+
+<p>プロジェクトルートに <code class="language-plaintext highlighter-rouge">web/</code> ディレクトリを作り、<code class="language-plaintext highlighter-rouge">index.html</code> を置きます。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span> <span class="na">dir=</span><span class="s">"ltr"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>BLOCK GAME<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+      <span class="nt">body</span> <span class="p">{</span>
+        <span class="nl">font-family</span><span class="p">:</span> <span class="n">system-ui</span><span class="p">;</span>
+        <span class="nl">background</span><span class="p">:</span> <span class="nx">#111</span><span class="p">;</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nx">#ddd</span><span class="p">;</span>
+        <span class="nl">padding-top</span><span class="p">:</span> <span class="m">32px</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nf">#canvas</span> <span class="p">{</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nc">.controls</span> <span class="p">{</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">220px</span><span class="p">;</span>
+        <span class="nl">margin</span><span class="p">:</span> <span class="m">20px</span> <span class="nb">auto</span> <span class="m">0</span><span class="p">;</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="nb">grid</span><span class="p">;</span>
+        <span class="nl">grid-template-columns</span><span class="p">:</span> <span class="nb">auto</span> <span class="m">1fr</span><span class="p">;</span>
+        <span class="nl">gap</span><span class="p">:</span> <span class="m">6px</span> <span class="m">16px</span><span class="p">;</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.9rem</span><span class="p">;</span>
+        <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.6</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nt">kbd</span> <span class="p">{</span>
+        <span class="nl">display</span><span class="p">:</span> <span class="nb">inline-block</span><span class="p">;</span>
+        <span class="nl">background</span><span class="p">:</span> <span class="nx">#2a2a2a</span><span class="p">;</span>
+        <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nx">#555</span><span class="p">;</span>
+        <span class="nl">border-radius</span><span class="p">:</span> <span class="m">4px</span><span class="p">;</span>
+        <span class="nl">padding</span><span class="p">:</span> <span class="m">1px</span> <span class="m">7px</span><span class="p">;</span>
+        <span class="nl">font-family</span><span class="p">:</span> <span class="nb">monospace</span><span class="p">;</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">0.85rem</span><span class="p">;</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="nx">#eee</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nt">span</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="nx">#aaa</span><span class="p">;</span> <span class="p">}</span>
+      <span class="nf">#output</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">"canvas"</span> <span class="na">oncontextmenu=</span><span class="s">"event.preventDefault()"</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"controls"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div&gt;&lt;kbd&gt;</span>A<span class="nt">&lt;/kbd&gt;</span> / <span class="nt">&lt;kbd&gt;</span>D<span class="nt">&lt;/kbd&gt;&lt;/div&gt;&lt;span&gt;</span>左右移動<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;div&gt;&lt;kbd&gt;</span>S<span class="nt">&lt;/kbd&gt;&lt;/div&gt;&lt;span&gt;</span>ソフトドロップ<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;div&gt;&lt;kbd&gt;</span>J<span class="nt">&lt;/kbd&gt;</span> / <span class="nt">&lt;kbd&gt;</span>K<span class="nt">&lt;/kbd&gt;&lt;/div&gt;&lt;span&gt;</span>左回転 / 右回転<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;div&gt;&lt;kbd&gt;</span>Space<span class="nt">&lt;/kbd&gt;&lt;/div&gt;&lt;span&gt;</span>スタート<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;div&gt;&lt;kbd&gt;</span>R<span class="nt">&lt;/kbd&gt;&lt;/div&gt;&lt;span&gt;</span>リスタート<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"output"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;script&gt;</span>
+    <span class="kd">var</span> <span class="nx">Module</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">canvas</span><span class="p">:</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">canvas</span><span class="dl">'</span><span class="p">);</span>
+      <span class="p">})(),</span>
+      <span class="na">print</span><span class="p">:</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">output</span><span class="dl">'</span><span class="p">);</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="nx">element</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">if </span><span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">text</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">);</span>
+          <span class="p">}</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
+          <span class="k">if </span><span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">element</span><span class="p">.</span><span class="nx">value</span> <span class="o">+=</span> <span class="nx">text</span> <span class="o">+</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">;</span>
+            <span class="nx">element</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">scrollHeight</span><span class="p">;</span>
+          <span class="p">}</span>
+        <span class="p">};</span>
+      <span class="p">})()</span>
+    <span class="p">};</span>
+  <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"app.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="重要なポイント">重要なポイント</h3>
+
+<p><strong>① <code class="language-plaintext highlighter-rouge">&lt;canvas id="canvas"&gt;</code> は必須</strong></p>
+
+<p>Emscripten はこの ID を持つ <code class="language-plaintext highlighter-rouge">&lt;canvas&gt;</code> 要素にゲームを描画します。削除したり ID を変えたりすると、何も表示されません。</p>
+
+<p><strong>② <code class="language-plaintext highlighter-rouge">body</code> に <code class="language-plaintext highlighter-rouge">display: flex</code> を使わない</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">display: flex</code> を <code class="language-plaintext highlighter-rouge">body</code> に設定すると、Emscripten がキャンバスのサイズを計算するときに影響が出て、1×1ピクセルになってしまいます。<br />
+中央寄せには <code class="language-plaintext highlighter-rouge">margin: 0 auto</code> を使います。</p>
+
+<p><strong>③ <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> タグは <code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code> の後に書く</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;script&gt;</span>
+    <span class="kd">var</span> <span class="nx">Module</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span> <span class="p">};</span>
+  <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"app.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Emscripten の <code class="language-plaintext highlighter-rouge">Module</code> オブジェクトと <code class="language-plaintext highlighter-rouge">app.js</code> の読み込みは、<code class="language-plaintext highlighter-rouge">&lt;/body&gt;</code> の<strong>後</strong>に置きます。<code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> 内に書くと、<code class="language-plaintext highlighter-rouge">&lt;canvas&gt;</code> の準備が整う前にスクリプトが動いてしまい、正常に動作しません。</p>
+
+<p><strong>④ <code class="language-plaintext highlighter-rouge">&lt;textarea id="output"&gt;</code> を非表示で残す</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"output"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+</code></pre></div></div>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#output</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>Emscripten のデバッグ出力を受け取るために必要です。<code class="language-plaintext highlighter-rouge">display: none</code> で非表示にしつつ、削除はしません。</p>
+
+<h4 id="ここで試したいこと">*ここで試したいこと</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.controls</code> の中の操作説明を、自分のゲームに合わせて書き換えてみよう。</li>
+  <li><code class="language-plaintext highlighter-rouge">background</code> の色を変えて、好きな配色にしてみよう。</li>
+</ul>
+
+    </div>
+    <nav class="page-turns flex justify-between p-10 bg-gray-200 dark:bg-black text-black dark:text-gray-100">
+  <div>
+  <a href="" class="previous-link hidden">
+    <i class="ri-arrow-left-double-fill"></i>
+    <span>前のセクション</span>
+  </a>
+  </div>
+  <div>
+  <a href="" class="next-link hidden">
+    <span>次のセクション</span>
+    <i class="ri-arrow-right-double-fill"></i>
+  </a>
+  </div>
+</nav>
+
+  </main>
+</div>
+
+    </div>
+    
+<div class="courses-data hidden" data-courses='[{"course":"basic","title":"べーシックコース","parts":["スクラッチ","Ruby(1)"]},{"course":"standard","title":"スタンダードコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby2D(1)","Ruby(2)","Ruby2D(2)"]},{"course":"advance","title":"アドバンスコース","parts":["開発環境(1)","開発環境(2)","Ruby(1)","Ruby2D(1)","Ruby(2)","Ruby2D(2)","HTML/CSS","Bootstrap","Git/GitHub","Jekyll","SQL(1)","sinatra","JavaScript(1)","WebAssembly"]},{"course":"professional","title":"プロフェッショナル","parts":["開発環境(1)"]}]'></div>
+<div class="curriculums-data hidden" data-curriculums='[{"title":"スクラッチ","icon":"lo-scratch-line","part":"scratch","contents":[{"title":"迷路ゲーム","chapter":"meiro"},{"title":"ジャンプゲーム","chapter":"jump_game"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"開発環境(1)","icon":"ri-computer-line","part":"development_environment_1","contents":[{"title":"VSCode","chapter":"vs_code"},{"title":"Git","chapter":"git"}]},{"title":"開発環境(2)","icon":"ri-computer-line","part":"development_environment_2","contents":[{"title":"WSL","chapter":"wsl"},{"title":"asdf","chapter":"asdf"}]},{"title":"Ruby(1)","icon":"lo-ruby-line","part":"ruby_1","contents":[{"title":"ruby基礎","chapter":"ruby_basic"},{"title":"RubyGems","chapter":"ruby_gems"}]},{"title":"Ruby2D(1)","icon":"lo-ruby-line","part":"ruby2d_1","contents":[{"title":"基礎","chapter":"ruby2d_basic"},{"title":"川下りゲーム","chapter":"river"},{"title":"ヘビゲーム","chapter":"hebi"}]},{"title":"Ruby(2)","icon":"lo-ruby-line","part":"ruby_2","contents":[{"title":"Ruby応用","chapter":"ruby_advance"}]},{"title":"Ruby2D(2)","icon":"lo-ruby-line","part":"ruby2d_2","contents":[{"title":"ブロックくずし","chapter":"blocks"},{"title":"シューティングゲーム","chapter":"shooting"},{"title":"ブロックパズル","chapter":"block_puzzle"}]},{"title":"HTML/CSS","icon":"ri-html5-line","part":"html_css","contents":[{"title":"HTML","chapter":"html"},{"title":"CSS","chapter":"css"},{"title":"webサイト","chapter":"my_site"}]},{"title":"Bootstrap","icon":"ri-layout-line","part":"bootstrap","contents":[{"title":"Bootstrap基礎","chapter":"bootstrap_basic"},{"title":"コーポレートサイト制作","chapter":"corporate_site"}]},{"title":"Git/GitHub","icon":"ri-github-line","part":"git_github","contents":[{"title":"Git基礎","chapter":"git_basic"},{"title":"GitHubの使い方","chapter":"github_basic"},{"title":"GitHub Pagesで公開","chapter":"github_pages"}]},{"title":"Jekyll","icon":"lo-jekyll-line","part":"jekyll","contents":[{"title":"ブログサイト","chapter":"blog"},{"title":"webサイトのリプレイス","chapter":"replace"},{"title":"GitHub Actionsで自動デプロイ","chapter":"github_actions"}]},{"title":"SQL(1)","icon":"ri-database-2-line","part":"sql_1","contents":[{"title":"SQLite","chapter":"sqlite"},{"title":"コーポサイトのデータをSQLで触る","chapter":"corporate_site"}]},{"title":"sinatra","icon":"lo-sinatra-line","part":"sinatra","contents":[{"title":"Sinatra基礎","chapter":"sinatra_basic"},{"title":"コーポサイトをSinatraでリプレイス","chapter":"corporate_site"}]},{"title":"JavaScript(1)","icon":"ri-javascript-line","part":"javescript_1","contents":[{"title":"JavaScript基礎","chapter":"java_script_basic"},{"title":"シングルページ","chapter":"single_page"}]},{"title":"CSS","icon":"ri-css3-line","part":"css","contents":[{"title":"２カラムデザイン","chapter":"two_column"},{"title":"パネルデザイン","chapter":"panel"},{"title":"フォーム","chapter":"form"},{"title":"レスポンシブデザイン","chapter":"response"}]},{"title":"Rspec(1)","icon":"lo-ruby-line","part":"rspec_1"},{"title":"WebAssembly","icon":"lo-ruby-line","part":"wasm","contents":[{"title":"WASMビルド","chapter":"wasm_basic"},{"title":"ヘビゲームをWASM公開する","chapter":"wasm_hebi"},{"title":"ブロックパズルをWASM公開する","chapter":"wasm_block_puzzle"}]},{"title":"RubyOnRails(1)","icon":"lo-rails-line","part":"ruby_on_rails_1","contents":[{"title":"タスクリスト","chapter":"tasklist"},{"title":"SNS","chapter":"link"}]},{"title":"JavaScript(2)","icon":"ri-javascript-line","part":"javescript_2","contents":[{"title":"TypeScript","chapter":"link"},{"title":"Stimulus","chapter":"stimulus"}]},{"title":"SQL(2)","icon":"ri-database-2-line","part":"sql_2","contents":[{"title":"PostgreSQL","chapter":"link"}]},{"title":"設計","icon":"ri-file-line","part":"app_design","contents":[{"title":"企画書","chapter":"kikaku"},{"title":"画面遷移図","chapter":"senizu"},{"title":"画面詳細図","chapter":"shousai"},{"title":"ER図","chapter":"er"},{"title":"テーブル設計書","chapter":"teble"},{"title":"URL設計書","chapter":"url"},{"title":"要件定義書","chapter":"youken"}]},{"title":"RubyOnRails(2)","icon":"lo-rails-line","part":"ruby_on_rails_2","contents":[{"title":"ECサイト","chapter":"tasklist"}]},{"title":"本番環境(1)","icon":"ri-server-line","part":"production_environment_1","contents":[{"title":"AWS","chapter":"link"}]},{"title":"卒業制作","icon":"ri-layout-5-line","part":"total_test","contents":[{"title":"企画","chapter":"kikaku"},{"title":"設計","chapter":"sekkei"},{"title":"制作","chapter":"seisaku"},{"title":"デプロイ","chapter":"deploy"}]},{"title":"本番環境(2)","icon":"ri-server-line","part":"production_environment_2","contents":[{"title":"ドメイン","chapter":"link"},{"title":"SSL","chapter":"link"},{"title":"自動デプロイ","chapter":"link"}]}]'></div>
+
+<script>
+  const COURSES_DATA = JSON.parse(document.querySelector('.courses-data').dataset.courses)
+  const CURRICULUMS_DATA = JSON.parse(document.querySelector('.curriculums-data').dataset.curriculums)
+  const currentCourse = sessionStorage.getItem('currentCourse')
+  const currentUrl = new URL(location.href)
+</script>
+
+
+  </body>
+</html>
