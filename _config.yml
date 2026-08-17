@@ -98,8 +98,8 @@ curriculums:
         chapter: blocks
       - title: シューティングゲーム
         chapter: shooting
-      - title: テトリス
-        chapter: tetris
+      - title: ブロックパズル
+        chapter: block_puzzle
   - title: HTML/CSS
     icon: ri-html5-line
     part: html_css
@@ -183,6 +183,10 @@ curriculums:
     contents:
       - title: WASMビルド
         chapter: wasm_basic
+      - title: ヘビゲームをWASM公開する
+        chapter: wasm_hebi
+      - title: ブロックパズルをWASM公開する
+        chapter: wasm_block_puzzle
   - title: RubyOnRails(1)
     icon: lo-rails-line
     part: ruby_on_rails_1
