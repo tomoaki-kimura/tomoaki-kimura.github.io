@@ -34,6 +34,7 @@ courses:
       - sinatra
       - JavaScript(1)
       - WebAssembly
+      - LLM(1)
   - course: professional
     title: プロフェッショナル
     parts:
@@ -187,6 +188,14 @@ curriculums:
         chapter: wasm_hebi
       - title: ブロックパズルをWASM公開する
         chapter: wasm_block_puzzle
+  - title: LLM(1)
+    icon: ri-robot-line
+    part: llm_1
+    contents:
+      - title: ローカルLLM入門
+        chapter: ollama_basic
+      - title: チャットアプリを作る
+        chapter: llm_chat
   - title: RubyOnRails(1)
     icon: lo-rails-line
     part: ruby_on_rails_1
